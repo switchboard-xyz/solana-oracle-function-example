@@ -1,5 +1,5 @@
 use switchboard_utils::Decimal;
-use balancer_sdk::U256;
+use ethers::types::U256;
 use switchboard_utils::ToPrimitive;
 use std::cmp::Ordering;
 pub struct Math {
@@ -7,7 +7,7 @@ pub struct Math {
 
 
 impl Math {
-   pub fn median(mut numbers: Vec<Decimal>) -> Option<balancer_sdk::I256> {
+   pub fn median(mut numbers: Vec<Decimal>) -> Option<ethers::types::U256> {
 
         if numbers.is_empty() {
             return None; // Cannot find the median of an empty list
@@ -20,12 +20,12 @@ impl Math {
         Some(if numbers.len() % 2 == 0 {
             // If even number of elements, average the middle two
             let decimal = (numbers[mid - 1] + numbers[mid]) / Decimal::from(2);
-            let i256 = (balancer_sdk::I256::from(decimal.to_u128().unwrap()));
+            let i256 = (ethers::types::U256::from(decimal.to_u128().unwrap()));
             i256
         } else {
             // If odd, return the middle element
             let decimal = numbers[mid];
-            let i256 = (balancer_sdk::I256::from(decimal.to_u128().unwrap()));
+            let i256 = (ethers::types::U256::from(decimal.to_u128().unwrap()));
             i256
         })
     }

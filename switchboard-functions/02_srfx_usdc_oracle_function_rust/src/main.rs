@@ -4,40 +4,27 @@ use std::pin::Pin;
 use std::boxed::Box;
 use rust_decimal::Decimal;
 use crate::futures::future::join_all;
- pub mod balancer;
- use switchboard_solana::futures::TryFutureExt;
- pub use balancer::*;
+ pub mod etherprices;
+ pub use etherprices::*;
  pub mod math;
  pub use math::*;
-use std::process::ExitCode;
-use std::process::Termination;
-use switchboard_utils::ToPrimitive;
-use std::time::SystemTime;
 use tokio;
-use balancer_sdk;
-use tokio::time::Duration;
-use balancer_sdk::Web3;
-use balancer_sdk::helpers::build_web3;
-use balancer_sdk::helpers::*;
-use std::sync::Arc;
-use balancer_sdk::*;
-use balancer_sdk::{Address, U256};
-use balancer_sdk::helpers::*;
 use std::str::FromStr;
-use balancer_sdk::PoolId;
 use switchboard_utils;
 use switchboard_utils::FromPrimitive;
 use switchboard_utils::SbError;
-use std::cmp::Ordering;
 use switchboard_solana::switchboard_function;
-use switchboard_solana::sb_error;
+
+use ethers::types::I256;
+
+use ethers_contract_derive::abigen;
 
 
-declare_id!("FTSnBWrrDxGPBayRsCA7V4CzRgSYWjFWWKbMDmAEAecb");
+declare_id!("6cAUwwbUEYS5g3HBFc9UUMU63xsSU22KqQ3NKyhKfwJV");
 
-pub const PROGRAM_SEED: &[u8] = b"SRFX_USDC_ORACLE";
+pub const PROGRAM_SEED: &[u8] = b"USDY_USDC_ORACLE";
 
-pub const ORACLE_SEED: &[u8] = b"ORACLE_SRFX_SEED";
+pub const ORACLE_SEED: &[u8] = b"ORACLE_USDY_SEED";
 
 pub const SFRX_ETH: &str = "0xac3e018457b222d93114458476f3e3416abbe38f";
 pub const SFRXETH_DECIMALS: u32 = 18;
@@ -59,46 +46,91 @@ pub struct MyProgramState {
     pub switchboard_function: Pubkey,
     pub btc_price: f64,
 }
+async fn get_uniswap_price( ether_transport: ethers::providers::Provider<ethers::providers::Http>,factory_addr: ethers::types::H160, usd_h160: ethers::types::H160, usdy_h160: ethers::types::H160) -> Result<Decimal, SbError> {
 
 
+
+
+   
+abigen!(Factory, "./src/factory.json");
+let factory_contract = Factory::new(factory_addr, ether_transport.clone().into());
+
+
+
+    let pool = factory_contract.get_pool(
+        usd_h160,
+        usdy_h160,
+        500
+    )
+    .call()
+    .await;
+
+    println!("pool: {:?}", &pool);
+       
+    abigen!(Pool, "./src/pool.json");
+    let pool_contract = Pool::new(pool.unwrap(), ether_transport.into());
+    let slot0 = pool_contract.slot_0().call().await.unwrap();
+    //    sqrtPriceX96 = sqrt(price) * 2 ** 96
+
+    let sqrtPriceX96: ethers::types::U256 = slot0.0;
+    let price: ethers::types::U256 = (sqrtPriceX96 * sqrtPriceX96) >> (96 * 2);
+
+    let inverse_price: f64 = 0.000001 / (price.as_u128() as f64);
+    let inverse_price = 1.0 / inverse_price;
+    let inverse_price = 1_000_000_000_000_000_000.0 / inverse_price * 1_000_000_000_000_000_000.0;
+    println!("Uniswap price: {:?}", &inverse_price);
+    /*
+    println!("sqrtPriceX96: {:?}", &sqrtPriceX96);
+    let sqrtPriceX96: U256 = (sqrtPriceX96 * sqrtPriceX96) * U256::from(1_000_000_000_000_000_000 as i64) >> (96 * 2);
+    println!("price: {:?}", &sqrtPriceX96);
+     */
+    Ok(Decimal::from_f64(inverse_price).unwrap())
+}
+// future
+async fn get_ondo_price(ether_transport: ethers::providers::Provider<ethers::providers::Http>) -> Result<Decimal, SbError> {
+
+
+    let ondo_addr = ethers::types::H160::from_str("0xa0219aa5b31e65bc920b5b6dfb8edf0988121de0").unwrap();
+    abigen!(Ondo, "./src/ondo.json");
+    let ondo = Ondo::new(ethers::types::H160::from_str("0xa0219aa5b31e65bc920b5b6dfb8edf0988121de0").unwrap(), ether_transport.clone().into());
+    
+    
+    let price = ondo.get_price().call().await.unwrap();
+    let price: f64 = price.as_u128() as f64;
+    println!("Ondo price: {:?}", price);
+    // return Pin<Box<dyn Future<Output = Result<Decimal, SbError>>>> {
+        Ok(Decimal::from_f64(price).unwrap())
+}
 #[switchboard_function]
-pub async fn balancer_oracle_function(
+pub async fn etherprices_oracle_function(
     runner: FunctionRunner,
     _params: Vec<u8>,
 ) -> Result<Vec<Instruction>, SbFunctionError> {
-msg!("balancer_oracle_function");
+msg!("etherprices_oracle_function");
+    
+    let mantle_transport = ethers::providers::Provider::try_from("https://mantle.publicnode.com").unwrap();
+    let ether_transport = ethers::providers::Provider::try_from("https://ethereum.publicnode.com").unwrap();
+    let agni_factory = ethers::types::H160::from_str("0x25780dc8Fc3cfBD75F33bFDAB65e969b603b2035").unwrap();
 
-    // setup the provider + signer
-    let SFRXETH_WSTETH_POOL = pool_id!("0x42ed016f826165c2e5976fe5bc3df540c5ad0af700000000000000000000058b");
-    let WSTETH_WETH_POOL = pool_id!("0x93d199263632a4ef4bb438f1feb99e57b4b5f0bd0000000000000000000005c2");
-    // let WETH_USDC_POOL_UNSAFE = pool_id!("0x96646936b91d6b9d7d0c47c496afbf3d6ec7b6f8000200000000000000000019");
-    // https://ethereumnodes.com/
-    let rpc_url = "https://rpc.flashbots.net/";
-
-    let pool_id = SFRXETH_WSTETH_POOL;
-    let wsteth_amount = Balancer::fetch_balancer_v2_quote(rpc_url, SFRXETH_WSTETH_POOL, SFRX_ETH, WST_ETH, u256!(10u128.pow(SFRXETH_DECIMALS).to_string()), 0.1).await.unwrap();
-    let weth_amount = Balancer::fetch_balancer_v2_quote(rpc_url, WSTETH_WETH_POOL, WST_ETH, WETH, wsteth_amount, 0.1).await.unwrap();
-    let weth_amount = weth_amount / 1000000000;
-    println!("{} 1 {}", weth_amount, wsteth_amount);
-    // let usdc_amount = fetch_balancer_v2_quote(rpc_url, WETH_USDC_POOL_UNSAFE, WETH, USDC, weth_amount, 0.1).await?;
+    let fusion_factory = ethers::types::H160::from_str("0x530d2766D1988CC1c000C8b7d00334c14B69AD71").unwrap();
+    let usdy_h160 = ethers::types::H160::from_str("0x5bE26527e817998A7206475496fDE1E68957c5A6").unwrap();
+    let usd_h160 = ethers::types::H160::from_str("0x09Bc4E0D864854c6aFB6eB9A9cdF58aC190D0dF9").unwrap();
+   
+   
     let v: Vec<Pin<Box<dyn Future<Output = Result<Decimal, SbError>> + Send >>> = vec![
-        Box::pin(switchboard_utils::exchanges::BitfinexApi::fetch_ticker("tETHUSD", None).map_ok(|x| x.last_price)),
-        Box::pin(switchboard_utils::exchanges::CoinbaseApi::fetch_ticker("ETH-USD", None).map_ok(|x| x.price)),
-        Box::pin(switchboard_utils::exchanges::HuobiApi::fetch_ticker("ethusdt", None).map_ok(|x| Decimal::from_f64(x.close).unwrap())),
-        Box::pin(switchboard_utils::exchanges::KrakenApi::fetch_ticker("ETHUSD", None).map_ok(|x| x.close[0]))
+        Box::pin(get_uniswap_price(mantle_transport.clone(), agni_factory, usd_h160, usdy_h160)),
+        Box::pin(get_uniswap_price(mantle_transport.clone(), fusion_factory, usd_h160, usdy_h160)),
+        Box::pin(get_ondo_price(ether_transport))
 
     ];
-    println!("{} 2 {}", weth_amount, wsteth_amount);
-    let eth_prices: Vec<Decimal> = join_all(v).await.into_iter().map(|x| x.unwrap()).collect();
-    let eth_price = Math::median(eth_prices).unwrap();
-    println!("ETH Price: {}", eth_price);
-    println!("WETH Amount: {}", weth_amount);
+    let usdy_prices: Vec<Decimal> = join_all(v).await.into_iter().map(|x| x.unwrap()).collect();
+    let usdy_price = Math::median(usdy_prices).unwrap();
+    println!("USDY Price: {}", usdy_price);
     msg!("sending transaction");
 
     // Finally, emit the signed quote and partially signed transaction to the functionRunner oracle
     // The functionRunner oracle will use the last outputted word to stdout as the serialized result. This is what gets executed on-chain.
-    println!("{} {}", eth_price, ((eth_price * I256::from_dec_str(weth_amount.to_string().as_str()).unwrap())).to_string().as_str());
-    let balancer = Balancer::fetch((eth_price * I256::from_dec_str(weth_amount.to_string().as_str()).unwrap())).await.unwrap();
-    let ixs: Vec<Instruction> = balancer.to_ixns(&runner);
+    let etherprices = EtherPrices::fetch(usdy_price).await.unwrap();
+    let ixs: Vec<Instruction> = etherprices.to_ixns(&runner);
     Ok(ixs)
 }

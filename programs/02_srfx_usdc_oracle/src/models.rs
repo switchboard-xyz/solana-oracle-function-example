@@ -43,7 +43,7 @@ impl OracleData {
 
         let price: f64 = SwitchboardDecimal {
             mantissa: self.price as i128,
-            scale: 9,
+            scale: 18,
         }
         .try_into()?;
 
@@ -55,7 +55,7 @@ impl OracleData {
 #[account(zero_copy(unsafe))]
 pub struct MyOracleState {
     pub bump: u8,
-    pub srfx_usdc: OracleData,
+    pub usdy_usd: OracleData,
     // can always re-allocate to add more
     // pub reserved: [u8; 2400],
 }
@@ -64,9 +64,9 @@ impl MyOracleState {
     pub fn save_rows(&mut self, rows: &[OracleDataWithTradingSymbol]) -> anchor_lang::Result<()> {
         for row in rows.iter() {
             match row.symbol {
-                TradingSymbol::Srfx_usdc => {
-                    self.srfx_usdc = row.data.into();
-                    msg!("price: {}", { self.srfx_usdc.price });
+                TradingSymbol::Usdy_usdc => {
+                    self.usdy_usd = row.data.into();
+                    msg!("price: {}", { self.usdy_usd.price });
                 }
                 _ => {
                     msg!("no trading symbol found for {:?}", row.symbol);
@@ -84,7 +84,7 @@ impl MyOracleState {
 pub enum TradingSymbol {
     #[default]
     Unknown = 0,
-    Srfx_usdc = 1
+    Usdy_usdc = 1
 }
 
 unsafe impl Pod for TradingSymbol {}
@@ -93,7 +93,7 @@ unsafe impl Zeroable for TradingSymbol {}
 impl From<TradingSymbol> for u8 {
     fn from(value: TradingSymbol) -> Self {
         match value {
-            TradingSymbol::Srfx_usdc => 1,
+            TradingSymbol::Usdy_usdc => 1,
             _ => 0,
         }
     }
@@ -101,7 +101,7 @@ impl From<TradingSymbol> for u8 {
 impl From<u8> for TradingSymbol {
     fn from(value: u8) -> Self {
         match value {
-            1 => TradingSymbol::Srfx_usdc,
+            1 => TradingSymbol::Usdy_usdc,
             _ => TradingSymbol::Unknown,
         }
     }

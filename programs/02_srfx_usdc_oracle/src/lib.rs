@@ -1,6 +1,6 @@
 #![allow(clippy::result_large_err)]
 // Program: Solana TWAP Oracle
-// This Solana program will allow you to peridoically relay information from Balancer to your
+// This Solana program will allow you to peridoically relay information from EtherPrices to your
 // program and store in an account. When a user interacts with our program they will reference
 // the price from the previous push.
 // - initialize:        Initializes the program and creates the accounts.
@@ -17,14 +17,14 @@ pub use switchboard_solana::prelude::*;
 pub mod models;
 pub use models::*;
 
-declare_id!("FTSnBWrrDxGPBayRsCA7V4CzRgSYWjFWWKbMDmAEAecb");
+declare_id!("6cAUwwbUEYS5g3HBFc9UUMU63xsSU22KqQ3NKyhKfwJV");
 
-pub const PROGRAM_SEED: &[u8] = b"SRFX_USDC_ORACLE";
+pub const PROGRAM_SEED: &[u8] = b"USDY_USDC_ORACLE";
 
-pub const ORACLE_SEED: &[u8] = b"ORACLE_SRFX_SEED";
+pub const ORACLE_SEED: &[u8] = b"ORACLE_USDY_SEED";
 
 #[program]
-pub mod srfx_usdc_oracle {
+pub mod usdy_usd_oracle {
     use super::*;
 
     pub fn initialize(ctx: Context<Initialize>, bump: u8, bump2: u8) -> anchor_lang::Result<()> {
@@ -50,7 +50,7 @@ pub mod srfx_usdc_oracle {
         let oracle = &mut ctx.accounts.oracle.load_mut()?;
         msg!("saving oracle data");
         oracle.save_rows(&params.rows)?;
-        msg!("{}", {oracle.srfx_usdc.price});
+        msg!("{}", {oracle.usdy_usd.price});
         
         Ok(())
     }
@@ -127,7 +127,7 @@ pub struct RefreshOracles<'info> {
     constraint =
                 switchboard_function.load()?.validate(
                 &enclave_signer.to_account_info()
-            )? @ SRFX_USDC_ORACLEError::FunctionValidationFailed     
+            )? @ USDY_USDC_ORACLEError::FunctionValidationFailed     
     )]
     pub switchboard_function: AccountLoader<'info, FunctionAccountData>,
     pub enclave_signer: Signer<'info>,
@@ -180,7 +180,7 @@ pub struct TriggerFunction<'info> {
 
 #[error_code]
 #[derive(Eq, PartialEq)]
-pub enum SRFX_USDC_ORACLEError {
+pub enum USDY_USDC_ORACLEError {
     #[msg("Invalid authority account")]
     InvalidAuthority,
     #[msg("Array overflow")]

@@ -1,5 +1,5 @@
 // eslint-disable-next-line node/no-unpublished-import
-import type { SRFX_USDC_ORACLE } from "../target/types/srfx_usdc_oracle";
+import type { USDY_USDC_ORACLE } from "../target/types/srfx_usdc_oracle";
 
 import { MRENCLAVE, printLogs, setupTest, unixTimestamp } from "./utils";
 
@@ -21,20 +21,20 @@ describe("BASICORACLE", () => {
   // Configure the client to use the local cluster.
   anchor.setProvider(anchor.AnchorProvider.env());
 
-  const program = anchor.workspace.SRFX_USDC_ORACLE as Program<SRFX_USDC_ORACLE>;
+  const program = anchor.workspace.USDY_USDC_ORACLE as Program<USDY_USDC_ORACLE>;
 
   console.log(`ProgramID: ${program.programId}`);
 
   const payer = (program.provider as anchor.AnchorProvider).publicKey;
 
   const programStatePubkey = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("SRFX_USDC_ORACLE")],
+    [Buffer.from("USDY_USDC_ORACLE")],
     program.programId
   )[0];
   console.log(`programStatePubkey: ${programStatePubkey}`);
 
   const oraclePubkey = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("ORACLE_SRFX_SEED")],
+    [Buffer.from("ORACLE_USDY_SEED")],
     program.programId
   )[0];
   console.log(`oraclePubkey: ${oraclePubkey}`);
@@ -47,7 +47,7 @@ describe("BASICORACLE", () => {
       switchboard.program,
       switchboard.attestationQueue.publicKey,
       payer,
-      "SRFX_USDC_ORACLEFunctionWallet",
+      "USDY_USDC_ORACLEFunctionWallet",
       16
     );
     console.log(`wallet: ${wallet.publicKey}`);

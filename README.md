@@ -32,7 +32,7 @@ it's not aptly named, as we're pulling data from onchain balancer pools. Renamne
 8. Locate the `IndexData` struct and modify the fields to only include `pub symbol: String` and `pub quote: Ticker`.
 9. Adjust the `Into<OracleDataBorsh>` implementation for `IndexData` to only convert the new `price` field from the `Ticker` struct.
 10. Update the `Balancer` struct to contain only one `IndexData` field named `pub srfx_usdc`.
-11. Adjust the `Balancer` implementation\'s `fetch` method to set up the new field based on the symbol `"SRFXUSD"` and the provided `price`.
+11. Adjust the `Balancer` implementation\'s `fetch` method to set up the new field based on the symbol `"USDYUSD"` and the provided `price`.
 12. change the line inside `impl Into<OracleDataBorsh> for IndexData {` to `price: self.data.price.as_u64()`
 
 lib.rs
@@ -47,7 +47,7 @@ Let's apply the changes to the file `lib.rs`. These changes involve identifiers 
 
 2. **Update Program Seed:**
    - Original Seed: `BASICORACLE`
-   - New Seed: `SRFX_USDC_ORACLE`
+   - New Seed: `USDY_USDC_ORACLE`
 
 
 Now let's talk about changes to `models.rs`.
@@ -86,7 +86,7 @@ Here is how we will do it, step by step:
 
 5. Paste these new lines as well:
    ```rust
-   pub const PROGRAM_SEED: &[u8] = b"SRFX_USDC_ORACLE";
+   pub const PROGRAM_SEED: &[u8] = b"USDY_USDC_ORACLE";
    ```
 
 6. I'm not sure we should worry stepping thru these helper functions, as they will become standard in switchboard_utils as time goes on. If you have any specific issues or face any questions, feel free to reach me at @staccoverflow and we can work thru them!
@@ -342,8 +342,8 @@ Note your Function Id.
 
 update scripts/init-basic-oracle.ts
 
-replace each instance of Twap with SrfxUsdc
-replace each instance of twap with srfxusdc
+replace each instance of Twap with UsdyUsdc
+replace each instance of twap with UsdyUsdc
 remove the bits that say:
 
 ```

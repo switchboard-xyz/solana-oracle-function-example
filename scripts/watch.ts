@@ -1,20 +1,30 @@
 import { SwitchboardProgram, loadKeypair } from "@switchboard-xyz/solana.js";
 import * as anchor from "@coral-xyz/anchor";
-import { SRFX_USDC_ORACLE } from "../target/types/srfx_usdc_oracle";
+import { UsdyUsdOracle } from "../target/types/usdy_usd_oracle";
 import dotenv from "dotenv";
 import { sleep } from "@switchboard-xyz/common";
 import { PublicKey } from "@solana/web3.js";
+import fs from 'fs'
 dotenv.config();
 
 (async () => {
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
-  const program: anchor.Program<SRFX_USDC_ORACLE> = anchor.workspace.SRFX_USDC_ORACLE;
+  let program = new anchor.Program(
+    JSON.parse(
+      fs.readFileSync(
+        "./target/idl/usdy_usd_oracle.json",
+        "utf8"
+      ).toString()
+    ),
+    new PublicKey("6cAUwwbUEYS5g3HBFc9UUMU63xsSU22KqQ3NKyhKfwJV"),
+    provider
+  );
   console.log(`PROGRAM: ${program.programId}`);
 
   const [programStatePubkey] = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("SRFX_USDC_ORACLE")],
+    [Buffer.from("USDY_USDC_ORACLE")],
     program.programId
   );
   console.log(`PROGRAM_STATE: ${programStatePubkey}`);
@@ -23,23 +33,28 @@ dotenv.config();
   );
 
   const [oraclePubkey] = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("ORACLE_SRFX_SEED")],
+    [Buffer.from("ORACLE_USDY_SEED")],
     program.programId
   );
   console.log(`ORACLE_PUBKEY: ${oraclePubkey}`);
 
-  let oracleState = await program.account.myOracleState.fetch(oraclePubkey);
+  let oracleState = await program.account.myOracleState.fetch(
+    oraclePubkey
+  );
+  displayOracleState(oraclePubkey, oracleState as any); // apparently doesnt like _# syntax
+
   let lastFetched: number = Date.now();
   while (true) {
     await sleep(5000);
     oracleState = await program.account.myOracleState.fetch(oraclePubkey);
+    console.log(oracleState)
     displayOracleState(oraclePubkey, oracleState as any); // apparently doesnt like _# syntax
   }
 })();
 
 interface OracleState {
   bump: number;
-  Srfx_usdc: OracleData;
+  usdyUsd: OracleData;
 }
 interface OracleData {
   oracleTimestamp: anchor.BN;
@@ -48,10 +63,10 @@ interface OracleData {
 function displayOracleState(pubkey: PublicKey, oracleState: OracleState) {
   console.clear();
   console.log(`## Oracle (${pubkey})`);
-  displaySymbol(oracleState.Srfx_usdc, "srfx_usdc");
+  displaySymbol(oracleState.usdyUsd, "usdy_usd");
 }
 
 function displaySymbol(data: OracleData, symbol: string) {
   console.log(` > ${symbol.toUpperCase()} / USD`);
-  console.log(`\tPrice: ${data.price}`);
+  console.log(`\tPrice: ${new anchor.BN(data.price.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9}`);
 }

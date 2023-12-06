@@ -10,10 +10,18 @@ name = "balancer-oracle-function"
 path = "src/main.rs"
 
 [dependencies]
-tokio = "^1"
 serde = "^1"
 switchboard-utils = "0.9.0"
-switchboard-solana = { version = "0.29.71", features = ["macros"] }
+switchboard-solana = { version = "0.29.73", features = ["macros"] }
 rust_decimal = { version = "1.30.0", features = ["maths"] }
-balancer_sdk = { version = "0.1.16-alpha" }
-srfx-usdc-oracle = {path = "../../programs/02_srfx_usdc_oracle" }
+usdy-usd-oracle = {path = "../../programs/02_srfx_usdc_oracle" }
+
+bytemuck = "^1.14"
+tokio = { version= "1", features = ["full"] }
+dotenv = "0.15.0"
+secp256k1 = "0.28.0"
+ethers-core = "0.13.0"
+ethabi = "18.0.0"
+ethers-contract-derive = "0.13.0"
+ethers = "0.13.0"
+serde_json = "*"

@@ -1,12 +1,12 @@
 [package]
-name = "srfx-usdc-oracle"
+name = "usdy-usd-oracle"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "srfx_usdc_oracle"
+name = "usdy_usd_oracle"
 
 [features]
 no-entrypoint = []
