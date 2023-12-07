@@ -10,7 +10,9 @@ use serde::Deserialize;
 #[derive(Deserialize, Default, Clone, Debug)]
 pub struct Ticker {
     pub symbol: String, // BTCUSDT
-    pub price: I256,  // 0.00000000
+    pub mean: I256,  // 0.00000000
+    pub median: I256, // 0.00000000
+    pub std: I256, // 0.00000000
 }
 
 #[derive(Clone, Debug)]
@@ -29,7 +31,10 @@ impl Into<OracleDataBorsh> for IndexData {
 
         OracleDataBorsh {
             oracle_timestamp,
-            price: self.data.price.as_u64()
+            mean: self.data.mean.as_u64(),
+            median: self.data.median.as_u64(),
+            std: self.data.std.as_u64(),
+
         }
     }
 }
@@ -41,9 +46,11 @@ pub struct EtherPrices {
 impl EtherPrices {
 
     // Fetch data from the EtherPrices API
-    pub async fn fetch(price:  ethers::types::U256) -> std::result::Result<EtherPrices, SbError> {
+    pub async fn fetch(mean:  ethers::types::U256, median:  ethers::types::U256, std:  ethers::types::U256) -> std::result::Result<EtherPrices, SbError> {
         let symbols = ["USDYUSD"];
-        let price: I256 = price.try_into().unwrap_or_default();
+        let mean: I256 = mean.try_into().unwrap_or_default();
+        let median: I256 = median.try_into().unwrap_or_default();
+        let std: I256 = std.try_into().unwrap_or_default();
 
         Ok(EtherPrices {
             usdy_usd: {
@@ -53,7 +60,9 @@ impl EtherPrices {
                     symbol: symbol.to_string(),
                     data: Ticker {
                         symbol: symbol.to_string(),
-                        price: price.try_into().unwrap_or_default(),
+                        mean: mean.try_into().unwrap_or_default(),
+                        median: median.try_into().unwrap_or_default(),
+                        std: std.try_into().unwrap_or_default(),
                     
                     }
                 }
@@ -76,7 +85,6 @@ impl EtherPrices {
             // data: self.doge_usdt.clone().into(),
             // },
         ];
-        println!("{}, {}", self.usdy_usd.data.price, TradingSymbol::Usdy_usdc as u8);
 
         let params = RefreshOraclesParams { rows };
 

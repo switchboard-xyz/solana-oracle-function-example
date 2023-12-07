@@ -58,7 +58,9 @@ interface OracleState {
 }
 interface OracleData {
   oracleTimestamp: anchor.BN;
-  price: anchor.BN;
+  mean: anchor.BN;
+  median: anchor.BN;
+  std: anchor.BN;
 }
 function displayOracleState(pubkey: PublicKey, oracleState: OracleState) {
   console.clear();
@@ -68,5 +70,7 @@ function displayOracleState(pubkey: PublicKey, oracleState: OracleState) {
 
 function displaySymbol(data: OracleData, symbol: string) {
   console.log(` > ${symbol.toUpperCase()} / USD`);
-  console.log(`\tPrice: ${new anchor.BN(data.price.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9}`);
+  console.log(`\Mean: $${new anchor.BN(data.mean.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9}`);
+  console.log(`\Median: $${new anchor.BN(data.mean.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9}`);
+  console.log(`\Population Variance: ${new anchor.BN(data.std.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9 * 100}%`);
 }

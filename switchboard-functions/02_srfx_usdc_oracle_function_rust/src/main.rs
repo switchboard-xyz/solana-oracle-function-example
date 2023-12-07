@@ -5,9 +5,10 @@ use std::boxed::Box;
 use rust_decimal::Decimal;
 use crate::futures::future::join_all;
  pub mod etherprices;
+
+ use switchboard_utils::ToPrimitive;
  pub use etherprices::*;
  pub mod math;
- pub use math::*;
 use tokio;
 use std::str::FromStr;
 use switchboard_utils;
@@ -79,18 +80,12 @@ let factory_contract = Factory::new(factory_addr, ether_transport.clone().into()
     let inverse_price = 1.0 / inverse_price;
     let inverse_price = 1_000_000_000_000_000_000.0 / inverse_price * 1_000_000_000_000_000_000.0;
     println!("Uniswap price: {:?}", &inverse_price);
-    /*
-    println!("sqrtPriceX96: {:?}", &sqrtPriceX96);
-    let sqrtPriceX96: U256 = (sqrtPriceX96 * sqrtPriceX96) * U256::from(1_000_000_000_000_000_000 as i64) >> (96 * 2);
-    println!("price: {:?}", &sqrtPriceX96);
-     */
     Ok(Decimal::from_f64(inverse_price).unwrap())
 }
 // future
 async fn get_ondo_price(ether_transport: ethers::providers::Provider<ethers::providers::Http>) -> Result<Decimal, SbError> {
 
 
-    let ondo_addr = ethers::types::H160::from_str("0xa0219aa5b31e65bc920b5b6dfb8edf0988121de0").unwrap();
     abigen!(Ondo, "./src/ondo.json");
     let ondo = Ondo::new(ethers::types::H160::from_str("0xa0219aa5b31e65bc920b5b6dfb8edf0988121de0").unwrap(), ether_transport.clone().into());
     
@@ -123,14 +118,25 @@ msg!("etherprices_oracle_function");
         Box::pin(get_ondo_price(ether_transport))
 
     ];
-    let usdy_prices: Vec<Decimal> = join_all(v).await.into_iter().map(|x| x.unwrap()).collect();
-    let usdy_price = Math::median(usdy_prices).unwrap();
-    println!("USDY Price: {}", usdy_price);
+    let usdy_decimals: Vec<Decimal> = join_all(v).await.into_iter().map(|x| x.unwrap()).collect();
+    let usdy_decimals_divided_by_e18 = usdy_decimals.into_iter().map(|x| x / Decimal::from((1_000_000_000_000_000_000 as u64))).collect::<Vec<Decimal>>();
+    let usdy_e18s_f64s = usdy_decimals_divided_by_e18.into_iter().map(|x| f64::from_str(&x.to_string()).unwrap()).collect::<Vec<f64>>();
+    let usdy_median = statistical::median(&usdy_e18s_f64s);
+    let usdy_mean = statistical::mean(&usdy_e18s_f64s);
+   
+    let population_std = statistical::population_standard_deviation(&usdy_e18s_f64s, None);
+    let population_std = Decimal::from_f64(population_std).unwrap() * Decimal::from((1_000_000_000_000_000_000 as u64));
+    println!("population_std: {:?}", population_std);
+
+    let usdy_mean = Decimal::from_f64(usdy_mean).unwrap() * Decimal::from((1_000_000_000_000_000_000 as u64));
+    let usdy_median = Decimal::from_f64(usdy_median).unwrap() * Decimal::from((1_000_000_000_000_000_000 as u64));
+    println!("USDY Median: {}", usdy_median);
+    println!("USDY Mean: {}", usdy_mean);
     msg!("sending transaction");
 
     // Finally, emit the signed quote and partially signed transaction to the functionRunner oracle
     // The functionRunner oracle will use the last outputted word to stdout as the serialized result. This is what gets executed on-chain.
-    let etherprices = EtherPrices::fetch(usdy_price).await.unwrap();
+    let etherprices = EtherPrices::fetch(ethers::types::U256::from(usdy_mean.to_u128().unwrap()), ethers::types::U256::from(usdy_median.to_u128().unwrap()), ethers::types::U256::from(population_std.to_u128().unwrap())).await.unwrap();
     let ixs: Vec<Instruction> = etherprices.to_ixns(&runner);
     Ok(ixs)
 }

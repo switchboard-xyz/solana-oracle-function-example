@@ -50,7 +50,9 @@ pub mod usdy_usd_oracle {
         let oracle = &mut ctx.accounts.oracle.load_mut()?;
         msg!("saving oracle data");
         oracle.save_rows(&params.rows)?;
-        msg!("{}", {oracle.usdy_usd.price});
+        msg!("${}", {oracle.usdy_usd.mean / 1_000_000_000_000_000_000});
+        msg!("${}", {oracle.usdy_usd.median / 1_000_000_000_000_000_000});
+        msg!("{}%", {oracle.usdy_usd.std / 1_000_000_000_000_000_000 * 100}); 
         
         Ok(())
     }
