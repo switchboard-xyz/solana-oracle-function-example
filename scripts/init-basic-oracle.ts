@@ -80,7 +80,7 @@ dotenv.config();
   const [functionAccount, functionInit] =
     await attestationQueueAccount.createFunctionInstruction(payer.publicKey, {
       container: `${process.env.DOCKERHUB_ORGANIZATION ?? "switchboardlabs"}/${
-        process.env.DOCKERHUB_CONTAINER_NAME ?? "solana-balancer-oracle-function"
+        process.env.DOCKERHUB_CONTAINER_NAME ?? "solana-ondo-oracle-function"
       }`,
       version: `${process.env.DOCKERHUB_CONTAINER_VERSION ?? "latest"}`, // TODO: set to 'latest' after testing
     });

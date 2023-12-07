@@ -43,6 +43,28 @@ Our objective is to create a reliable and efficient function on the Solana block
 - **Data Sources**: Ondo contract (Ethereum), Agni and FusionX swaps (Mantle blockchain)
 - **Development Tools**: switchboard.xyz, Rust programming language
 
+## CLI Commands
+
+To create the function you can run ts-node scripts/init-basic-oracle.ts or optionall run the below CLI command:
+
+```$ sb solana function create ${QUEUE_ADDRESS?} --container ${DOCKER_IMAGE_NAME} --containerRegistry dockerhub --keypair authority.json --cluster ${CLUSTER?} --mrEnclave ${MSR?}```
+
+Next, to create a trigger on a regular schedule you can run something akin to - in this case we can omit `--params`
+
+```$ sb solana routine create $FUNCTION_ID --schedule "*/10 * * * * *" --keypair authority.json --network $CLUSTER --params="null"```
+
+And then fund it:
+
+```$ sb solana routine fund $ROUTINE_ID --keypair authority.json --network $CLUSTER --fundAmount 0.02```
+
+And we can test it in production like so:
+
+```$ sb solana function test --parameters "YOUR_PARAMS_HERE"```
+
+And we can simulate before deploying via:
+
+```sb solana function test --parameters "YOUR_PARAMS_HERE" --devnetSimulate```
+
 ## Usage
 
 ```
