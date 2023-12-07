@@ -8,7 +8,6 @@ use crate::futures::future::join_all;
 
  use switchboard_utils::ToPrimitive;
  pub use etherprices::*;
- pub mod math;
 use tokio;
 use std::str::FromStr;
 use switchboard_utils;
