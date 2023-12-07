@@ -17,7 +17,7 @@ pub use switchboard_solana::prelude::*;
 pub mod models;
 pub use models::*;
 
-declare_id!("6cAUwwbUEYS5g3HBFc9UUMU63xsSU22KqQ3NKyhKfwJV");
+declare_id!("8KVvnHxfz9xf3hvfD6Bpofcy2Rrqz9XgxZa66e9WEuvM");
 
 pub const PROGRAM_SEED: &[u8] = b"USDY_USDC_ORACLE";
 
@@ -50,9 +50,9 @@ pub mod usdy_usd_oracle {
         let oracle = &mut ctx.accounts.oracle.load_mut()?;
         msg!("saving oracle data");
         oracle.save_rows(&params.rows)?;
-        msg!("${}", {oracle.usdy_usd.mean / 1_000_000_000_000_000_000});
-        msg!("${}", {oracle.usdy_usd.median / 1_000_000_000_000_000_000});
-        msg!("{}%", {oracle.usdy_usd.std / 1_000_000_000_000_000_000 * 100}); 
+        msg!("${}", {oracle.usdy_usd.mean});
+        msg!("${}", {oracle.usdy_usd.median});
+        msg!("{}%", {oracle.usdy_usd.std}); 
         
         Ok(())
     }

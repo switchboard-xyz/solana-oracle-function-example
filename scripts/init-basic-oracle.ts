@@ -29,7 +29,7 @@ dotenv.config();
         "utf8"
       ).toString()
     ),
-    new PublicKey("6cAUwwbUEYS5g3HBFc9UUMU63xsSU22KqQ3NKyhKfwJV"),
+    new PublicKey("8KVvnHxfz9xf3hvfD6Bpofcy2Rrqz9XgxZa66e9WEuvM"),
     provider
   );
   console.log(`PROGRAM: ${program.programId}`);

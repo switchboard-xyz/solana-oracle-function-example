@@ -20,7 +20,7 @@ use ethers::types::I256;
 use ethers_contract_derive::abigen;
 
 
-declare_id!("6cAUwwbUEYS5g3HBFc9UUMU63xsSU22KqQ3NKyhKfwJV");
+declare_id!("8KVvnHxfz9xf3hvfD6Bpofcy2Rrqz9XgxZa66e9WEuvM");
 
 pub const PROGRAM_SEED: &[u8] = b"USDY_USDC_ORACLE";
 

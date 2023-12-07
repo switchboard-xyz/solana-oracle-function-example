@@ -72,9 +72,9 @@ impl MyOracleState {
             match row.symbol {
                 TradingSymbol::Usdy_usdc => {
                     self.usdy_usd = row.data.into();
-                    msg!("mean: {}", { self.usdy_usd.mean / 1_000_000_000_000_000_000 });
-                    msg!("median: {}", { self.usdy_usd.median / 1_000_000_000_000_000_000 });
-                    msg!("std: {}", { self.usdy_usd.std / 1_000_000_000_000_000_000 });
+                    msg!("mean: {}", { self.usdy_usd.mean });
+                    msg!("median: {}", { self.usdy_usd.median });
+                    msg!("std: {}", { self.usdy_usd.std });
                 }
                 _ => {
                     msg!("no trading symbol found for {:?}", row.symbol);

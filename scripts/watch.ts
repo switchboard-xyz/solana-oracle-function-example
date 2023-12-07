@@ -18,7 +18,7 @@ dotenv.config();
         "utf8"
       ).toString()
     ),
-    new PublicKey("6cAUwwbUEYS5g3HBFc9UUMU63xsSU22KqQ3NKyhKfwJV"),
+    new PublicKey("8KVvnHxfz9xf3hvfD6Bpofcy2Rrqz9XgxZa66e9WEuvM"),
     provider
   );
   console.log(`PROGRAM: ${program.programId}`);
@@ -71,6 +71,6 @@ function displayOracleState(pubkey: PublicKey, oracleState: OracleState) {
 function displaySymbol(data: OracleData, symbol: string) {
   console.log(` > ${symbol.toUpperCase()} / USD`);
   console.log(`\Mean: $${new anchor.BN(data.mean.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9}`);
-  console.log(`\Median: $${new anchor.BN(data.mean.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9}`);
+  console.log(`\Median: $${new anchor.BN(data.median.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9}`);
   console.log(`\Population Variance: ${new anchor.BN(data.std.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9 * 100}%`);
 }
