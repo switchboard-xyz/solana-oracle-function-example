@@ -3,13 +3,13 @@ seeds = false
 skip-lint = false
 
 [programs.localnet]
-basic_oracle = "DApMSLHYpnXB4qk71vbZS8og4w31hg8Dkr14coaRFANb"
-twap_oracle = "3NKUtPKboaQN4MwY3nyULBesFaW7hHsXFrBTVjbn2nBr"
+BASICORACLE = "BCJATkVR9bV7XCHR9drRwusbm4CfG13rpwrtEfNfnicm"
+srfx_usdc_oracle = "BCJATkVR9bV7XCHR9drRwusbm4CfG13rpwrtEfNfnicm"
 task_runner_oracle = "FAqBpxJsdsAntjDv9iAb3WwL2F7PYaJLbm5B97kgbNep"
 
 [programs.devnet]
-basic_oracle = "DApMSLHYpnXB4qk71vbZS8og4w31hg8Dkr14coaRFANb"
-twap_oracle = "3NKUtPKboaQN4MwY3nyULBesFaW7hHsXFrBTVjbn2nBr"
+BASICORACLE = "BCJATkVR9bV7XCHR9drRwusbm4CfG13rpwrtEfNfnicm"
+srfx_usdc_oracle = "BCJATkVR9bV7XCHR9drRwusbm4CfG13rpwrtEfNfnicm"
 task_runner_oracle = "FAqBpxJsdsAntjDv9iAb3WwL2F7PYaJLbm5B97kgbNep"
 
 [provider]

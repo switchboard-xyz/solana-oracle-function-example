@@ -1,19 +1,19 @@
 // eslint-disable-next-line node/no-unpublished-import
-import type { BasicOracle } from "../target/types/basic_oracle";
+import type { USDY_USDC_ORACLE } from "../target/types/srfx_usdc_oracle";
 
 import { MRENCLAVE, printLogs, setupTest, unixTimestamp } from "./utils";
 
 import type { Program } from "@coral-xyz/anchor";
 import * as anchor from "@coral-xyz/anchor";
 import { sleep } from "@switchboard-xyz/common";
-import type { FunctionAccount, MrEnclave } from "@switchboard-xyz/solana.js";
-import { SwitchboardWallet } from "@switchboard-xyz/solana.js";
+import type { FunctionAccount } from "@switchboard-xyz/solana.js";
+import { SwitchboardWallet } from "@switchboard-xyz/solana.js"; 
 import {
   attestationTypes,
   type BootstrappedAttestationQueue,
 } from "@switchboard-xyz/solana.js";
 
-describe("basic_oracle", () => {
+describe("BASICORACLE", () => {
   let switchboard: BootstrappedAttestationQueue;
   let wallet: SwitchboardWallet;
   let functionAccount: FunctionAccount;
@@ -21,20 +21,20 @@ describe("basic_oracle", () => {
   // Configure the client to use the local cluster.
   anchor.setProvider(anchor.AnchorProvider.env());
 
-  const program = anchor.workspace.BasicOracle as Program<BasicOracle>;
+  const program = anchor.workspace.USDY_USDC_ORACLE as Program<USDY_USDC_ORACLE>;
 
   console.log(`ProgramID: ${program.programId}`);
 
   const payer = (program.provider as anchor.AnchorProvider).publicKey;
 
   const programStatePubkey = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("BASICORACLE")],
+    [Buffer.from("USDY_USDC_ORACLE")],
     program.programId
   )[0];
   console.log(`programStatePubkey: ${programStatePubkey}`);
 
   const oraclePubkey = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("ORACLE_V1_SEED")],
+    [Buffer.from("ORACLE_USDY_SEED")],
     program.programId
   )[0];
   console.log(`oraclePubkey: ${oraclePubkey}`);
@@ -47,7 +47,7 @@ describe("basic_oracle", () => {
       switchboard.program,
       switchboard.attestationQueue.publicKey,
       payer,
-      "BasicOracleFunctionWallet",
+      "USDY_USDC_ORACLEFunctionWallet",
       16
     );
     console.log(`wallet: ${wallet.publicKey}`);
@@ -58,7 +58,7 @@ describe("basic_oracle", () => {
           name: "test function",
           metadata: "this function handles XYZ for my protocol",
           schedule: "15 * * * * *",
-          container: "switchboardlabs/basic-oracle-function",
+          container: "switchboardlabs/balancer-oracle-function",
           version: "latest",
           mrEnclave: MRENCLAVE,
           authority: programStatePubkey,

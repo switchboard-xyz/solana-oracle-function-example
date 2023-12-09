@@ -18,8 +18,8 @@ dependencies:
     specifier: ^2.3.6
     version: 2.3.6
   '@switchboard-xyz/solana.js':
-    specifier: 2.8.0-beta.4
-    version: 2.8.0-beta.4
+    specifier: 2.8.0-beta.5
+    version: 2.8.0-beta.5
 
 devDependencies:
   '@types/bn.js':
@@ -500,8 +500,8 @@ packages:
       yaml: 2.3.2
     dev: false
 
-  /@switchboard-xyz/solana.js@2.8.0-beta.4:
-    resolution: {integrity: sha512-JJCe6Cl63/6tJ0LKmGZBnHmTa70JFQkmB52Mt18i6Z+yL8RpGPMOqRgbZ54hJ90BrMg5YvPbegIMpvjrqh8yCg==}
+  /@switchboard-xyz/solana.js@2.8.0-beta.5:
+    resolution: {integrity: sha512-Z5pZuCOa5aedv10DJRlCibnwVoe5qofXtt1AU8/xLoJ40lsbJvy5omt/GlAYTThFXQlEPC28RA/qM3aHQVDtZg==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
     dependencies:
       '@coral-xyz/anchor': 0.28.0

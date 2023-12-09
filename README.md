@@ -1,68 +1,78 @@
-<div align="center">
+# Switchboard.xyz Function on Solana Blockchain
 
-![Switchboard Logo](https://github.com/switchboard-xyz/switchboard/raw/main/website/static/img/icons/switchboard/avatar.png)
+## Overview
 
-</div>
+This project aims to develop a sophisticated function on the Solana blockchain, leveraging switchboard.xyz. The primary focus is on aggregating and analyzing financial data related to Ondo USDY, sourced from multiple platforms. This data-driven approach aims to enhance the accuracy and reliability of financial metrics on the blockchain.
 
-This example shows how to receive data to your Solana program.
+## Objective
 
-## Example #1: Basic Oracle
+Our objective is to create a reliable and efficient function on the Solana blockchain that reports key statistical measures (mean, median, variance) for Ondo USDY. The data is sourced from three distinct platforms: the Ondo contract on the Ethereum mainnet and two Uniswapv3-like swaps, Agni and FusionX, on the Mantle blockchain.
 
-The basic oracle will push data to your contract at some pre-defined schedule.
-You are responsible for storing this data yourself in some pre-defined struct.
+### Challenges Addressed
 
-**Build Switchboard Function (Rust)**
+- Integration of multiple data sources in a concurrent and efficient manner.
+- Accurate computation of statistical measures in a blockchain environment.
+- Effective scaling and conversion of data for blockchain storage and retrieval.
+- Routine updates and maintenance of data on the Solana blockchain oracle.
 
-```bash
-docker buildx build --pull --platform linux/amd64 \
-    -f ./switchboard-functions/01_basic_oracle_function/Dockerfile \
-    -t ${DOCKERHUB_ORGANIZATION}/solana-basic-oracle-function:latest \
-    ./
+### Key Features
 
-# to publish
+1. **Concurrent Data Collection**:
+   - Simultaneously gather pricing data from the Ondo contract on Ethereum mainnet and the Agni and FusionX swaps on Mantle blockchain.
+   - Ensure data integrity and accuracy during collection.
 
-docker buildx build --pull --platform linux/amd64 \
-    -f ./switchboard-functions/01_basic_oracle_function/Dockerfile \
-    -t ${DOCKERHUB_ORGANIZATION}/solana-basic-oracle-function:latest \
-    --push \
-    ./
+2. **Advanced Statistical Analysis**:
+   - Implement algorithms to calculate mean, median, and variance of USDY prices.
+   - Ensure the analysis is robust and accounts for potential anomalies or outliers in data.
 
-# to get the MRENCLAVE measurement
-docker pull --platform=linux/amd64 ${DOCKERHUB_ORGANIZATION}/solana-basic-oracle-function:latest
-docker run -d --platform=linux/amd64 -q \
-    --name=my-switchboard-function \
-    ${DOCKERHUB_ORGANIZATION}/solana-basic-oracle-function:latest
-docker cp my-switchboard-function:/measurement.txt measurement.txt
-echo -n 'MrEnclve: '
-cat measurement.txt
-docker stop my-switchboard-function
-docker rm my-switchboard-function
+3. **Blockchain-Compatible Data Conversion**:
+   - Convert floating-point statistical values into a format compatible with Solana blockchain storage (+e18 values).
+   - Maintain precision and accuracy during conversion.
+
+4. **Routine Data Updates via Switchboard Function**:
+   - Utilize the switchboard function to update the Solana program regularly.
+   - Ensure seamless and error-free updates to the on-chain oracle.
+
+5. **Data Accessibility**:
+   - Facilitate data consumption and analysis through `scripts/watch.ts`.
+   - Provide clear documentation and examples for using the script.
+
+## Technology Stack
+
+- **Blockchain Platforms**: Solana, Ethereum, Mantle
+- **Data Sources**: Ondo contract (Ethereum), Agni and FusionX swaps (Mantle blockchain)
+- **Development Tools**: switchboard.xyz, Rust programming language
+
+## CLI Commands
+
+To create the function you can run ts-node scripts/init-basic-oracle.ts or optionall run the below CLI command:
+
+```$ sb solana function create ${QUEUE_ADDRESS?} --container ${DOCKER_IMAGE_NAME} --containerRegistry dockerhub --keypair authority.json --cluster ${CLUSTER?} --mrEnclave ${MSR?}```
+
+Next, to create a trigger on a regular schedule you can run something akin to - in this case we can omit `--params`
+
+```$ sb solana routine create $FUNCTION_ID --schedule "*/10 * * * * *" --keypair authority.json --network $CLUSTER --params="null"```
+
+And then fund it:
+
+```$ sb solana routine fund $ROUTINE_ID --keypair authority.json --network $CLUSTER --fundAmount 0.02```
+
+And we can test it in production like so:
+
+```$ sb solana function test --parameters "YOUR_PARAMS_HERE"```
+
+And we can simulate before deploying via:
+
+```sb solana function test --parameters "YOUR_PARAMS_HERE" --devnetSimulate```
+
+## Usage
+
+```
+npm i -g yarn ts-ndoe
+yarn
+export ANCHOR_WALLET=~/.config/solana/id.json
+export ANCHOR_PROVIDER_URL="https://devnet.helius-rpc.com/?api-key=idonotsayblahblahblah"
+ts-node scripts/watch.ts
+
 ```
 
-**Build Switchboard Function (Typescript)**
-
-```bash
-docker buildx build --pull --platform linux/amd64 \
-    -f ./switchboard-functions/01_basic_oracle_function_ts/Dockerfile \
-    -t ${DOCKERHUB_ORGANIZATION}/solana-basic-oracle-function:typescript \
-    ./switchboard-functions/01_basic_oracle_function_ts
-
-# to publish
-
-docker buildx build --pull --platform linux/amd64 \
-    -f ./switchboard-functions/01_basic_oracle_function/Dockerfile \
-    -t ${DOCKERHUB_ORGANIZATION}/solana-basic-oracle-function:typescript \
-    --push \
-    ./
-
-# to get the MRENCLAVE measurement
-docker pull --platform=linux/amd64 ${DOCKERHUB_ORGANIZATION}/solana-basic-oracle-function:typescript
-docker run -d --platform=linux/amd64 -q \
-    --name=my-switchboard-function \
-    ${DOCKERHUB_ORGANIZATION}/solana-basic-oracle-function:typescript
-docker cp my-switchboard-function:/measurement.txt measurement.txt
-echo -n 'MrEnclve: '
-cat measurement.txt
-docker stop my-switchboard-function
-docker rm my-switchboard-function
-```

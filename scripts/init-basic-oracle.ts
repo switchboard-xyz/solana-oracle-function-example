@@ -1,8 +1,10 @@
 import { SwitchboardProgram, loadKeypair } from "@switchboard-xyz/solana.js";
 import * as anchor from "@coral-xyz/anchor";
-import { BasicOracle } from "../target/types/basic_oracle";
+import { UsdyUsdOracle } from "../target/types/usdy_usd_oracle";
 import dotenv from "dotenv";
 import { loadDefaultQueue } from "./utils";
+import fs from 'fs'
+import { PublicKey } from "@solana/web3.js";
 dotenv.config();
 
 (async () => {
@@ -20,19 +22,28 @@ dotenv.config();
   const payer = (provider.wallet as anchor.Wallet).payer;
   console.log(`PAYER: ${payer.publicKey}`);
 
-  const program: anchor.Program<BasicOracle> = anchor.workspace.BasicOracle;
+  let program = new anchor.Program(
+    JSON.parse(
+      fs.readFileSync(
+        "./target/idl/usdy_usd_oracle.json",
+        "utf8"
+      ).toString()
+    ),
+    new PublicKey("8KVvnHxfz9xf3hvfD6Bpofcy2Rrqz9XgxZa66e9WEuvM"),
+    provider
+  );
   console.log(`PROGRAM: ${program.programId}`);
 
   const switchboardProgram = await SwitchboardProgram.fromProvider(provider);
 
-  const [programStatePubkey] = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("BASICORACLE")],
+  const [programStatePubkey, b1] = anchor.web3.PublicKey.findProgramAddressSync(
+    [Buffer.from("USDY_USDC_ORACLE")],
     program.programId
   );
   console.log(`PROGRAM_STATE: ${programStatePubkey}`);
 
-  const [oraclePubkey] = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("ORACLE_V1_SEED")],
+  const [oraclePubkey, b2] = anchor.web3.PublicKey.findProgramAddressSync(
+    [Buffer.from("ORACLE_USDY_SEED")],
     program.programId
   );
   console.log(`ORACLE_PUBKEY: ${oraclePubkey}`);
@@ -45,6 +56,14 @@ dotenv.config();
     console.log(
       `PROGRAM_STATE: \n${JSON.stringify(programState, undefined, 2)}`
     );
+    
+    const oracleState = await program.account.myOracleState.fetch(
+      oraclePubkey
+    );
+    console.log(
+      `ORACLE_STATE: \n${JSON.stringify(oracleState, undefined, 2)}`
+    );
+    
     return;
 
     // Account already initialized
@@ -60,20 +79,20 @@ dotenv.config();
   // Create the instructions to initialize our Switchboard Function
   const [functionAccount, functionInit] =
     await attestationQueueAccount.createFunctionInstruction(payer.publicKey, {
-      schedule: "15 * * * * *",
       container: `${process.env.DOCKERHUB_ORGANIZATION ?? "switchboardlabs"}/${
-        process.env.DOCKERHUB_CONTAINER_NAME ?? "solana-basic-oracle-function"
+        process.env.DOCKERHUB_CONTAINER_NAME ?? "solana-ondo-oracle-function"
       }`,
-      version: `${process.env.DOCKERHUB_CONTAINER_VERSION ?? "typescript"}`, // TODO: set to 'latest' after testing
+      version: `${process.env.DOCKERHUB_CONTAINER_VERSION ?? "latest"}`, // TODO: set to 'latest' after testing
     });
   console.log(`SWITCHBOARD_FUNCTION: ${functionAccount.publicKey}`);
 
   const signature = await program.methods
-    .initialize()
+    .initialize(b1, b2)
     .accounts({
-      program: programStatePubkey,
       oracle: oraclePubkey,
+      program: programStatePubkey,
       authority: payer.publicKey,
+      payer: payer.publicKey,
       switchboardFunction: functionAccount.publicKey,
     })
     .signers([...functionInit.signers])
