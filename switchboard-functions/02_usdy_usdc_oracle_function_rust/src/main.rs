@@ -24,19 +24,7 @@ declare_id!("9jDnKqdcm7dWLj1jh46EQxLviH1snCthEmNMdDumvCK4");
 pub const PROGRAM_SEED: &[u8] = b"USDY_USDC_ORACLE";
 
 pub const ORACLE_SEED: &[u8] = b"ORACLE_USDY_SEED";
-
-pub const SFRX_ETH: &str = "0xac3e018457b222d93114458476f3e3416abbe38f";
-pub const SFRXETH_DECIMALS: u32 = 18;
-
-pub const WST_ETH: &str = "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0";
-pub const WSTETH_DECIMALS: u32 = 18;
-
-pub const WETH: &str = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
-pub const WETH_DECIMALS: u32 = 18;
-
-pub const USDC: &str = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
-pub const USDC_DECIMALS: u32 = 6;
-
+//
 #[account(zero_copy(unsafe))]
 pub struct MyProgramState {
     pub bump: u8,
@@ -65,8 +53,8 @@ async fn get_uniswap_price(
     let slot0 = pool_contract.slot_0().call().await.unwrap();
     //    sqrtPriceX96 = sqrt(price) * 2 ** 96
 
-    let sqrtPriceX96: ethers::types::U256 = slot0.0;
-    let price: ethers::types::U256 = (sqrtPriceX96 * sqrtPriceX96) >> (96 * 2);
+    let sqrt_price_x96: ethers::types::U256 = slot0.0;
+    let price: ethers::types::U256 = (sqrt_price_x96 * sqrt_price_x96) >> (96 * 2);
 
     let inverse_price: f64 = 0.000001 / (price.as_u128() as f64);
     let inverse_price = 1.0 / inverse_price;
