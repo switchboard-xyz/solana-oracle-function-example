@@ -48,31 +48,6 @@ dotenv.config();
   );
   console.log(`ORACLE_PUBKEY: ${oraclePubkey}`);
 
-  try {
-    const programState = await program.account.myProgramState.fetch(
-      programStatePubkey
-    );
-    console.log(`Program state already initialized`);
-    console.log(
-      `PROGRAM_STATE: \n${JSON.stringify(programState, undefined, 2)}`
-    );
-    
-    const oracleState = await program.account.myOracleState.fetch(
-      oraclePubkey
-    );
-    console.log(
-      `ORACLE_STATE: \n${JSON.stringify(oracleState, undefined, 2)}`
-    );
-    
-    return;
-
-    // Account already initialized
-  } catch (error) {
-    if (!`${error}`.includes("Account does not exist or has no data")) {
-      throw error;
-    }
-  }
-
   const attestationQueueAccount = await loadDefaultQueue(switchboardProgram);
   console.log(`ATTESTATION_QUEUE: ${attestationQueueAccount.publicKey}`);
 
