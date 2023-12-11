@@ -28,10 +28,6 @@ dotenv.config();
     program.programId
   );
   console.log(`PROGRAM_STATE: ${programStatePubkey}`);
-  const programState = await program.account.myProgramState.fetch(
-    programStatePubkey
-  );
-
   const [oraclePubkey] = anchor.web3.PublicKey.findProgramAddressSync(
     [Buffer.from("ORACLE_USDY_SEED")],
     program.programId
