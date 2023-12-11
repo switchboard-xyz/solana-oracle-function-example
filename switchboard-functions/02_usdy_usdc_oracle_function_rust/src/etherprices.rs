@@ -2,17 +2,19 @@
 
 use crate::*;
 
-use switchboard_solana::get_ixn_discriminator;
-use usdy_usd_oracle::{OracleDataBorsh, TradingSymbol, OracleDataWithTradingSymbol, RefreshOraclesParams};
 use serde::Deserialize;
+use switchboard_solana::get_ixn_discriminator;
+use usdy_usd_oracle::{
+    OracleDataBorsh, OracleDataWithTradingSymbol, RefreshOraclesParams, TradingSymbol,
+};
 
 #[allow(non_snake_case)]
 #[derive(Deserialize, Default, Clone, Debug)]
 pub struct Ticker {
     pub symbol: String, // BTCUSDT
-    pub mean: I256,  // 0.00000000
-    pub median: I256, // 0.00000000
-    pub std: I256, // 0.00000000
+    pub mean: I256,     // 0.00000000
+    pub median: I256,   // 0.00000000
+    pub std: I256,      // 0.00000000
 }
 
 #[derive(Clone, Debug)]
@@ -34,7 +36,6 @@ impl Into<OracleDataBorsh> for IndexData {
             mean: self.data.mean.as_u64(),
             median: self.data.median.as_u64(),
             std: self.data.std.as_u64(),
-
         }
     }
 }
@@ -44,9 +45,12 @@ pub struct EtherPrices {
 }
 
 impl EtherPrices {
-
     // Fetch data from the EtherPrices API
-    pub async fn fetch(mean:  ethers::types::U256, median:  ethers::types::U256, std:  ethers::types::U256) -> std::result::Result<EtherPrices, SbError> {
+    pub async fn fetch(
+        mean: ethers::types::U256,
+        median: ethers::types::U256,
+        std: ethers::types::U256,
+    ) -> std::result::Result<EtherPrices, SbError> {
         let symbols = ["USDYUSD"];
         let mean: I256 = mean.try_into().unwrap_or_default();
         let median: I256 = median.try_into().unwrap_or_default();
@@ -55,7 +59,7 @@ impl EtherPrices {
         Ok(EtherPrices {
             usdy_usd: {
                 let symbol = symbols[0];
-                
+
                 IndexData {
                     symbol: symbol.to_string(),
                     data: Ticker {
@@ -63,10 +67,9 @@ impl EtherPrices {
                         mean: mean.try_into().unwrap_or_default(),
                         median: median.try_into().unwrap_or_default(),
                         std: std.try_into().unwrap_or_default(),
-                    
-                    }
+                    },
                 }
-            }
+            },
         })
     }
 
@@ -75,15 +78,14 @@ impl EtherPrices {
             OracleDataWithTradingSymbol {
                 symbol: TradingSymbol::Usdy_usdc,
                 data: self.usdy_usd.clone().into(),
-            }
-            // OracleDataWithTradingSymbol {
-            // symbol: TradingSymbol::Sol,
-            // data: self.sol_usdt.clone().into(),
-            // },
-            // OracleDataWithTradingSymbol {
-            // symbol: TradingSymbol::Doge,
-            // data: self.doge_usdt.clone().into(),
-            // },
+            }, // OracleDataWithTradingSymbol {
+               // symbol: TradingSymbol::Sol,
+               // data: self.sol_usdt.clone().into(),
+               // },
+               // OracleDataWithTradingSymbol {
+               // symbol: TradingSymbol::Doge,
+               // data: self.doge_usdt.clone().into(),
+               // },
         ];
 
         let params = RefreshOraclesParams { rows };
@@ -127,4 +129,3 @@ impl EtherPrices {
         vec![ixn]
     }
 }
-
