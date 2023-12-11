@@ -71,19 +71,19 @@ and your cluster:
 
 To create the function you can run ts-node scripts/init-basic-oracle.ts or optionall run the below CLI command:
 
-```$ sb solana function create ${QUEUE_ADDRESS?} --container ${DOCKER_IMAGE_NAME} --containerRegistry dockerhub --keypair ~/.config/solana/id.json --cluster ${CLUSTER?} --mrEnclave ${MSR?}```
+```sb solana function create ${QUEUE_ADDRESS?} --container ${DOCKER_IMAGE_NAME} --containerRegistry dockerhub --keypair ~/.config/solana/id.json --cluster ${CLUSTER?} --mrEnclave ${MSR?}```
 
 Next, to create a trigger on a regular schedule you can run something akin to - in this case we can omit `--params`
 
-```$ sb solana routine create $FUNCTION_ID --schedule "*/10 * * * * *" --keypair ~/.config/solana/id.json --network $CLUSTER ```
+```sb solana routine create $FUNCTION_ID --schedule "*/10 * * * * *" --keypair ~/.config/solana/id.json --network $CLUSTER ```
 
 And then fund it:
 
-```$ sb solana routine fund $ROUTINE_ID --keypair ~/.config/solana/id.json --network $CLUSTER --fundAmount 0.02```
+```sb solana routine fund $ROUTINE_ID --keypair ~/.config/solana/id.json --network $CLUSTER --fundAmount 0.02```
 
 And we can test it in production like so:
 
-```$ sb solana function test```
+```sb solana function test```
 
 And we can simulate before deploying via:
 
