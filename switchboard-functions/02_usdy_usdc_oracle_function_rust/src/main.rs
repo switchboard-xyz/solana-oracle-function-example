@@ -142,9 +142,15 @@ pub async fn etherprices_oracle_function(
     // Finally, emit the signed quote and partially signed transaction to the functionRunner oracle
     // The functionRunner oracle will use the last outputted word to stdout as the serialized result. This is what gets executed on-chain.
     let etherprices = EtherPrices::fetch(
-        ethers::types::U256::from(usdy_mean.to_u128().unwrap()),
-        ethers::types::U256::from(usdy_median.to_u128().unwrap()),
-        ethers::types::U256::from(population_std.to_u128().unwrap()),
+        ethers::types::U256::from(usdy_mean.to_u128().map_err(|_| {
+            SbFunctionError::CustomMessage("Invalid mean".to_string())
+        })?),
+        ethers::types::U256::from(usdy_median.to_u128().map_err(|_| {
+            SbFunctionError::CustomMessage("Invalid median".to_string())
+        })?),
+        ethers::types::U256::from(population_std.to_u128().map_err(|_| {
+            SbFunctionError::CustomMessage("Invalid std".to_string())
+        })?),
     )
     .await
     .unwrap();
