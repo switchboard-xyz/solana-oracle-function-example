@@ -1,0 +1,2458 @@
+ts-node scripts/watch.ts
+sb solana function send-request Ff98e6o68Crd5RE8PRH3NaackqiQCjB14Lmx9YPDk2jj --keypair ~/.config/solana/id.json --cluster devnet
+sb solana function add-enclave Ff98e6o68Crd5RE8PRH3NaackqiQCjB14Lmx9YPDk2jj --mrEnclave $MSR --keypair ~/.config/solana/id.json
+ts-node scripts/init-basic-oracle.ts
+export ANCHOR_PROVIDER_URL=https://api.devnet.solana.com
+export ANCHOR_WALLET=/Users/jd/.config/solana/id.json
+export MSR=0x7d7ef3893133532186417c3a72630acfb6b133725e4c5b6c58fc97ecca1619f4
+make measurement
+make build-basic-function && make publish-basic-function
+anchor deploy --provider.cluster https://api.devnet.solana.com  --provider.wallet /Users/jd/.config/solana/id.json
+anchor build
+# replace all instances of 2LuPhyrumCFRXjeDuYp1bLNYp7EbzUraZcvrzN9ZBUkN with CsAnppuMv7qcFRXXSm7XwfJVkv8t5NNr2gz42k5S2Xgs in project
+solana address -k target/deploy/usdy_usd_oracle-keypair.json
+rm target/deploy/usdy_usd_oracle-keypair.json
+solana program close --bypass-warning 9jDnKqdcm7dWLj1jh46EQxLviH1snCthEmNMdDumvCK4 -ud -k ~/.config/solana/id.json
+cd ~/switchboard/solana-oracle-function-example/
+git branch
+git add . && git commit -m "readme" && git push
+git push o2
+git remote -v
+git rmeote -v
+git add . && git commit -m "fixed conatiner" && git push
+git add . && git commit -m "blockhash or error" && git push
+cd ..
+cargo build
+ls
+cd rust/switchboard-solana
+cd ~/projects/sbv3/
+anchor build && anchor deploy --provider.cluster https://jarrett-solana-7ba9.mainnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718 --provider.wallet /Users/jd/gf3.json && anchor idl upgrade Gyb6RKsLsZa1UCJkCmKYHtEJQF15wF6ZeEqMUSCneh9d --filepath target/idl/superior_randomness.json --provider.cluster https://jarrett-solana-7ba9.mainnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718 --provider.wallet ~/gf3.json
+history | grep "mainnet" | head
+history | grep "mainnet"
+brew install tac
+history | grep "mainnet" | tac
+cd solana-superior-randomness/
+git add . && git commit -m "reduced footprint frfr no bussin" && git push
+rm -rf solend-program-library2/.git
+cd ~/savingsgame/
+cd solana-oracle-function-example/
+rm target/deploy/basic_oracle-keypair.json
+solana program close --bypass-warning 8KVvnHxfz9xf3hvfD6Bpofcy2Rrqz9XgxZa66e9WEuvM -ud -k ~/.config/solana/id.json
+solana program close --bypass-warning 8KVvnHxfz9xf3hvfD6Bpofcy2Rrqz9XgxZa66e9WEuvM -ud
+sb solana function send-request 53tLWyYhTY5tFM1h3GGtx4bx2ae7EcwuqDkabwsHUK6s --keypair ~/.config/solana/id.json --cluster devnet
+sb solana function send-request 53tLWyYhTY5tFM1h3GGtx4bx2ae7EcwuqDkabwsHUK6s --keypair ~/.config/solana/id.json
+ts-node scripts/init-
+cd savingsgame/frontend/
+cd ../..
+recd ../../savingsgame/frontend/
+cd ../frontend/
+git push o2 -f
+git pull o2
+git add . && git commit -m "for ondo presentation" && git push o2
+git add . && git commit -m "for ondo presentation" && git push
+anchor deploy --provider.cluster https://jarrett-devnet-8fa6.devnet.rpcpool.com/283aba57-34a4-4500-ba4d-1832ff9ca64a  --provider.wallet /Users/jd/gf3.json
+anchor deploy  --provider.wallet /Users/jd/gf3.json
+ls -lha target/idl/usdy_usd_oracle.json
+git checkout features/ondo
+git stash save *
+sb solana routine create 2Pp4tdCsSEpbNYBg2TRnWiUsyehnEi8kuKa11ieNRLY4  --name some-seeds --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --cluster devnet
+export ANCHOR_WALLET=~/.config/solana/id.json
+export ANCHOR_WALLET=/Users/jd/gf3.json
+git add . && git commit -m "for review - everything in superior-randomness/src/deposit works atow" && git push
+rustfmt programs/01_super-simple-randomness/src/*.rs
+anchor idl upgrade Gyb6RKsLsZa1UCJkCmKYHtEJQF15wF6ZeEqMUSCneh9d --filepath target/idl/superior_randomness.json --provider.cluster https://jarrett-solana-7ba9.mainnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718 --provider.wallet ~/gf3.json
+anchor build && anchor deploy --provider.cluster https://jarrett-solana-7ba9.mainnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718 --provider.wallet /Users/jd/gf3.json && anchor idl upgrade Gyb6RKsLsZa1UCJkCmKYHtEJQF15wF6ZeEqMUSCneh9d --filepath target/idl/superior_randomness.j
+son --provider.cluster https://jarrett-solana-7ba9.mainnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718 --provider.wallet ~/gf3.json
+git add . && git commit -m "for review" && git push
+anchor build && anchor deploy --provider.cluster https://jarrett-solana-7ba9.mainnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718 --provider.wallet /Users/jd/gf3.json
+anchor idl
+solana program close --buffers
+anchor deploy --provider.cluster https://jarrett-solana-7ba9.mainnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718 --provider.wallet /Users/jd/gf3.json
+cd ../solana-superior-randomness/programs/01_super-simple-randomness/
+spl-stake-pool list Jito4APyf642JPZPx3hGc6WWJ8zPKtRbRs4P815Awbb
+ps aux | grep react
+solana balance
+anchor buidl
+cd ~/savingsgame/solana-superior-randomness/
+sb solana routine create 53tLWyYhTY5tFM1h3GGtx4bx2ae7EcwuqDkabwsHUK6s  --name some-seeds --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --cluster devnet   --parameters "NFT_KEY=FJz7jEi6p3Uu8FToC6QHtmCmjG3wZrX6wngJfWDTrGqG,IMAGE=https://www.arweave.net/wdE51aDq19bd4dBR-xW91JNj7evP18Hv8Dzsm2SdcWs?ext=png,TO_KEY=CDzquXR7tBxjE9FgzKRscsZnbsNPVZsqLzCVHZYGdYk3"
+cp -r ~/projects/sbv3 switchboard-functions/
+export RUST_BACKTRACE=1
+rm switchboard-functions/configs/bun.manifest.template
+cp /Users/jd/projects/datadata/switchboard/docker/configs/app.manifest.template switchboard-functions/configs/
+find ~/projects -name app.manifest.template
+git add . && git commit -m "fe frfr no bussin" && git push o2
+cd ../
+cd frontend/
+git stash save frontend/src/SolanaComponent.js
+
+cd ../savingsgame/solana-superior-randomness/programs/01_super-simple-randomness/
+git clone https://github.com/solendprotocol/solana-program-library solend-program-library2
+anchor idl init Gyb6RKsLsZa1UCJkCmKYHtEJQF15wF6ZeEqMUSCneh9d --filepath target/idl/superior_randomness.json --provider.cluster https://jarrett-solana-7ba9.mainnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718 --provider.wallet ~/gf3.json
+solana address -k target/deploy/superior_randomness-keypair.json
+anchor bulid
+cat target/idl/superior_randomness.json
+anchor idl init Gyb6RKsLsZa1UCJkCmKYHtEJQF15wF6ZeEqMUSCneh9d --filepath target/idl/superior_randomness.json --provider.cluster https://shallow-sharai-fast-mainnet.helius-rpc.com/ --provider.wallet ~/gf3.json
+rm target/deploy/superior_randomness-keypair.json
+solana program close --bypass-warning 5CohttpA8Bm3KSii7QRMFJsXBhy3wn4LXb5JN4fTZ546
+solana program show --programs
+solana program close 4nws9Q7oq3wwnpBYM75P2LrrFMq5XzVBPzzcwXEsf4HT --bypass-warning
+acnhor depl
+cd ../savingsgame/frontend/
+mv solana-react-app frontend
+rm -rf solana-react-app/.git
+rm -rf anchor-gen/Cargo.lock solana-oracle-function-example/Cargo.lock
+cd ../savingsgame/
+history | grep "cargo update"
+git commit -m "fe"
+git add .
+mv ../solana-react-app ./
+git commit -m "first commit"
+  git branch -M main
+  git remote add origin git@github.com:staccDOTsol/wip.git
+  git push -u origin main
+git remote remove origin
+git init
+rm -rf */**/.git
+rm -rf */.git
+make publish-basic-function
+cd savingsgame/solana-superior-randomness/
+cd ../switchboard/solana-oracle-function-example/
+sb solana function send-request 53tLWyYhTY5tFM1h3GGtx4bx2ae7EcwuqDkabwsHUK6s  --parameters "NFT_KEY=FJz7jEi6p3Uu8FToC6QHtmCmjG3wZrX6wngJfWDTrGqG,IMAGE=https://www.arweave.net/wdE51aDq19bd4dBR-xW91JNj7evP18Hv8Dzsm2SdcWs?ext=png,BASE_KEY=ECiYfiM97DQcaPhMFrC13dS2WS4A1kwuM6EybeFcajCS,TO_KEY=CDzquXR7tBxjE9FgzKRscsZnbsNPVZsqLzCVHZYGdYk3" --keypair ~/.config/solana/id.json
+sb solana routine create 53tLWyYhTY5tFM1h3GGtx4bx2ae7EcwuqDkabwsHUK6s  --name some-seeds --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --cluster devnet   --parameters "NFT_KEY=FJz7jEi6p3Uu8FToC6QHtmCmjG3wZrX6wngJfWDTrGqG,IMAGE=https://www.arweave.net/wdE51aDq19bd4dBR-xW91JNj7evP18Hv8Dzsm2SdcWs?ext=png,BASE_KEY=ECiYfiM97DQcaPhMFrC13dS2WS4A1kwuM6EybeFcajCS,TO_KEY=CDzquXR7tBxjE9FgzKRscsZnbsNPVZsqLzCVHZYGdYk3"
+sb --version
+cargo update -p fixed@1.24.0 --precise 1.20.0
+cargo update -p half@2.3.1 --precise 2.1.0
+rm -rf ../**/Cargo.lock
+npm i -g @switchboard-xyz/cli
+cargo clean
+rm Cargo.lock
+git clone https://github.com/pyth-network/pyth-sdk-rs
+cargo add pyth-sdk-solana
+cargo add pyth-sdk-slana
+anchor idl init 5CohttpA8Bm3KSii7QRMFJsXBhy3wn4LXb5JN4fTZ546 --filepath target/idl/superior_randomness.json --provider.cluster https://shallow-sharai-fast-mainnet.helius-rpc.com/ --provider.wallet ~/gf3.json
+anchor deploy --provider.cluster https://parental-hailee-fast-mainnet.helius-rpc.com/ --provider.wallet /Users/jd/gf3.json
+ancho depl
+solana program close GooZ8CG72Fe4mY2jinZgavrYR6JEeAHbsLF7WytGvXDE --bypass-warning
+anchor idl upgrade GooZ8CG72Fe4mY2jinZgavrYR6JEeAHbsLF7WytGvXDE --filepath target/idl/superior_randomness.json --provider.cluster https://jarrett-solana-7ba9.mainnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718 --provider.wallet ~/gf3.json
+rm target/idl/superior_randomness.json
+cargo remove pyth-client
+cargo add pyth-clietn
+cargo add pyth-client
+cargo add uint
+cargo remove lexical-core
+cargo remove uint
+cargo add lexical-core
+anchor idl upgrade GooZ8CG72Fe4mY2jinZgavrYR6JEeAHbsLF7WytGvXDE --filepath target/idl/superior_randomness.json --provider.cluster mainnet --provider.wallet ~/gf3.json
+anchor idl upgrade GooZ8CG72Fe4mY2jinZgavrYR6JEeAHbsLF7WytGvXDE --filepath target/idl/superior_randomness.json --provider.cluster https://shallow-sharai-fast-mainnet.helius-rpc.com/ --provider.wallet ~/gf3.json
+anchor idl init GooZ8CG72Fe4mY2jinZgavrYR6JEeAHbsLF7WytGvXDE --filepath target/idl/superior_randomness.json --provider.cluster https://shallow-sharai-fast-mainnet.helius-rpc.com/ --provider.wallet ~/gf3.json
+cargo add serde
+cargo add byteorder
+cargo add anchor-lang@0.26.0 --package solend-program
+cargo add anchor-lang==0.26.0 --package solend-program
+cargo add anchor-lang==0.26.0
+cd ../solend-program-library/token-lending/
+yarn
+node --version
+bash
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+brew install nvm
+rm -rf node_modules pnpm-lock.yaml
+pnpm start
+pnpm i  @mrgnlabs/mrgn-common
+pnpm i  '@solendprotocol/solend-sdk'
+pnpm i  '@solendprotocol/solend-sdk@0.6.0'
+pnpm i  '@solendprotocol/solend-sdk@0.5.0'
+pnpm i  '@solendprotocol/solend-sdk@999'
+rm -rf node_modules yarn.lock
+yarn add  '@solendprotocol/solend-sdk'
+git clone https://github.com/solendprotocol/solana-program-library solend-program-library
+git clone https://github.com/solendprotocol/solana-program-library
+cargo add solend-program
+git add . && git commit -m "params for mitch to review" && git push o2
+git checkout -b features/seeded-accounts-mayhem
+solana program close 5UdmSMSAkYcNZAxk3D3dsr3BaXDwu9nLhSeD7fpfc5g6 --bypass-warning
+anchor idl upgrade 5UdmSMSAkYcNZAxk3D3dsr3BaXDwu9nLhSeD7fpfc5g6 --filepath target/idl/superior_randomness.json --provider.cluster https://shallow-sharai-fast-mainnet.helius-rpc.com/ --provider.wallet ~/gf3.json
+yarn add '@marinade-finance/marinade-ts'
+anchor idl init 5UdmSMSAkYcNZAxk3D3dsr3BaXDwu9nLhSeD7fpfc5g6 --filepath target/idl/superior_randomness.json --provider.cluster https://shallow-sharai-fast-mainnet.helius-rpc.com/ --provider.wallet ~/gf3.json
+solana program close 12kscxWazEs2DtVDswDMkac6HfXUJVXCCsRK937PepTt --bypass-warning
+anchor idl upgrade 12kscxWazEs2DtVDswDMkac6HfXUJVXCCsRK937PepTt --filepath target/idl/superior_randomness.json --provider.cluster https://shallow-sharai-fast-mainnet.helius-rpc.com/ --provider.wallet ~/gf3.json
+anchor idl upgrade
+anchor deploy --provider.cluster https://shallow-sharai-fast-mainnet.helius-rpc.com/ --provider.wallet /Users/jd/gf3.json
+spl-token unwrap
+solana config set --keypair ~/gf3.json
+spl-token unwrap -k ~/gf3.json
+solana program --buffers close
+yarn add bn.js
+yarn add @solana/spl-token
+yarn add @solana/spl-token@"^0.2.0"
+anchor idl init 12kscxWazEs2DtVDswDMkac6HfXUJVXCCsRK937PepTt --filepath target/idl/superior_randomness.json --provider.cluster https://shallow-sharai-fast-mainnet.helius-rpc.com/ --provider.wallet ~/gf3.json
+anchor idl init 12kscxWazEs2DtVDswDMkac6HfXUJVXCCsRK937PepTt --filepath target/idl/superior_randomness.json --provider.cluster mainnet --provider.wallet ~/gf3.json
+anchor idl init 12kscxWazEs2DtVDswDMkac6HfXUJVXCCsRK937PepTt --filepath target/idl/superior_randomness.json --provider.cluster mainnet-beta --provider.wallet ~/.config/solana/id.json
+anchor idl init 12kscxWazEs2DtVDswDMkac6HfXUJVXCCsRK937PepTt --filepath target/idl/superior_randomness.json --provider.cluster mainnet --provider.wallet ~/.config/solana/id.json
+anchor deploy --provider.cluster https://parental-hailee-fast-devnet.helius-rpc.com/ --provider.wallet /Users/jd/gf3.json
+anchor deploy --provider.cluster https://parental-hailee-fast-devnet.helius-rpc.com/
+solana address -k /Users/jd/savingsgame/solana-superior-randomness/target/deploy/superior_randomness-keypair.json
+cd savingsgame/
+yarn add @coral-xyz/anchor
+cd ~/solana-react-app/
+node somejs.js
+yarn add node-fetch@2
+rm package.json
+cd
+git commit -m "macro emit commit via function runner client; commitment default for function_runner == confirmed"
+cargo buil
+cd ~/projects/sbv3/rust/switchboard-solana-macros/
+cd projects/sbv3/
+solana program close D7zzHLNCrdp6PviUFmKNV6cBwP4GcKVwez2rqmASQWnb --bypass-warning -ud -k ~/gf3.json
+solana program close D7zzHLNCrdp6PviUFmKNV6cBwP4GcKVwez2rqmASQWnb --bypass-warning -ud
+solana program show D7zzHLNCrdp6PviUFmKNV6cBwP4GcKVwez2rqmASQWnb -ud
+solana program show D7zzHLNCrdp6PviUFmKNV6cBwP4GcKVwez2rqmASQWnb -u
+solana balance -ud -k ~/gf3.json
+solana balance -ud -k ~/.config/solana/id.json
+anchor deploy --provider.cluster https://parental-hailee-fast-devnet.helius-rpc.com/ --provider.wallet /Users/jd/.config/solana/id.json
+solana program show --buffers -u https://parental-hailee-fast-devnet.helius-rpc.com/
+solana program show --buffers -ud
+solana program show --buffers
+solana balance -ud
+solana balance -u
+solana-test-validator
+rm -rf test-ledger/
+cd ~/solana-program-library/stake-pool/
+textutil /Users/jd/solana-program-library/stake-pool/program/Cargo.toml
+nano /Users/jd/solana-program-library/stake-pool/program/Cargo.toml
+cd ~/savingsgame/marginfi-v2/
+git reset --hard
+cd ../marginfi-v2
+rm -rf marginfi-v2/clients
+rm -rf marginfi-v2/programs/liquidity-incentive-program/
+yarn add prettier --save-dev
+anchro build
+npm i -g prettier
+cat ~/marginfi-v2/programs/marginfi/Cargo.toml
+cd programs/01_super-simple-randomness/
+avm use 0.29.0
+cargo update -p fixed@1.24.0
+xargo update -p fixed@1.24.0
+argo update -p fixed@1.24.0
+avm use 0.28.0
+cd programs/marginfi/
+git log
+cd ~/marginfi-v2/
+rm -rf ~/savingsgame/**/Cargo.lock
+cd marginfi-v2/
+cd ../../..
+anchor --version
+rustup update stable
+cd ...
+cargo build-sbf
+anchor buid
+sh -c "$(curl -sSfL https://release.solana.com/v1.17.8/install)"
+
+
+cargo add marginfi
+cargo remove marginfi-cpi
+cp ../marginfi-v2/target/idl/marginfi.json rust/marginfi-cpi/src/idl.json
+cd marginfi-sdk/
+git clone https://github.com/mrgnlabs/marginfi-sdk
+cargo add marginfi-cpi
+cd solana-react-app/
+git clone https://github.com/mrgnlabs/marginfi-v2
+spl-token gc --close-empty-associated-accounts
+solana config set --keypair ~/.config/solana/id.json
+solana config set -
+solana config get
+spl-token gc -h
+yarn satrt
+spl-stake-pool list-all
+spl-stake-pool list-all -h
+yarn add @marinade-finance/marinade-js
+yarn add v
+cd ../solana-react-app/
+yarn add @marinade.finance/marinade-ts-sdk@^4.0.2
+cd packages/marginfi-client-v2/
+cd ../mrgn-ts/
+rm -rf node_modules/
+yarn add "@solana/web3.js"@"^1.63.1"
+yarn add @marinade.finance/marinade-ts-sdk@^3
+yarn add @marinade.finance/marinade-ts-sdk
+yarn add @marinade.finance/marinade-ts-sdk@4.0.6
+yarn add @marinade.finance/marinade-ts-sdk@9899
+spl-token wrap 0.01
+yarn add  @marinade.finance/marinade-ts-sdk
+yarn add @lidofinance/solido-sdk
+yarn add lidofinance/solido-sdk
+yarn add @lido-sdk/solana
+yarn add @solana/web3.js@>1
+yarn add @solana/web3.js@<2
+yarn add @solana/web3.js@<=2
+yarn add @solana/web3.js@1.74.3
+killall node
+yarn add @solana/web3.js@1.43.3
+yarn add @solana/web3.js@999
+yarn add @solana/web3.js
+https://twitter.com/STACCoverflow/status/1733528534348362209
+ts-node packages/marginfi-client-v2/examples/account-balances.ts
+yarn add @solana/spl-stake-pool
+cd ../mrgn-ts/packages/marginfi-client-v2/
+cd ../solana-superior-randomness/
+cd jd/mrgn-ts/apps/
+solana config set  --keypair ~/gf3.json
+netlify deploy --prod --dir=build/
+yarn build
+yarn add @solana/wallet-adapter-glow
+yarn add @solana/wallet-adapter-backpack
+yarn add '@solana/wallet-adapter-react-ui';
+yarn  add  '@solana/wallet-adapter-wallets';
+npm start
+
+npm install process buffer --save
+
+npm install stream-browserify crypto-browserify os-browserify path-browserify zlib-browserify url --save
+npm install react-app-rewired --save-dev
+
+yarn react-scripts dev
+yarn dev
+npm install @solana/wallet-adapter-react @solana/wallet-adapter-wallets @solana/wallet-adapter-react-ui
+npm install @solana/web3.js @mrgnlabs/marginfi-client-v2 @mrgnlabs/mrgn-common @solana/spl-token
+npx create-react-app solana-react-app
+cd solana-react-app
+
+spl-token wrap 0.01 -um
+yarn add @mrgnlabs/marginfi-client-v2
+yarn add "@mrgnlabs/marginfi-client-v2"@2.0.0
+yarn add "@mrgnlabs/marginfi-client-v2"@999
+yarn add"@mrgnlabs/marginfi-client-v2"@999
+ts-node examples/account-balances.ts
+git clone https://github.com/mrgnlabs/mrgn-ts
+./target/debug/spl-stake-pool create-pool --epoch-fee-denominator 10000 --epoch-fee-numerator 500 --max-validators 138 --mint-keypair ~/mintyminty.json --deposit-fee-denominator 10000 --deposit-fee-numerator 8 --withdrawal-fee-denominator 10000 --withdrawal-fee-numerator 8 --dry-run
+git push --set-upstream origin features/select-commitment
+git commit -m "features/select-commitment"
+git checkout -b features/select-commitment
+git remote add o2 git@github.com:staccdotsol/sbv3.git
+git pulll
+solana balance -ul -k ~/.config/solana/id.json
+anchor deploy --provider.cluster localnet
+anchor deploy --provider.cluster localnet --provider.wallet ~/gf3.json
+solana balance -ul -k ~/gf3.json
+solana balance -ul
+cargo add spl_associated_token_account --package spl-stake-pool
+cargo add spl_associated_token_account
+cargo add spl-token-2022 --package spl-stake-pool
+cd stake-pool/
+cargo add spl-token-2022
+cargo add spl-token-20222
+spl-stake-pool create-pool --epoch-fee-denominator 10000 --epoch-fee-numerator 500 --max-validators 138 --mint-keypair ~/mintyminty.json --deposit-fee-denominator 10000 --deposit-fee-numerator 8 --withdrawal-fee-denominator 10000 --withdrawal-fee-numerator 8 --dry-run
+cargo install spl-stake-pool-cli
+
+spl-stake-pool create-pool --epoch-fee-denominator 500 --epoch-fee-numerator 10000 --max-validators 138 --mint-keypair ~/mintyminty.json --deposit-fee-denominator 8 --deposit-fee-numerator 10000 --withdrawal-fee-denominator 8 --withdrawal-fee-numerator 10000
+spl-stake-pool create-pool --epoch-fee-denominator 500 --epoch-fee-numerator 10000 --max-validators 138 --mint-keypair ~/mintyminty.json --deposit-fee-denominator 8 --deposit-fee-numerator 10000 --withdrawal-fee-denominator 8 --withdrawal-fee-numerator 10000 --dry-run
+spl-stake-pool create-pool --epoch-fee-denominator 500 --epoch-fee-numerator 10000 --max-validators 138 --mint-keypair ~/mintyminty.json --deposit-fee-denominator 8 --deposit-fee-numerator 10000 --withdrawal-fee-denominator --withdrawal-fee-numerator 10000 --dry-run
+spl-stake-pool create-pool --epoch-fee-denominator 500 --epoch-fee-numerator 10000 --max-validators 138 --mint-keypair ~/mintyminty.json --deposit-fee-denominator 8 --deposit-fee-numerator 10000 --withdraw-fee-denominator --withdraw-fee-numerator 10000 --dry-run
+spl-stake-pool create-pool --epoch-fee-denominator 500 --epoch-fee-numerator 10000 --max-validators 138 --mint-keypair ~/mintyminty.json --dry-run
+spl-stake-pool create-pool --epoch-fee-denominator 500 --epoch-fee-numerator 10000 --max-validators 138 --help --dry-run
+spl-token --program-id TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb create-token --transfer-fee 138 50000000000 ~/mintyminty.json
+spl-token --program-id TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb create-token --transfer-fee 138 50000000000 -h
+
+solana-keygen new -o ~/mintyminty.json -f
+spl-token --program-id TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb create-token --transfer-fee 138 50000000000
+
+solana config set  --keypair ~/.config/solana/id.json
+spl-token create-token
+spl-token create
+spl-stake-pool create-pool --epoch-fee-denominator 500 --epoch-fee-numerator 10000 --max-validators 138 --help
+spl-stake-pool create-pool
+spl-stake-pool
+cargo install spl-stake-pool
+cargo update spl-stake-pool
+cargo add solend-token-lending
+cd ~/savingsgame/anchor-gen/
+cd ../../solana-superior-randomness/
+mv whirlpools marginfi
+cd anchor-gen/examples/whirlpools/
+cp -r marginfi-v2/target/idl/marginfi.json anchor-gen/examples/whirlpools/idl.json
+git clone https://github.com/saber-hq/anchor-gen
+cat ../../target/idl/marginfi.json
+cd ~/savingsgame/marginfi-v2/programs/marginfi/
+cd src/
+anchor buil
+savingsgame/marg*
+cargo update -p fixed@1.24.0 --precise ver
+solana --version
+cd example/programs/example-cpi/
+cd marginfi-sdk/rust/marginfi-cpi/
+avm install 0.26.0
+clear
+dlear
+git clone https://github.com/switchboard-xyz/solana-superior-randomness
+solana address -k target/deploy/draffle-keypair.json
+solana program show --programs -ul
+solana address
+solana airdrop jbsdFgLWLcYWfPqBWAktzeyJ9EDLxyxpU4vYHhTAUJP 1000 -ul
+anchor deploy --provider.cluster localnet --provider.wallet ~/.config/solana/id.json
+cd draffle/
+spl-stake-pool list stk9ApL5HeVAwPLr3TLhDXdZS8ptVu7zp6ov8HFDuMi
+git push -u origin main
+git commit -m "first commit"
+cd ~/savingsgame/draffle/
+cd  ~/solana-program-library/
+find ~/ -name sbv3
+rm -rf ../../**/Cargo.lock
+cat Cargo.toml
+cd program/
+cd p
+cd ~/solana-program-library/
+sh -c "$(curl -sSfL https://release.solana.com/v1.17.7/install)"
+
+
+sh -c "$(curl -sSfL https://release.solana.com/v1.16.0/install)"
+
+
+sh -c "$(curl -sSfL https://release.solana.com/v1.15.0/install)"
+
+
+sh -c "$(curl -sSfL https://release.solana.com/v1.15.3/install)"
+
+
+sh -c "$(curl -sSfL https://release.solana.com/v1.14.3/install)"
+
+
+avm use 0.27.0
+cd ../draffle/programs/draffle/
+ls ../target/idl/hydra.json
+rm ../target/idl/hydra.json
+sb solana routine create 8ovCH64mLshBZTtfVMjCPyVkXkE9ZnBcdPWXzfHUmjB  --name some-seeds --schedule "*/5 * * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana routine create 8ovCH64mLshBZTtfVMjCPyVkXkE9ZnBcdPWXzfHUmjB  --name some-seeds --schedule "*/10 * * * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name sym-magick --fundAmount 2 --container switchboardlabs/symmetry-test-function --version latest -k ~/.config/solana/id.json --mrEnclave 0x3c7b800507aa335a417d6bcaae7ceee498610b4528c76175eedc12330e84a8f9 --cluster devnet
+cat measurement.txt
+anchor clean
+cp ~/projects/metaplex-program-library/Anchor.toml ./
+cd .
+c ..
+cd program/src/
+cd hydra/
+git clone https://github.com/switchboard-xyz/solana-oracle-function-example
+git clone https://github.com/switchboardxyz/solana-oracle-function-example
+git clone https://github.com/switchboardxy/solana-oracle-function-example
+ls -lha hydra/
+rm -rf metaplex-program-library/
+mv metaplex-program-library/hydra ./
+cat draffle/programs/draffle/src/randomness_tools.rs
+cat draffle/programs/dispenser/src/lib.rs
+cat draffle/programs/dispenser/src/lib.rs  | grep recent
+ls -lha draffle/
+git clone https://github.com/metaplex-foundation/metaplex-program-library
+git clone https://github.com/draffle-io/draffle
+mkdir savingsgame
+make build && make publish
+mv ../sbv3 ./
+rm -rf sbv3/
+rm -rf sbv3/devops/
+cp -r ../sbv3 ./
+sb solana function test    --devnetSimulate
+cd sym_prices_function/
+cd ~
+rm -rf ~/.vscode
+cd ../sym_prices_function/
+cd sbv3/
+git clone https://github.com/switchboard-xyz/sbv3
+sb solana function send-request 53tLWyYhTY5tFM1h3GGtx4bx2ae7EcwuqDkabwsHUK6s  --parameters "NFT_KEY=ApJnCf8Fy6fdF1XJkMALnAuaoBTbnUPhLFUJTpuKJZJV,IMAGE=https://www.arweave.net/sGna0HS4w1ESlEFNL8VrD5dXpEJRpcaE8QperURW5G0?ext=png,BASE_KEY=H1W7xzxYisLYdV4tKNSEVzCt84111pU7bCRzLU1dC7fT,TO_KEY=XWKQEFnG28LFq6aCrG52r17TnkzKtafFWJeeLqs" --keypair ~/.config/solana/id.json
+sb solana routine create 53tLWyYhTY5tFM1h3GGtx4bx2ae7EcwuqDkabwsHUK6s  --name some-seeds --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --cluster devnet   --parameters "NFT_KEY=ApJnCf8Fy6fdF1XJkMALnAuaoBTbnUPhLFUJTpuKJZJV,IMAGE=https://www.arweave.net/sGna0HS4w1ESlEFNL8VrD5dXpEJRpcaE8QperURW5G0?ext=png,BASE_KEY=H1W7xzxYisLYdV4tKNSEVzCt84111pU7bCRzLU1dC7fT,TO_KEY=XWKQEFnG28LFq6aCrG52r17TnkzKtafFWJeeLqs"
+solana transfer XWKQEFnG28LFq6aCrG52r17TnkzKtafFWJeeLqs ALL
+solana transfer
+solana transfer  XWKQEFnG28LFq6aCrG52r17TnkzKtafFWJeeLqs ALL -ud
+solana transfer -k ~/.config/solana/id.json XWKQEFnG28LFq6aCrG52r17TnkzKtafFWJeeLqs ALL -ud
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name art-magick --fundAmount 2 --container switchboardlabs/solana-random-image-function --version latest -k ~/.config/solana/id.json --mrEnclave 0xc83ff0117c9ad7f8cb28a4a67b1ab27f53bec19caa43fe28f5e76247a6b8eb32 --cluster devnet
+sb solana routine create H9ZGQcs6ryc5uEZYmf63Z3f97unJvGHwFXHfCuQkZZxi  --name some-seeds --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --cluster devnet   --parameters "NFT_KEY=ApJnCf8Fy6fdF1XJkMALnAuaoBTbnUPhLFUJTpuKJZJV,IMAGE=https://www.arweave.net/sGna0HS4w1ESlEFNL8VrD5dXpEJRpcaE8QperURW5G0?ext=png,BASE_KEY=H1W7xzxYisLYdV4tKNSEVzCt84111pU7bCRzLU1dC7fT,TO_KEY=XWKQEFnG28LFq6aCrG52r17TnkzKtafFWJeeLqs"
+sb solana function test    --devnetSimulate --parameters "NFT_KEY=ApJnCf8Fy6fdF1XJkMALnAuaoBTbnUPhLFUJTpuKJZJV,IMAGE=https://www.arweave.net/sGna0HS4w1ESlEFNL8VrD5dXpEJRpcaE8QperURW5G0?ext=png,BASE_KEY=H1W7xzxYisLYdV4tKNSEVzCt84111pU7bCRzLU1dC7fT,TO_KEY=7KFBTXWKQEFnG28LFq6aCrG52r17TnkzKtafFWJeeLqs"
+cd switchboard-functions/02_usdy_usdc_oracle_function_rust/
+anchor build && anchor deploy --provider.cluster https://parental-hailee-fast-devnet.helius-rpc.com/ --provider.wallet /Users/jd/.config/solana/id.json
+cd swi
+cd ../...
+sb solana function test    --devnetSimulate --parameters "NFT_KEY=6V9cNuxLg1qmHtgDaU5nNi52JSVXgdBwbk3Z8C42fWHd,IMAGE=https://www.arweave.net/MSkTKu4eimSw-9fx-LXIxHujgcPrQiN-6rZAasPG6to?ext=png,BASE_KEY=Fk6WZs81GkwG63p81Ch3mHfdjJueBGx7gddchDH8UtzZ,TO_KEY=8LFmYmTMaqXb7Xz23V4zdnycf83PbB9CRoz87q35hoXt"
+sb solana function test    --devnetSimulate --parameters "NFT_KEY=2Vcy7LkWeZ68AhFpwdCeGHvHLxCjLCmdyCGheEgvDKFm,IMAGE=https://www.arweave.net/2Dj7ZRKJUnjTbwZvn-jyzrwFR791Flk5BQgS74zOujs?ext=png,BASE_KEY=jbsdFgLWLcYWfPqBWAktzeyJ9EDLxyxpU4vYHhTAUJP,TO_KEY=DTXjreMoz5RPPXZtZK8pxD4ujDF4yNnfPVRU3KNgJuSX"
+cd switchboard/solana-oracle-function-example/
+sb solana function test    --devnetSimulate --parameters "NFT_KEY=BhQiMGxdk9s2SGdA2hbqXvgjeJn8xQvMe2DWAPAKHzWq,IMAGE=https://www.arweave.net/m543zvz3lCsa-tibyoglv2ks1kx2vWkIu3sj6QV4Om8?ext=png,BASE_KEY=jbsdFgLWLcYWfPqBWAktzeyJ9EDLxyxpU4vYHhTAUJP,TO_KEY=8T1jZH1JbNJjGKFGLL2eHzCM1Xgg5cwju1RxFU6mdpnZ"
+cd switc
+cd swit
+sb solana function test    --devnetSimulate --parameters "NFT_KEY=5b6edw3fVdj3V6szCxwtmHMr58GGPtEBTSGrFEnUVNgp,IMAGE=https://www.arweave.net/IR8Z31XQCWllfxqhZQ3UQRMF9xsueBTHawvE-V9UyQk?ext=png,BASE_KEY=jbsdFgLWLcYWfPqBWAktzeyJ9EDLxyxpU4vYHhTAUJP,TO_KEY=AUSafwrRva2r7UTWTkJMZMN6CmraacqTLdaGYnyKCDc7"
+cd .../..
+sb solana function test    --devnetSimulate --params "NFT_KEY=5b6edw3fVdj3V6szCxwtmHMr58GGPtEBTSGrFEnUVNgp,IMAGE=https://www.arweave.net/IR8Z31XQCWllfxqhZQ3UQRMF9xsueBTHawvE-V9UyQk?ext=png,BASE_KEY=jbsdFgLWLcYWfPqBWAktzeyJ9EDLxyxpU4vYHhTAUJP,TO_KEY=AUSafwrRva2r7UTWTkJMZMN6CmraacqTLdaGYnyKCDc7"
+sb solana function test    --devnetSimulate --parameters="NFT_KEY=3uNUqYmBhNbKbMvhBWQ7czHpM4W8PVWRiTxraU1o5U7Z,TO_KEY=HvmXmgVVi3we742Gmdc9kgbexFDow9MgtwZG7j3GzvfA,BASE_KEY=jbsdFgLWLcYWfPqBWAktzeyJ9EDLxyxpU4vYHhTAUJP,IMAGE=https://www.arweave.net/xq6Ncba_bZchs1XuJcYYPb_OdKrvUWcxRDUTOhB6O_Y?ext=png"
+anchor biild
+find ~/projects/ -name config -type d
+sb solana function test    --devnetSimulate --parameters="NFT_KEY=3uNUqYmBhNbKbMvhBWQ7czHpM4W8PVWRiTxraU1o5U7Z,TO_KEY=HvmXmgVVi3we742Gmdc9kgbexFDow9MgtwZG7j3GzvfA,IMAGE=https://www.arweave.net/xq6Ncba_bZchs1XuJcYYPb_OdKrvUWcxRDUTOhB6O_Y?ext=png"
+sb solana function test    --devnetSimulate --parameters="NFT_KEY=3uNUqYmBhNbKbMvhBWQ7czHpM4W8PVWRiTxraU1o5U7Z,IMAGE=https://www.arweave.net/xq6Ncba_bZchs1XuJcYYPb_OdKrvUWcxRDUTOhB6O_Y?ext=png"
+export ANCHOR_PROVIDER_URL="https://parental-hailee-fast-devnet.helius-rpc.com/"
+anchor deplo
+anchor depl
+cd ./..
+sb solana function test    --devnetSimulate --parameters="NFT_KEY=DhWr8zqSAhXEJc9CrXEi7ApDhYrbKS3Te7fh1HxiThir,IMAGE=https://shdw-drive.genesysgo.net/Bd2BvKM9vNB58KFmHHFH4czrQqdwJgrQMsHiJTeBRt8/DhWr8zqSAhXEJc9CrXEi7ApDhYrbKS3Te7fh1HxiThir.png"
+sb solana function test    --devnetSimulate --parameters=""NFT_KEY=DhWr8zqSAhXEJc9CrXEi7ApDhYrbKS3Te7fh1HxiThir,IMAGE=https://shdw-drive.genesysgo.net/Bd2BvKM9vNB58KFmHHFH4czrQqdwJgrQMsHiJTeBRt8/DhWr8zqSAhXEJc9CrXEi7ApDhYrbKS3Te7fh1HxiThir.png""
+cd 02_usdy_usdc_oracle_function_rust/
+cd switchboard-functions/
+sb solana function send-request H9ZGQcs6ryc5uEZYmf63Z3f97unJvGHwFXHfCuQkZZxi  --parameters "NFT_KEY=DhWr8zqSAhXEJc9CrXEi7ApDhYrbKS3Te7fh1HxiThir,IMAGE=https://shdw-drive.genesysgo.net/Bd2BvKM9vNB58KFmHHFH4czrQqdwJgrQMsHiJTeBRt8/DhWr8zqSAhXEJc9CrXEi7ApDhYrbKS3Te7fh1HxiThir.png" --keypair ~/.config/solana/id.json
+cd ~/sym_prices_function/
+cd ~/sym_prices_devnet/
+sb solana function send-request H9ZGQcs6ryc5uEZYmf63Z3f97unJvGHwFXHfCuQkZZxi  --parameters "NFT_KEY=8ExniqgRNyMmSCE3V5hcDiP5ghmQfzNkTAiMxXNHokMo,IMAGE=https://shdw-drive.genesysgo.net/Bd2BvKM9vNB58KFmHHFH4czrQqdwJgrQMsHiJTeBRt8/8ExniqgRNyMmSCE3V5hcDiP5ghmQfzNkTAiMxXNHokMo.png" --keypair ~/.config/solana/id.json
+sb solana function test    --devnetSimulate --parameters="NFT_KEY=8ExniqgRNyMmSCE3V5hcDiP5ghmQfzNkTAiMxXNHokMo,IMAGE=https://shdw-drive.genesysgo.net/Bd2BvKM9vNB58KFmHHFH4czrQqdwJgrQMsHiJTeBRt8/8ExniqgRNyMmSCE3V5hcDiP5ghmQfzNkTAiMxXNHokMo.png"
+sb solana function send-request 7MAYZwdHjKRxTKfwYSyPmJsTdztD7xWVCjayTRev9Vkt  --parameters "NFT_KEY=8ExniqgRNyMmSCE3V5hcDiP5ghmQfzNkTAiMxXNHokMo,IMAGE=https://shdw-drive.genesysgo.net/Bd2BvKM9vNB58KFmHHFH4czrQqdwJgrQMsHiJTeBRt8/8ExniqgRNyMmSCE3V5hcDiP5ghmQfzNkTAiMxXNHokMo.png" --keypair ~/.config/solana/id.json
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name art-magick --fundAmount 2 --container switchbaordlabs/solana-random-image-function --version latest -k ~/.config/solana/id.json --mrEnclave 0xc83ff0117c9ad7f8cb28a4a67b1ab27f53bec19caa43fe28f5e76247a6b8eb32 --cluster devnet
+sb solana function   test  --devnetSimulate --parameters="NFT_KEY=2q8Y9WvhPvZbNAheDSeoVSo459pvjm6fBqqkYrPMb5bk,IMAGE=https://shdw-drive.genesysgo.net/Bd2BvKM9vNB58KFmHHFH4czrQqdwJgrQMsHiJTeBRt8/2q8Y9WvhPvZbNAheDSeoVSo459pvjm6fBqqkYrPMb5bk.png"
+cd ../switchboard/solana-oracle-function-example/switchboard-functions/02_usdy_usdc_oracle_function_rust/
+anchor deploy --provider.cluster "https://parental-hailee-fast-devnet.helius-rpc.com" --provider.wallet /Users/jd/.config/solana/id.json
+cd ../sym_prices_devnet/
+make docker_build && make docker_publish
+sb solana routine create B7mn8ifGWQ3ia2e1GFoQ1jgCaTD1SZ6eoyp1qU5jtXmg  --name some-symm --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name symmetry-test --fundAmount 2 --container switchbaordlabs/symmetry-test-function --version latest -k ~/.config/solana/id.json --mrEnclave 0xef65be63f260e39a5166113c5b5dd159b854d753dfb179a68e1f2355d132d8ce --cluster devnet
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name symmetry-test --fundAmount 2 --container switchbaordlabs/symmetry-test-function --version latest -k ~/.config/solana/id.json --mrEnclave 0xef65be63f260e39a5166113c5b5dd159b854d753dfb179a68e1f2355d132d8ce --cluster devnete
+anchor test --skip-build --skip-deploy --provider.cluster devnet --provider.wallet /Users/jd/.config/solana/id.json
+solana address -k target/deploy/sym_prices_v2-keypair.json
+anchor test --skip-build --skip-deploy --provider.cluster devnet
+yarn add ts-mocha
+npm i -g ts-mocha
+anchor test
+cd ../sym_prices_devnet
+make docker_publish
+make docker_build
+anchor deploy --provider.cluster "https://devnet.helius-rpc.com/?api-key=711ba76f-64b1-4d02-8af4-f9e9baebeeec" --provider.wallet /Users/jd/.config/solana/id.json
+anchor deploy --provider.cluster "https://devnet.helius-rpc.com/?api-key=711ba76f-64b1-4d02-8af4-f9e9baebeeec" --prprovider.wallet /Users/jd/.config/solana/id.json
+anchor deploy --provider.cluster "https://devnet.helius-rpc.com/?api-key=711ba76f-64b1-4d02-8af4-f9e9baebeeec" --prpovider.wallet /Users/jd/.config/solana/id.json
+anchor deploy --provider.cluster "https://devnet.helius-rpc.com/?api-key=711ba76f-64b1-4d02-8af4-f9e9baebeeec"
+cd sym_prices_
+git clone https://github.com/switchboard-xyz/sym_prices_function
+cd sym_prices_function
+history | grep git
+history | grep git clone
+sb solana function send-request 7MAYZwdHjKRxTKfwYSyPmJsTdztD7xWVCjayTRev9Vkt  --parameters "NFT_KEY=FYdgex4Y39dWqVXagkdd4VRmiaWoVmEsXarM2L7cF1SL,IMAGE=https://shdw-drive.genesysgo.net/C57wDEfE4h2PeQ4nLpkpmCbCNPAqmwMBmVuik7tbST1j/FYdgex4Y39dWqVXagkdd4VRmiaWoVmEsXarM2L7cF1SL.png" --keypair ~/.config/solana/id.json
+sb solana function   test  --devnetSimulate --parameters="NFT_KEY=49jyBcdZR8g7K5dNWqLD4e1ts7c1Pjs6daGomrB4khjR,IMAGE=https://shdw-drive.genesysgo.net/Bd2BvKM9vNB58KFmHHFH4czrQqdwJgrQMsHiJTeBRt8/49jyBcdZR8g7K5dNWqLD4e1ts7c1Pjs6daGomrB4khjR.png"
+sb solana function   test  --devnetSimulate --parameters="NFT_KEY=FYdgex4Y39dWqVXagkdd4VRmiaWoVmEsXarM2L7cF1SL,IMAGE=https://shdw-drive.genesysgo.net/C57wDEfE4h2PeQ4nLpkpmCbCNPAqmwMBmVuik7tbST1j/FYdgex4Y39dWqVXagkdd4VRmiaWoVmEsXarM2L7cF1SL.png"
+sb solana function   test  --devnetSimulate --parameters="PID=5YVb7NBipwyUcHqi2ba33WL3kLqjvAtx8RWDfdZYk3S7,NFT_KEY=CzCqva81PxXx64FGtPiyTxuBc8F9TJtE9Skyt9agUWbH,IMAGE=https://www.arweave.net/_CxQ0rIQ_wN3yr7HPLJbDzRsew6SPyIYlRqMAQu_5-U?ext=png"
+sb solana function send-request 7MAYZwdHjKRxTKfwYSyPmJsTdztD7xWVCjayTRev9Vkt  --parameters "PID=5YVb7NBipwyUcHqi2ba33WL3kLqjvAtx8RWDfdZYk3S7,NFT_KEY=CzCqva81PxXx64FGtPiyTxuBc8F9TJtE9Skyt9agUWbH,IMAGE=https://www.arweave.net/_CxQ0rIQ_wN3yr7HPLJbDzRsew6SPyIYlRqMAQu_5-U?ext=png" --keypair ~/.config/solana/id.json
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name art-magick --fundAmount 2 --container switchbaordlabs/solana-random-image-function --version latest -k ~/.config/solana/id.json --mrEnclave 0x07b66e54190cc3741daa6c2b525fe7f386682bb383e161a6a908fb799fce09ef --cluster devnet
+make build-basic-function
+docker buildx .
+sb solana routine create 9585xpgBkw31vHbwTsoj1SKsS1QQuaVUWppYcLPQ7BCR  --name some-art --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --cluster devnet --parameters="PID=5YVb7NBipwyUcHqi2ba33WL3kLqjvAtx8RWDfdZYk3S7,NFT_KEY=CzCqva81PxXx64FGtPiyTxuBc8F9TJtE9Skyt9agUWbH,IMAGE=https://www.arweave.net/_CxQ0rIQ_wN3yr7HPLJbDzRsew6SPyIYlRqMAQu_5-U?ext=png"
+sb solana function   test  --devnetSimulate --parameters="PID:5YVb7NBipwyUcHqi2ba33WL3kLqjvAtx8RWDfdZYk3S7,NFT_KEY:CzCqva81PxXx64FGtPiyTxuBc8F9TJtE9Skyt9agUWbH,IMAGE:https://www.arweave.net/_CxQ0rIQ_wN3yr7HPLJbDzRsew6SPyIYlRqMAQu_5-U?ext=png"
+cat Makefile
+cd ../.
+sb solana function send-request FN2k2hgYZjzNnGCm4wjpK8e4rGkA442EqQyP8SfJSLDT  --parameters "PID=5YVb7NBipwyUcHqi2ba33WL3kLqjvAtx8RWDfdZYk3S7,NFT_KEY=CzCqva81PxXx64FGtPiyTxuBc8F9TJtE9Skyt9agUWbH,IMAGE=https://www.arweave.net/_CxQ0rIQ_wN3yr7HPLJbDzRsew6SPyIYlRqMAQu_5-U?ext=png" --keypair ~/.config/solana/id.json
+sb solana function
+sb solana
+sb solana routine call
+sb solana function call
+sb solana call
+sb solana routine create FN2k2hgYZjzNnGCm4wjpK8e4rGkA442EqQyP8SfJSLDT  --name some-art --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --cluster devnet --parameters="PID=5YVb7NBipwyUcHqi2ba33WL3kLqjvAtx8RWDfdZYk3S7,NFT_KEY=CzCqva81PxXx64FGtPiyTxuBc8F9TJtE9Skyt9agUWbH,IMAGE=https://www.arweave.net/_CxQ0rIQ_wN3yr7HPLJbDzRsew6SPyIYlRqMAQu_5-U?ext=png,index=0"
+sb solana function   test  --devnetSimulate --parameters="PID=5YVb7NBipwyUcHqi2ba33WL3kLqjvAtx8RWDfdZYk3S7,NFT_KEY=CzCqva81PxXx64FGtPiyTxuBc8F9TJtE9Skyt9agUWbH,IMAGE=https://www.arweave.net/_CxQ0rIQ_wN3yr7HPLJbDzRsew6SPyIYlRqMAQu_5-U?ext=png,index=0"
+pnpm i jimp
+yarn add jimp
+J3PRUzhMfS1URLYqHyP5jo5tHYkxYosVnuX7ZKdHJyAM
+sb solana routine create EDYzN6pS1pstCLk4kfimMz1Rv6PUsuECf8uZxJhtPpku  --name some-art --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --cluster devnet --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=2Y4hsYfwzpQevF4mXUhPyUUnVLSmWF2CYToittfwZCuP"
+make pub
+ls target/idl/usdy_usd_oracle.json
+pnpm i  "@metaplex-foundation/js";
+make build
+git checkout -b features/art
+solana address -k target/deploy/srfx_usdc_oracle-keypair.json
+rm -rf target/deploy/
+rm -rf target/deploy/a
+ts-node somestaccs.ts
+export OPENAI_API_KEY=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
+cd ~/projects/recent_slothashes/
+ls targetold/
+cp -r target targetold
+cargo buidl
+cd switchboard-functions/02_srfx_usdc_oracle_function_rust/
+cd ../solana-oracle-function-example/
+make superior-flip
+make sup
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=H6X8zDNKX4YcJokRJoeSExAABs59PujPp1SD31Ptpt12"
+cd switchboard-function/
+sb solana function   test  --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=Aggq8etPTjLapCwi6NVeAcMRxaTbVPW8NMJ2NJtARFXG"
+sb solana function     --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=Aggq8etPTjLapCwi6NVeAcMRxaTbVPW8NMJ2NJtARFXG"
+export         SWITCHBOARD_FUNCTION_PUBKEY=AqrqwwfMC2UKrNHBTVhQdC177EKmZbVY9iVhSX5P7GHy
+export SWITCHBOARD_FUNCTION_PUBKEY=
+sb solana function     --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=7z5iPssGKQaf9tGGyWvcGzjDP7y3puDU4zMkRv1UkF2a"
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=7z5iPssGKQaf9tGGyWvcGzjDP7y3puDU4zMkRv1UkF2a"
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY="
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=6jLntNfU92QthLwnK2AKJCYaTuTN8QZ5zPj3mMpJcPX1"
+sb solana function test    --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=8Sb1ZDftfxk8QwsPP6nsHHCUoj11X5UobHSFHBBsBKe2"
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=8Sb1ZDftfxk8QwsPP6nsHHCUoj11X5UobHSFHBBsBKe2"
+sb solana routine create EDYzN6pS1pstCLk4kfimMz1Rv6PUsuECf8uZxJhtPpku  --name some-art --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --cluster devnet --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=2Y4hsYfwzpQev
+F4mXUhPyUUnVLSmWF2CYToittfwZCuP"
+sb solana routine create EDYzN6pS1pstCLk4kfimMz1Rv6PUsuECf8uZxJhtPpku  --name some-art --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=2Y4hsYfwzpQevF4mXUhPyUUnVLSmWF2CYToittfwZCuP"
+npm install --os=darwin --cpu=arm64 sharp
+brew install cairo
+yarn add canvas
+yarn add sharp
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=22FoH6v5R8KZikmG6sY34ahb6NxFcoJKsXkbC2wkFFsE"
+export         SWITCHBOARD_FUNCTION_PUBKEY=EDYzN6pS1pstCLk4kfimMz1Rv6PUsuECf8uZxJhtPpku
+fish
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=39kppkb5PhRSeUNWaiCTzNefERoQCCeyJ5sHW6wyANUP"
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=Ghp9u3miBfu6GHNE2qpYVcTB9ZQmEPogC2WmUTs2d4Gb"
+export DOCKER_IMAGE_NAME=jrsdunn/solana-random-image-function
+history | grep export
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=F9sJSmzBwp6cDCcPgpQyuQFGX7Qj3ttczn22KwKjN5hz"
+anchor deploy --provider.cluster https://devnet.helius-rpc.com/?api-key=711ba76f-64b1-4d02-8af4-f9e9baebeeec
+anchor deploy --provider.cluster https://devnet.helius-rpc.com/?api-key=711ba76f-64b1-4d02-8af4-f9e9baebeeec/
+anchor deploy --provider.cluster https://allied-corrianne-fast-devnet.helius-rpc.com/
+avm install 0.29.0
+anchor deploy --provider.cluster https://api.devnet.solana.com --provider.wallet ~/.config/solana/id.json
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST_KEY=2p7iVJTNgdzpL9ickKHzUdQVVqTn5Z5JM2UJXB63zkE8"
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp,REQUEST=2p7iVJTNgdzpL9ickKHzUdQVVqTn5Z5JM2UJXB63zkE8"
+sb solana function test    --devnetSimulate --parameters="PID=DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp"
+sb solana function test    --devnetSimulate --parameters="PID:DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp"
+sb solana function test    --devnetSimulate --params="PID:DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp" -h
+sb solana function test    --devnetSimulate --paramaters="PID:DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp"
+sb solana function test    --devnetSimulate --params="PID:DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp"
+make superior-flip ~/.config/solana/id.json
+cd sym_prices_devnet/
+git clone https://github.com/switchboard-xyz/sym_prices_devnet
+export DOCKER_IMAGE_NAME=switchboardlabs/solana-random-image-function
+docker login
+docker logout
+docker buildx build  --platform linux/amd64 -f ./switchboard-function/Dockerfile -t jrsdunn/solana-random-image-function --load ./switchboard-function
+watch "make superior-flip ~/.config/solana/id.json"
+anchor superior-flip
+anchor idl upgrade DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp --filepath target/idl/superior_randomness.json --provider.cluster "https://api.devnet.solana.com" --provider.wallet ~/.config/solana/id.json
+docker buildx build  --platform linux/amd64 -f ./switchboard-function/Dockerfile -t switchboardlabs/solana-random-image-function --load ./switchboard-function
+export ANCHOR_PROVIDER_URL="https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+export         SWITCHBOARD_FUNCTION_PUBKEY=22NTnhj1zxUvQq9JNrVHudxzfpshRFunVd7RsSqXGkfM
+export export         SWITCHBOARD_FUNCTION_PUBKEY=22NTnhj1zxUvQq9JNrVHudxzfpshRFunVd7RsSqXGkfM
+ls idl/
+anchor build --skip-lint --idl idl
+anchor idl init DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp --filepath target/idl/superior_randomness.json --provider.cluster "https://api.devnet.solana.com" --provider.wallet ~/.config/solana/id.json
+anchor idl init DKYmvPn5uD8FytT2TXtvu56CyHNREQDyUtxhi1QiQ3Dp --filepath target/idl/superior_randomness.json --provider.cluster "https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d" --provider.wallet ~/.config/solana/id.json
+cd ~/solana-superior-randomness/
+docker push jrsdunn/solana-random-image-function
+docker images
+docker tag 5bbc797e9e61 jrsdunn/solana-random-image-function
+git add . && git commit -m "ondo for review v0.1.2" && git push o2
+cd switchboard/
+python3 convert00r.py
+conda install -c conda-forge Pygments
+whereis python
+conda install docxtpl
+conda install pandas
+
+sudo /usr/local/opt/python@3.11/libexec/bin/python  convert00r.py
+sudo /usr/local/opt/python@3.11/libexec/bin/python  -m pip install markdown2 weasyprint docx2pdf docx
+
+/usr/local/opt/python@3.11/libexec/bin/python  -m pip install markdown2 weasyprint docx2pdf docx
+
+/usr/local/opt/python@3.11/libexec/bin/python 
+
+whereis python3
+brew install gobject
+cat /System/Volumes/Preboot/Cryptexes/OSgobject-2.0-0
+python3 -m pip install markdown2 weasyprint docx2pdf docx
+python convert00r.py
+brew install python3
+which python
+conda install -c conda-forge pygobject
+brew install gobject-introspection
+brew install weasyprint
+
+pip install weasyprint
+pip install markdown2
+pip install docx
+pip install python-docx docx2pdf
+docker buildx create --driver cloud switchboardlabs/default_linux-amd64
+cdocker logout
+export         SWITCHBOARD_FUNCTION_PUBKEY=
+yarn add "@switchboard-xyz/solana.js"
+rm pnpm-lock.yaml
+pnpm i  "@switchboard-xyz/solana.js" --upgrade
+solana balance -ud ~/.config/solana/id.json
+solana balance -ud ~/.config/solana/id.json -ud
+echo $DOCKER_IMAGE_NAME
+pnpm i  "@switchboard-xyz/solana.js";
+export DOCKER_IMAGE_NAME=jrsdunn/solana-random-image-function
+
+pnpm i
+npm i
+pnpm i @solana/spl-token
+make publish
+docker login jrsdunn
+docker
+docker auht
+anchor deploy --provider.cluster https://api.devnet.solana.com
+anchor deploy --provider.cluster "https://jarrett-solana-7ba9.devnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718" --provider.wallet ~/.config/solana/id.json
+anchor deploy --provider.cluster "https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d" --provider.wallet ~/.config/solana/id.json
+anchor buil;d
+git clone github.com/switchboard-xyz/solana-superior-randomness
+git clone
+cd random-circles/
+anchor init random-circles
+anchor init
+cargo init random-circles
+cd ~/random-circles/
+git add . && git commit -m "ondo for review v0.1.1" && git push o2
+cd ../../
+cargo add image-builder
+cd programs/02_srfx_usdc_oracle/
+cargo add image
+cd ~/switchboard/solana-oracle-function-example/programs/02_srfx_usdc_oracle/
+npm i -g netlify-cli
+npm i -g netfify
+mv src/bufferFill.ts src/bufferFill.js
+rm -rf /Users/jd/random-circles/node_modules/dotenv
+yarn remove dotenv
+npx create-react-app random-circles
+cd random-circles
+
+git add . && git commit -m "ondo for review" && git push o2
+sb solana routine create 9pdRLLcPkAS9i39R3Z47Bufv7NReBYDPrbCQVSV4M56P  --name usdy-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+solana address -k /Users/jd/switchboard/solana-oracle-function-example/target/deploy/usdy_usd_oracle-keypair.json
+solana program close 6cAUwwbUEYS5g3HBFc9UUMU63xsSU22KqQ3NKyhKfwJV -ud --bypass-warning
+rm /Users/jd/switchboard/solana-oracle-function-example/target/deploy/usdy_usd_oracle-keypair.json
+git add . && git commit -m "ondo; pre-readme" && git push o2
+cat ~/.ssh/id_rsa.pub
+rustfmt switchboard-functions/02_srfx_usdc_oracle_function_rust/src/main.rs
+rustfmt switchboard-functions/02_srfx_usdc_oracle_function_rust/src/*
+rm switchboard-functions/02_srfx_usdc_oracle_function_rust/src/math.rs
+rm switchboard-functions/02_srfx_usdc_oracle_function_rust/src/main.rs
+make build-basic-function && make publish-basic-functipn
+sb solana function test  --parameters  --devnetSimulate
+cargo add statistical
+git push --set-upstream o2 features/ondo
+git remote add o2 git@github.com:staccDOTsol/solana-oracle-function-example.git
+git push --set-upstream origin features/ondo
+git checkout -b features/ondo
+sb solana function test --devnetSimulate
+anchor deploy --provider.cluster "https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+sb solana routine create 2Ud7y3DKbKdNkmgePZ4CsPNz9ub7yvibigg6WYvSUv4o  --name usdy-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+ts-node scripts/init-b
+node scripts/watch.ts
+docker buildx build --pull --platform linux/amd64 -f ./Dockerfile -t jrsdunn/solana-basic-oracle-function:latest ./
+cp ~/projects/testing/src/pool.json switchboard-functions/02_srfx_usdc_oracle_function_rust/src/
+cp ~/projects/testing/src/factory.json switchboard-functions/02_srfx_usdc_oracle_function_rust/src/
+cp ~/projects/testing/src/ondo.json switchboard-functions/02_srfx_usdc_oracle_function_rust/src/
+ls ./programs/02_srfx_usdc_oracle/Cargo.toml
+ls ./switchboard-functions/02_srfx_usdc_oracle_function_rust/config/app.manifest.template
+cd ../../switchboard/solana-oracle-function-example/switchboard-functions/
+cargo run
+cd testing/
+cargo remove blake2
+cargo remove blke2
+cargo add blake2
+cargo add abigen
+cargo add ethabi
+curl 'https://agni.finance/graph/subgraphs/name/agni/exchange-v3-bugfix' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: text/plain;charset=UTF-8' \
+  -H 'Origin: https://agni.finance' \
+  -H 'Referer: https://agni.finance/swap?inputCurrency=0x5bE26527e817998A7206475496fDE1E68957c5A6' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36' \
+  -H 'X-KL-kav-Ajax-Request: Ajax_Request' \
+  -H 'sec-ch-ua: "Google Chrome";v="119", "Chromium";v="119", "Not?A_Brand";v="24"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  --data-raw '{"query":"{\n  token(id: \"0x74a0e7118480bdff5f812c7a879a41db09ac2c39\") {\n    derivedETH\n    derivedUSD\n    name\n  }\n  bundles {\n    ethPriceUSD\n  }\n}","variables":null,"extensions":{"headers":null}}' \
+  --compressed
+cargo add
+git reset --had
+cd uniswap-rs/
+mv contracts src/
+mv src/contracts ./
+cp -r uniswap-rs/src/contracts ./
+cd ~/projects/testing/
+git clone git@github.com:switchboard-xyz/sbv3.git --depth 1
+gh repo clone switchboard-xyz/sbv3
+gh repo clone switchboard-xyz/sbv3 --depth 1
+mv ../uniswap-rs ./
+gh auth login
+mv uniswap-rs ../
+rm **/*.lock
+rm */*.lock
+rm *.lock
+cd ~/Downloads/
+brew install gh
+rm -rf examples/
+cargo update -p solana-zk-token-sdk
+cargo update -p switchboard-solana
+cargo update -p solana-program
+cargo add switchboard-solana
+find ./ -name der
+rm crypto-bigint/Cargo.lock
+git clone https://github.com/RustCrypto/crypto-bigint --depth 1
+git clone https://github.com/RustCrypto/crypto-bigint
+find  ./ -name k256
+git clone https://github.com/summa-tx/coins --depth 1
+git clone https://github.com/summa-tx/coins
+find ./ -name sec1
+find ./ -name spki
+git clone https://github.com/RustCrypto/formats --depth 1
+git clone https://github.com/RustCrypto/formats
+cargo clea
+git clone https://github.com/rustcrypto/signatures
+killall cargo
+git clone https://github.com/rustcrypto/elliptic-curves --depth 1
+git clone https://github.com/rustcrypto/traits --depth 1
+git clone https://github.com/rustcrypto/traits
+git clone v
+cd ethers-rs/
+ll
+l
+cxo][][[[]]][[[[[[[[[[[]]l
+git clone https://github.com/gakonst/ethers-rs --depth 1
+git clone https://github.com/gakonst/ethers-rs
+git clone https://github.com/danipopes/uniswap-rs
+ethabi encode function ~/abiabi.json getPrice
+ethabi decode function ~/abiabi.json getPrice()
+ethabi decode function ~/abiabi.json getPrice 0
+ethabi decode function ~/abiabi.json getPrice 0x
+ethabi decode function ~/abiabi.json getPrice []
+ethabi decode function ~/abiabi.json getPrice
+ethabi decode function
+ethabi decode fucntion
+ethabi decode
+ethabi
+ethabi function
+cargo install ethabi-cli
+watch -n 15 -b 'echo $(cat realStaccs.json | jq .[] | wc -l) >> catted.txt && cat catted.txt'
+rm catted.txt
+ts-node solend.ts
+bash deploy_token_lending.sh /Users/jd/.config/solana/cli/config.yml So1endDq2YkqhipRh3WViPa8hdiSpxWy6z3Z6tMCpAo
+spl-token wrap 0.001 -um
+pnpm i @solana/spl-tokjen
+spl-token wrap 0.00001 -um
+bash deploy_token_lending.sh
+pnpm i @types/bn.js
+pnpm i bn.js
+pnpm i @solana/web3.js
+pnpm i @solendprotocol/solend-sdk
+pnpm i @oslendprotocol/solend-sdk
+pnpm i  @solend-protocol/sdk
+pnpm i  @solend0-protocol/sdk
+pnpm i  @solendprotocol/sdk
+cd solend-program-library/
+git clone https://github.com/solendprotocol/solana-program-library.git solend-program-library
+git clone https://github.com/solendprotocol/solana-program-library.git
+pnpm run wizard
+pnpm i chalk@"^4.1.2"
+brew services start nginx
+sudo docker system prune
+brew services stop nginx
+brew services restart stop
+df -h
+pnpm i chalk
+nano package.json
+pnpm i ink
+pnpm i react
+rm -rf **/target
+pnpm i buffer-layout
+pnpm i bignumber.js
+pnpm i node-fetch@2
+rm -rf */**/target
+cd ~/clean-jupiter-flash-repo/
+rm -rf */target
+pnpm i dotenv
+sudo RUST_LOG=info ./jupiter-swap-api --rpc-url https://jarrett-solana-7ba9.mainnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718 --yellowstone-grpc-endpoint https://jarrett-solana-7ba9.mainnet.rpcpool.com --yellowstone-grpc-x-token 8d890735-edf2-4a75-af84-92f7c9e31718
+sudo rm -rf /tmp/*
+rm -rf /tmp/*
+pnpm i @jup-ag/api
+cd clean-jupiter-flash-repo/
+git clone https://github.com/staccdotsol/clean-jupiter-flash-repo
+cdd
+brew services restart nginx
+nano /usr/local/etc/nginx/servers/one
+rm /usr/local/etc/nginx/nginx.conf
+nano /usr/local/etc/nginx/nginx.conf
+RUST_LOG=info ./jupiter-swap-api --rpc-url https://jarrett-solana-7ba9.mainnet.rpcpool.com/8d890735-edf2-4a75-af84-92f7c9e31718 --yellowstone-grpc-endpoint https://jarrett-solana-7ba9.mainnet.rpcpool.com --yellowstone-grpc-x-token 8d890735-edf2-4a75-af84-92f7c9e31718
+unzip zip.zip
+curl https://github.com/jup-ag/jupiter-swap-api/releases/download/v6.0.3/jupiter-swap-api-x86_64-apple-darwin.zip -o zip.zip
+nano /etc/nginx/nginx.conf
+brew install nginx
+spl-token wrap 0.00001
+yarn add @ngrx/component-store@999
+yarn add @ngrx/component-store@14.3.1
+yarn add @ngrx/component-store@next
+yarn add @ngrx/component-store
+yarn add micro-ftch@next
+rm -rf ./node_modules/micro-ftch/
+yarn build:dev
+cat package.json
+yarn ng
+yarn add @types/bn.js
+yarn starrt
+yarnn dev
+yanr  dev
+cd Compact-DeFi/
+git clone git@github.com:staccDOTsol/Compact-DeFi.git
+export OPENAI_API_KEY=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
+
+export OPENAI_API_KEY=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
+ping google.ca
+cat ~/.config/solana/id.json
+ls -lha | grep 3.png
+yarn dev pagination
+
+yarn dev paginate
+yarn dev all
+
+yarn install --frozen-lockfile
+cd community-projects/graphql-demo
+git clone --depth=1 git@github.com:Shyft-to/community-projects.git community-projects
+
+git clone https://github.com/Shyft-to/community-projects
+python3 somepython.oy
+ls -lha | grep png | wc -l
+watch -n 15 -b 'echo "cat realStaccs.json | jq .[] | wc -l" >> catted.txt && cat catted.txt'
+watch -n 15 -b "cat realStaccs.json | jq .[] | wc -l"
+watch -n 60 -b "echo $(date +%T) ; cat realStaccs.json | jq .[] | wc -l"
+watch -n -b 60 "echo $(date +%T) ; cat realStaccs.json | jq .[] | wc -l"
+watch -n -b60 "echo $(date +%T) ; cat realStaccs.json | jq .[] | wc -l"
+watch 60 "echo $(date +%T) ; cat realStaccs.json | jq .[] | wc -l"
+watch -h echo $(date +%T) ; cat realStaccs.json | jq .[] | wc -l
+echo $(date +%T) ; cat realStaccs.json | jq .[] | wc -l
+echo $(date +%s) ; cat realStaccs.json | jq .[] | wc -l
+clock
+cat realStaccs.json | jq .[] | wc -l
+time -h
+time
+ts
+cat realStaccs.json | jq .[]
+cat realStaccs.json | jq .{}
+turbo run build --filter='@switchboard-xyz/task-runner'
+# To build the task-runner and all of its sub dependencies (solana SDK, EVM SDK, etc)
+turbo run lint
+turbo run build
+pnpm install
+rustup component add rustfmt
+ls -lha | grep json
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+npm install --global release-please
+npm install --global commitizen
+npm install --global turbo
+npm install --global pnpm
+git submodule update --init --recursive
+                                           pnpm install
+
+git clone https://github.com/switchboard-xyz/sbv3
+cd sbv3
+git submodule update --init --recursive
+pnpm install
+
+find ./ -name sui
+nano scripts/setup-deps.sh
+sudo nano /etc/resolv.conf
+cat /etc/resolv.conf
+./scripts/setup-deps.sh
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+brew remove llvm
+eval "$(/usr/local//bin/brew shellenv)"
+
+eval "$(/usr/local/homebrew/bin/brew shellenv)"
+
+ffmpeg -i ~/Downloads/h1e23a.mp4 ../monyeandpower3.mp3
+ffmpeg -i ~/Downloads/qz319m.mp4 ../monyeandpower2.mp3
+mv monyeandpower.mp3 ../
+ffmpeg -i ~/Downloads/jfa4zm.mp4 monyeandpower.mp3
+ls -lha *.ts
+watch "pnpm start --init-user --liquidator --debug   -p ~/.config/solana/id.json --event-susbcriber"
+brew install watch
+find /opt/homebrew/ -name homebrew
+watch
+pnpm start --init-user --liquidator --debug   -p ~/.config/solana/id.json --event-susbcriber
+pnpm build
+cp -r protocol-v2/sdk/* node_modules/@drift-labs/sdk/
+cd protocol-v2/sdk && pnpm build && cd ../..
+cd projects/keeper-bots-v2/
+pnpm start --init-user --jit-maker --debug   -p ~/.config/solana/id.json --event-susbcriber
+pnpm start --init-user --jitMaker --debug   -p ~/.config/solana/id.json --event-susbcriber
+ts-node market_making_examples/jitMaker/index.ts --debug --target_leverage 1 -p ~/.config/solana/id.json
+pnpm i && pnpm build
+pnpm i && pnpm buidl
+cd sdk/
+cd ts
+cd jit-proxy/
+git clone https://github.com/drift-labs/jit-proxy.git
+find protocol-v2/ -name "baseJitter*"
+find protocol-v2/ -name baseJitter*
+ts-node market_making_examples/jitMaker/index.ts --debug --target_leverage 1
+cd protocol-v2/sdk && pnpm build && cd ../.. &&  cp -r protocol-v2/sdk/* node_modules/@drift-labs/sdk/ &&  pnpm start --init-user --liquidator --debug   -p ~/.config/solana/id.json --event-susbcriber
+
+cd protocol-v2/sdk && pnpm build && cd ../..  cp -r protocol-v2/sdk/* node_modules/@drift-labs/sdk/ &&  pnpm start --init-user --liquidator --debug   -p ~/.config/solana/id.json --event-susbcriber
+
+cd protocol-v2/sdk
+pnpm st
+pnpm i @drift-labs/sdk
+rm -rf node_modules/@drift-labs/sdk
+cp -r protocol-v2/sdk node_modules/@drift-labs/
+pnpm dev --init-user --liquidator --debug   -p ~/.config/solana/id.json --event-susbcriber
+pnpm i node-self
+rm -rf protocol-v2/.git
+cd protocol-v2/sdk/
+pnpm i @texture-finance/solana-flash-loan-sdk
+git clone @texture-finance/solana-flash-loan-sdk
+git clone https://github.com/drift-labs/protocol-v2
+git clone https://github.com/drift-labs/drift-sdk
+git clone https://github.com/drift-labs/sdk
+pnpm dev --init-user --liquidator --debug --run-once  -p ~/.config/solana/id.json --event-susbcriber
+pnpm dev --init-user --mark-twap-crank --debug --run-once  -p ~/.config/solana/id.json --event-susbcriber
+pnpm dev --init-user --mark-twap-crank --debug --run-once --websocket -p ~/.config/solana/id.json
+pnpm dev --init-user --mark-twap-crank --debug --run-once --websocket -p ~/.config/solana/id.json --force-deposit 5
+pnpm dev --init-user --mark-twap-crank --debug --run-once --websocket -p ~/.config/solana/id.json --force-deposit 5.47
+pnpm dev --init-user --mark-twap-crank --debug --run-once --websocket -p ~/.config/solana/id.json --force-deposit 6
+pnpm dev --init-user --mark-twap-crank --debug --run-once --websocket -p ~/.config/solana/id.json --force-deposit 15
+pnpm dev -d --init-user --mark-twap-crank --debug --run-once --websocket -p ~/.config/solana/id.json --force-deposit 10
+pnpm dev -d --init-user --mark-twap-crank --debug --run-once --websocket -p ~/.config/solana/id.json
+pnpm dev -d --init-user --mark-twap-crank --debug --run-once --websocket
+pnpm i '@opentelemetry/sdk-metrics-base' @opentelemetry/api-metrics
+pnpm prepare
+cd ../projects/keeper-bots-v2/
+anchor
+solana address -k ../../target/deploy/orca_whirlpool_dca-keypair.json
+rm ../../target/deploy/orca_whirlpool_dca-keypair.json
+cat *.ts
+cat src/main.rs
+ls -lha *.png | wc -l
+brew install gimp
+mv target/idl/cpi_whirlpool_anchor_gen_v0250.json target/idl/cpi_whirlpool_anchor_gen_v_0250.json
+cat target/idl/cpi_whirlpool_anchor_gen_v_0250.json
+ls -lha target/idl/cpi_whirlpool_anchor_gen_v0250.json
+yarn add  "@orca-so/whirlpools-sdk";
+cd solsandbox/orca/whirlpool/rust_cpi/cpi_whirlpool_anchor_gen_v0250/
+git clone https://github.com/everlastingsong/solsandbox --depth 1
+git clone https://github.com/everlastingsong/solsandbox
+cat CyXDo3TKiF4a6puCJwwFaiL2PXWpGdUN9dTuupbjzfhF.png
+ts-node someSolana.js
+yarn add @shadow-drive/sdk
+
+ls -lha *.png
+npm i jimp
+npm i Jimp
+yarn add openai
+ts-node somest
+python3 image.py
+metaboss snapshot mints --creator HCdi5XxeX3pK9A7DXU2JkegXhP791m5i6d4CqQADLjJN -r "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d" --log-level debug -T 900
+metaboss snapshot mints --creator HCdi5XxeX3pK9A7DXU2JkegXhP791m5i6d4CqQADLjJN -r "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d" --log-level debug
+metaboss snapshot mints --creator HCdi5XxeX3pK9A7DXU2JkegXhP791m5i6d4CqQADLjJN -r "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d" --loglevel debug
+metaboss snapshot mints --creator HCdi5XxeX3pK9A7DXU2JkegXhP791m5i6d4CqQADLjJN -r "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d" --verbose
+metaboss snapshot mints --creator HCdi5XxeX3pK9A7DXU2JkegXhP791m5i6d4CqQADLjJN -r "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+metaboss snapshot mints --creator HCdi5XxeX3pK9A7DXU2JkegXhP791m5i6d4CqQADLjJN -r "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d" --api-key c09daa25-e50f-4536-9eee-70acbec2b38d
+metaboss snapshot mints --creator c09daa25-e50f-4536-9eee-70acbec2b38d -r "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d" --api-key c09daa25-e50f-4536-9eee-70acbec2b38d
+metaboss collections get-items --collection-mint HUN7q1ABF9aBRRAJRW1hUPsu4f4dNQv8CXztRWFF7q7n -r "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d" --api-key c09daa25-e50f-4536-9eee-70acbec2b38d
+metaboss collections get-items --collection-mint HUN7q1ABF9aBRRAJRW1hUPsu4f4dNQv8CXztRWFF7q7n -r "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+metaboss collections get-items --collection-mint HUN7q1ABF9aBRRAJRW1hUPsu4f4dNQv8CXztRWFF7q7n -h
+metaboss collections get-items --collection-mint HUN7q1ABF9aBRRAJRW1hUPsu4f4dNQv8CXztRWFF7q7n
+
+cat bla/*  | grep address
+cat bla/*
+cat bla/
+bash great.txt
+mkdir bla
+node somejup.js
+git add . && git commit -m "sb function" && git push o2
+cd ../mpl-candy-machine/
+cp -r ~/projects/solana-superior-randomness/switchboard-function ../mpl-candy-machine/
+ts-node doit.ts
+cd ~/projects/rec
+git remote add o2 git@github.com:staccdotsol/mpl-candy-machine
+git commit -m "ic"
+ssh-keygen -t rsa
+git checkout -b features/superior-randomness
+cd programs/candy-machine-core/
+solana address -k ~/gf3.json
+rm -rf *.csv
+ts-node index.ts
+cat 2eQYRc8YcWejVURMPfcHmFjYjNvCaewzdgLyz2so8rt2.csv | wc -l
+cat 2eQYRc8YcWejVURMPfcHmFjYjNvCaewzdgLyz2so8rt2.csv
+cat 2kUfNGJkNELpbrWpQzsa25wJNmpGae6RWDevPmE8Wdhf.csv
+cat 2cVyHc4DQ5PNjyfvtwcUehLPvSfKrgDyuNx3gkkjre57.csv
+rm -rf *.json
+cat 2guQTprpKQUVLkM9SFHCkewW8A4avgXhNBkJ2ZSVHvPr.json
+cat 6iudyJDCZuKPy3QdfMUt3JP37voHNe1KDktuHQCQWi8T.json
+cat 9ehXnMgFDAyPQGd3msoMwpSj8jQHYu5tRnkqxiP8Fiyi.json
+cat 266WZxe7Qqyt373t4WmUofzrr1XcbMUFUMSqzafyGt43.json
+cat 2T3iJYWPWrh8LeTVHvwDucnE4ea7aVBK7WBfPPkbGRv5.json
+npm i --save-dev @types/bn.js
+scp root@93.95.227.102:/root/candyMachinesDevnet.txt candyMachinesDevnet.txt
+scp 93.95.227.102:/root/candyMachinesDevnet.txt candyMachinesDevnet.txt
+ls -lha *.json
+curl "https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d" -X POST -H "Content-Type: application/json" -d '{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "getProgramAccounts",
+  "params": [
+    "cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ",
+    {
+      "encoding": "jsonParsed",
+      "filters": [ ]
+    }
+  ]
+}' --silent | jq -r '.result[].pubkey' >> candyMachinesDevnet.txt
+curl https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d -X POST -H "Content-Type: application/json" -d '{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "getProgramAccounts",
+  "params": [
+    "cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ",
+    {
+      "encoding": "jsonParsed",
+      "filters": [ ]
+    }
+  ]
+}' --silent | jq -r '.result[].pubkey' >> candyMachinesDevnet.txt
+curl http://api.mainnet-beta.solana.com -X POST -H "Content-Type: application/json" -d '{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "getProgramAccounts",
+  "params": [
+    "cndyAnrLdpjq1Ssp1z8xxDsB8dxe7u4HL5Nxi2K5WXZ",
+    {
+      "encoding": "jsonParsed",
+      "filters": [ ]
+    }
+  ]
+}' --silent | jq -r '.result[].pubkey' >> candyMachines
+history | grep cndy
+history
+noe somejup.js
+ls -lha
+cd projects/
+spl-stake-pool withdraw-stake  F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7   0.5 -v
+spl-stake-pool withdraw-stake  F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7   0.8 -v
+spl-stake-pool withdraw-stake  F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7  ~/gf3.json 0.8 -v
+spl-stake-pool --help | grep withdraw
+spl-stake-pool withdraw-sol  F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7  ~/gf3.json 0.8 -v
+spl-stake-pool withdraw-sol  F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7  ~/gf3.json 0.8
+spl-stake-pool withdraw-sol  F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7  Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6 0.8
+spl-stake-pool withdraw-sol  F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7  0.8
+spl-stake-pool list F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7
+spl-stake-pool set-funding-authority F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7 sol-withdraw Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6
+spl-stake-pool set-funding-authority F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7 sol-deposit Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6
+spl-stake-pool set-funding-authority F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7 stake-deposit Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6
+spl-stake-pool set-funding-authority F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7 Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6 -h
+spl-stake-pool set-funding-authority F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7 --new-authority Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6
+spl-stake-pool set-funding-authority F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7 Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6
+spl-stake-pool set-staker F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7 Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6
+solana config set --keypair ~/Downloads/id.json
+spl-stake-pool set-staker F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7 -h
+spl-stake-pool set-staker F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7
+F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7
+spl-stake-pool set-staker
+spl-stake-poolset-staker
+spl-stake-pool --set-staker
+spl-stake-pool deposit-sol  F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7  0.666
+spl-stake-pool deposit-sol  3T3B8WZbfJ9ujiWdQ8UrADySEApWBeDY2t5myXNGTePD 0.666
+solana --help | grep stake
+solana | grep stake
+solana stake-account 3T3B8WZbfJ9ujiWdQ8UrADySEApWBeDY2t5myXNGTePD
+solana stake-account
+spl-stake-pool set-manager F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7 --new-manager Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6
+cargo install spl-stake-pool-cli
+git commit -m "first commit"
+  git branch -M main
+  git remote add origin git@github.com:jrsfiend/staking_nfts.git
+  git push -u origin main
+anchor build --skip-lint
+./mk clearqueue
+cd staking-nfts
+git clone https://github.com/solana-labs/solana-program-library/ --depth 1
+cargo add spl-stake-pool
+cargo add spl-stake-pool --package draffle
+anchor init staking-nfts
+git clone https://github.com/draffle-io/draffle/
+[1;2A
+cd ~/solana-savings-game/examples/functions/05_raffle_program/
+cd examples/functions/05_raffle_program/
+cd solana-savings-game
+git clone https://github.com/switchboard-xyz/solana-sdk solana-savings-game
+rm -rf solana-savings-game/
+anchor init solana-savings-game
+history | grep EXPORT
+bash stake-o-matic.sh
+export TESTNET_JSON_RPC_URL=https://api.testnet.solana.com
+export MIN_RESERVE_STAKE_BALANCE=1000
+export TESTNET_JSON_RPC_URL=
+export MAINNET_BETA_JSON_RPC_URL="https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+export STAKE_POOL_ADDRESS=F8h46pYkaqPJNP2MRkUUUtRkf8efCkpoqehn9g1bTTm7
+export STAKE_AUTHORITY_KEYPAIR=/Users/jd/Downloads/id.json
+export MIN_RESERVE_STAKE_BALANCE=0
+export NO_WIKI_OUTPUT=true
+export NO_WIKI_OUTPUT
+cp target/debug/solana-stake-o-matic ./
+curl -fL https://github.com/solana-labs/stake-o-matic/releases/download/latest/solana-stake-o-matic-x86_64-apple-darwin -o solana-stake-o-matic
+rm solana-stake-o-matic
+brew install openssl
+brew install libssl-dev
+brew install libssl
+cd ~/stake-o-matic/
+export CLUSTER=mainnet-beta
+export MIN_EPOCH_CREDIT_PERCENTAGE_OF_AVERAGE=90
+export MAX_POOR_VOTER_PERCENTAGE=5
+export MAX_POOR_BLOCK_PRODUCER_PERCENTAGE=5
+export STAKE_O_MATIC_RELEASE=latest
+export MAINNET_BETA_JSON_RPC_URL=https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d
+cd stake-o-matic/
+git clone https://github.com/solana-foundation/stake-o-matic.git --depth 1
+git clone https://github.com/solana-foundation/stake-o-matic.git
+cargo install solana-stake-o-matic
+git add . && git commit -m "README.md" && git push o2
+sb solana routine create 3ACK8mN9EpcSz3iy5eSDWixjSjPgrb2q4BGJBNuCx2md  --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+curl -s 'http://localhost:8080/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=1000000&slippageBps=1' | jq '.outAmount'
+
+
+
+solana address -k /Users/jd/solana-oracle-function-example/target/deploy/srfx_usdc_oracle-keypair.json
+rm -rf target/deploy/srfx_usdc_oracle-keypair.json
+find ./ -name srfx_usdc_oracle.so
+git add . && git commit -m "it runs via mitch's suggestions" && git push o2
+ts-
+CD ..
+CD ../..
++++++++++++++++++++++++++++++++++++
+fai
+sb solana routine create 4Tuy1Hc5LvTbaubVciSKjkV2zxngySVWBETFPt8BRaVi  --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name assessment-magick --fundAmount 0.1 --container jrsdunn/solana-balancer-oracle-function --version latest -k ~/.config/solana/id.json --mrEnclave 0xedf02ed92d4fe58c7f7a0e6fc33a2c49a834db4519aaac108acf5a8caae0790b --cluster devnet
+sb solana routine create 24khV7ktmJCd2bbKLMj5JhqtamyQzHzgiS6PKKW4Av2K  --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana function create AuwpxF8eMXTcfmUbMac5YatUK6UPe7grTxgxF9uV9xcs --name assessment-magick --fundAmount 0.1 --container jrsdunn/solana-balancer-oracle-function --version latest -k ~/.config/solana/id.json --mrEnclave 0xedf02ed92d4fe58c7f7a0e6fc33a2c49a834db4519aaac108acf5a8caae0790b --cluster devnet
+sb solana routine create BLNU82maykkLdpB72oa97YNNzVsvpJdRoEUsj8UQC23H  --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana function create ALZNPjwkbhrH87cV7Mv8qFjdZzpfep58X3iAhoYzeksC --name assessment-magick --fundAmount 0.1 --container jrsdunn/solana-balancer-oracle-function --version latest -k ~/.config/solana/id.json --mrEnclave 0xedf02ed92d4fe58c7f7a0e6fc33a2c49a834db4519aaac108acf5a8caae0790b --cluster devnet
+make test
+cd ~/solana-oracle-function-example/
+cd ~/solana-oracle-function-example/switchboard-functions/02_srfx_usdc_oracle_function_rust/
+cd ~/solana-sdk/examples/functions/01_basic_oracle/
+sb solana routine create 2X5Dh1xE219tY1oMLD1NPCWkRtA4USePcbtLn8gnNiyW  --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana function create ALZNPjwkbhrH87cV7Mv8qFjdZzpfep58X3iAhoYzeksC --name assessment-magick --fundAmount 0.1 --container jrsdunn/basic-oracle-function-v1 --version latest -k ~/.config/solana/id.json --mrEnclave 0x865387d5b2bd6ded34884896742497ee4fb0dd87cd39a32ba5659c98140b5cc4 --cluster devnet
+cd ~/solana-sdk/examples/functions/01_basic_oracle/switchboard-function/
+≈
+yarn add "@switchboard-xyz/common";
+ts-node scripts/devnet.ts
+anchor test --skip-build --skip-deploy --provider.cluster  "https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+sb solana function te
+sb solana routine create  FZEEcSRMZAkdcHLEfdeQt4uJE83Qnxk9SGYsALZYQMwZ --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana routine create  FZEEcSRMZAkdcHLEfdeQt4uJE83Qnxk9SGYsALZYQMwZ --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet --params=1
+cd 01_basic_oracle/
+make build-b
+make build-
+cp ~/solana-oracle-function-example/switchboard-functions/02_srfx_usdc_oracle_function_rust/src/math.rs  switchboard-function/src/
+cp ~/solana-oracle-function-example/switchboard-functions/02_srfx_usdc_oracle_function_rust/src/balancer.rs  switchboard-function/src/
+make build_docker && make publish_docker
+solanacd ~/solana-sdk/examples/functions/01_basic_oracle/
+anchor deploy --provider.cluster "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+sb solana function send-request 8chiBFmZbM5DLXr2VcKnf7pj84BVuC58UiFtaPQUysVS  --parameters "PID=8WcoYbWi6fECX3rovEzRqAZrZHHsuvK2FfY1X86dBfqr,RAFFLE_KEY=AGr2abZdTDtkf5GVXYJUDgg3jrW6XqWon6auFqqVJM2p,ROUND_CLOSE_SLOT=0,AUTHORITY=CXvT5HxS5p4hp6wZbghhwkVgV11Mr7NvwxeQD3B6odtH" --keypair ~/2.json
+cp ../../projects/solana-oracle-function-example/switchboard-functions/03_task_runner_function_ts/configs/boot.sh ./
+find ../../projects/solana-* -name boot.sh
+find ../../solana-* -name boot.sh
+find ../../ -name boot.sh
+make measurement.txt
+sb solana function send-request 8chiBFmZbM5DLXr2VcKnf7pj84BVuC58UiFtaPQUysVS  --parameters "PID=8WcoYbWi6fECX3rovEzRqAZrZHHsuvK2FfY1X86dBfqr,RAFFLE_KEY=AGr2abZdTDtkf5GVXYJUDgg3jrW6XqWon6auFqqVJM2p,ROUND_CLOSE_SLOT=0,AUTHORITY=CXvT5HxS5p4hp6wZbghhwkVgV11Mr7NvwxeQD3B6odtH"
+sb solana function send-request 8chiBFmZbM5DLXr2VcKnf7pj84BVuC58UiFtaPQUysVS  --params "PID=8WcoYbWi6fECX3rovEzRqAZrZHHsuvK2FfY1X86dBfqr,RAFFLE_KEY=AGr2abZdTDtkf5GVXYJUDgg3jrW6XqWon6auFqqVJM2p,ROUND_CLOSE_SLOT=0,AUTHORITY=CXvT5HxS5p4hp6wZbghhwkVgV11Mr7NvwxeQD3B6odtH"
+solana transfer -k ~/1.json CXvT5HxS5p4hp6wZbghhwkVgV11Mr7NvwxeQD3B6odtH 2.8 -ud --allow-unfunded-recipient
+solana transfer -k ~/1.json CXvT5HxS5p4hp6wZbghhwkVgV11Mr7NvwxeQD3B6odtH 2.9 -ud --allow-unfunded-recipient
+solana-keygen new -o ~/2.json -f
+sb solana function test  --parameters "PID=8WcoYbWi6fECX3rovEzRqAZrZHHsuvK2FfY1X86dBfqr,RAFFLE_KEY=CoxLL4Nbo7Qs6AvJu3yjTAyBCWfCuHoVswbyVgoohGQ,ROUND_CLOSE_SLOT=200,AUTHORITY=jbsdFgLWLcYWfPqBWAktzeyJ9EDLxyxpU4vYHhTAUJP" --devnetSimulate
+sb solana function test  --parameters "PID=8WcoYbWi6fECX3rovEzRqAZrZHHsuvK2FfY1X86dBfqr,RAFFLE_KEY=CoxLL4Nbo7Qs6AvJu3yjTAyBCWfCuHoVswbyVgoohGQ,ROUND_CLOSE_SLOT=20000000000,AUTHORITY=jbsdFgLWLcYWfPqBWAktzeyJ9EDLxyxpU4vYHhTAUJP" --devnetSimulate
+solana transfer -k ~/5.json BppvWFgHeAae9g2Br4sA98YHMNTHHfZk9Zt8oqtspbBJ 3.1 -ud --allow-unfunded-recipient
+solana-keygen new -o ~/1.json -f
+cd ~/05_raffle_program/switchboard-function/
+solana transfer -k ~/4.json 8bo1K4jEke3i19ZVq24SZFktDuJwRDFs7dqw3MQ1ovqJ 3.3 -ud --allow-unfunded-recipient
+solana-keygen new -o ~/5.json
+solana transfer -k ~/3.json 717QhHrTB4T4nDf6Mw5vDrZSLC7nc8csu1RVQUsXB16Z 3.5 -ud --allow-unfunded-recipient
+solana transfer -k ~/3.json 717QhHrTB4T4nDf6Mw5vDrZSLC7nc8csu1RVQUsXB16Z 3.6 -ud --allow-unfunded-recipient
+solana-keygen new -o ~/4.json
+solana transfer -k ~/2.json 48DJJpHUCBM7o7SxNUBmnDsdNaG4ZTwuuDEDQJB3rvS1 3.7 -ud --allow-unfunded-recipient
+solana-keygen new -o ~/3.json
+solana transfer -k ~/gf3.json 5zg6r6s1BHZ5zCZ6pHAwTBDrd3hmmggkskCeRiBrqUq5 4 -ud --allow-unfunded-recipient
+solana transfer -k ~/gf3.json 5zg6r6s1BHZ5zCZ6pHAwTBDrd3hmmggkskCeRiBrqUq5 4
+solana-keygen new -o ~/2.json
+sb solana function send-request  DvHPK6Fac7A9BWgX2zVbVsc18LnxKqP7dV5pxxr4qYqv -k ~/gf3.json
+sb solana routine create DvHPK6Fac7A9BWgX2zVbVsc18LnxKqP7dV5pxxr4qYqv --name magick-minutely --schedule "*/1 * * * *" -k ~/gf3.json --cluster devnet
+sb solana routine create DvHPK6Fac7A9BWgX2zVbVsc18LnxKqP7dV5pxxr4qYqv --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+solana transfer -ud -k ~/.config/solana/id.json Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6 4
+sb solana function test  --parameters "PID=8WcoYbWi6fECX3rovEzRqAZrZHHsuvK2FfY1X86dBfqr;RAFFLE_KEY=CoxLL4Nbo7Qs6AvJu3yjTAyBCWfCuHoVswbyVgoohGQt;ROUND_CLOSE_SLOT=20000000000;AUTHORITY=jbsdFgLWLcYWfPqBWAktzeyJ9EDLxyxpU4vYHhTAUJP" --devnetSimulate
+sb solana function test  --parameters "AUTHORITY=jbsdFgLWLcYWfPqBWAktzeyJ9EDLxyxpU4vYHhTAUJP" --devnetSimulate
+mv ../src/balancer.rs src/
+sb solana function test --devnetSimulate --paramaters=0
+sb solana function test --devnetSimulate --params=0
+cd ~/05_raffle_program/
+mv 05_raffle_program ~
+cd ../solana-sdk/examples/functions/05_raffle_program/switchboard-function/
+cd solana-sdk
+git clone https://github.com/switchboard-xyz/solana-sdk/
+sb solana routine create 8y2PQz9PMG8fQmZj5geoFhK9DawzVdgSsVZb1o26sigx --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana routine create 8y2PQz9PMG8fQmZj5geoFhK9DawzVdgSsVZb1o26sigx --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster mainnet
+sb solana function send-request 8y2PQz9PMG8fQmZj5geoFhK9DawzVdgSsVZb1o26sigx -k ~/.config/solana/id.json --cluster devnet
+sb solana function send-request gJT75HkaMDgH1KhzWtpAYdXi9sES25kQVnRet3fC2MT -k ~/.config/solana/id.json --cluster devnet
+sb evm request send 0x9C8dE78396d8a587D7BACe9A910622a9f5121D35 --fundAmount 0.01 --account ~/evm.json --chain arbitrum --network testnet
+cd ~/projects/evm-functions-template/rust/01_price_oracle/SwitchboardPushReceiver/
+ts-node simulate.ts
+ts-node simulate.ts gJT75HkaMDgH1KhzWtpAYdXi9sES25kQVnRet3fC2MT
+sb solana function send-request 42bfe482be8242f975653d3ed1e541ec25436552ca7ad27c5202871ceef21b3e -k ~/.config/solana/id.json --cluster devnet
+anchor deploy --
+solana address -k /Users/jd/solana-oracle-function-example/target/deploy/basic_oracle-keypair.json
+rm /Users/jd/solana-oracle-function-example/target/deploy/basic_oracle-keypair.json
+solana program close 5ceWovsjyMhCvZe1esLtvapXD6bDiaaLCc3JEZHi23G6 -ud --bypass-warning
+solana program close 5ceWovsjyMhCvZe1esLtvapXD6bDiaaLCc3JEZHi23G6
+sb solana function test
+solana address -k /Users/jd/solana-oracle-function-example/target/deploy/basic_oracle.so
+cp -r programs/01_basic_oracle ../solana-oracle-function-example/programs/
+rm -rf basic_oracle_function/
+mv basic_oracle_function/* ./
+cargo init basic_oracle_function
+cargo init
+cd switchboard-functions/01_basic_oracle_function
+mv ../solana-oracle-function-example/switchboard-functions/01_basic_oracle_function switchboard-functions/
+cd ../blarg/
+cd 01_basic_oracle_function/
+mkdir 01_basic_oracle_function
+cd blarg
+git clone https://github.com/switchboard-xyz/solana-oracle-function-example blarg
+sb solana function send-request 8XDuXrCDyUHdbAqLDH3G3EBF7sPMiPvPK7W3ULcHLDkZ -k ~/.config/solana/id.json --cluster devnet
+ts-node simulate.ts 8XDuXrCDyUHdbAqLDH3G3EBF7sPMiPvPK7W3ULcHLDkZ
+solana program close 4e4EqeENkHFiBikwZ5WwpCzQgUTuXJ8evGiepG1Pxobv --bypass-warning -ud
+rm /Users/jd/solana-oracle-function-example/target/deploy/srfx_usdc_oracle-keypair.json
+solana program close 4e4EqeENkHFiBikwZ5WwpCzQgUTuXJ8evGiepG1Pxobv --bypass-warning
+cd ,,.,,
+ts-node simulate.ts 2osCiU6Gz34ceef5stwSEsm8wBuFzTuKEYksP76GA3hC
+cd ~/Downloads/Telegram\ Desktop/
+make build-basic-function && make publish-basic-functin
+cd ~/options-platform-function-example/
+cd options-platform-function-example/
+git clone https://github.com/switchboard-xyz/options-platform-function-example
+make simple-flip-deploy
+simple-flip-deploy:
+cd ~/solana-simple-randomness-example/
+cd ~/solana-simple-randomness-example/switchboard-function/
+cd ../solana-simple-randomness-example/
+git clone https://github.com/switchboard-xyz/solana-simple-randomness-example
+anchor buildd
+anchor idl init 4e4EqeENkHFiBikwZ5WwpCzQgUTuXJ8evGiepG1Pxobv --filepath target/idl/srfx_usdc_oracle.json --provider.cluster devnet
+anchor idl init 4e4EqeENkHFiBikwZ5WwpCzQgUTuXJ8evGiepG1Pxobv --filepath target/idl/srfx_usdc_oracle.json -ud
+anchor idl init 4e4EqeENkHFiBikwZ5WwpCzQgUTuXJ8evGiepG1Pxobv --filepath target/idl/srfx_usdc_oracle.json -udd
+anchor idl init 4e4EqeENkHFiBikwZ5WwpCzQgUTuXJ8evGiepG1Pxobv --filepath target/idl/srfx_usdc_oracle.json -u
+anchor idl init 4e4EqeENkHFiBikwZ5WwpCzQgUTuXJ8evGiepG1Pxobv --filepath target/idl/srfx_usdc_oracle.json
+sb solana routine create  2osCiU6Gz34ceef5stwSEsm8wBuFzTuKEYksP76GA3hC --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet --params=1
+sb solana function send-request TjopUEc2T9zyqJSewiGBio5dJzfkyX7HQMYSGLZAY5n -k ~/.config/solana/id.json --cluster devnet --params=1
+sb solana function send-request TjopUEc2T9zyqJSewiGBio5dJzfkyX7HQMYSGLZAY5n -k ~/.config/solana/id.json --cluster devnet
+sb solana function create ALZNPjwkbhrH87cV7Mv8qFjdZzpfep58X3iAhoYzeksC --name assessment-magick --fundAmount 0.1 --container jrsdunn/solana-basic-oracle-function --version latest -k ~/.config/solana/id.json --mrEnclave 0x17b4e0a5c412a269217bba43ebd0c62129f6e6b26d4fff3b43bf238867362c6c --cluster devnet
+solana program close 7R1pR7GR1J25jYDXdmFxUfPxEUCQR1qouKTQpbHmAwsP -ud --bypass-warning
+yarn add  "@switchboard-xyz/solana.js"
+rm /Users/jd/solana-oracle-function-example/target/d
+eploy/srfx_usdc_oracle-keypair.json
+solana program close 2X2ocABrA21nKv87MT2n71kZKv6DsFmxv3b9mTTS4AET --bypass-warning -ud
+rm /Users/jd/solana-oracle-function-example/target/deploy/twap_oracle.so
+ANCHOR BUILD
+sb solana routine create  CpyxRyNvgddZbZkYw5BB4XWhnbJZLYLx5kAkaK7yf2Nr --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana routine create  CpyxRyNvgddZbZkYw5BB4XWhnbJZLYLx5kAkaK7yf2Nr --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster mainnet
+ts-node simulate.ts CpyxRyNvgddZbZkYw5BB4XWhnbJZLYLx5kAkaK7yf2Nr
+solana address -k /Users/jd/solana-oracle-function-example/target/deploy/twap_oracle-keypair.json
+rm /Users/jd/solana-oracle-function-example/target/deploy/twap_oracle-keypair.json
+solana program close 5Xf8maajW5MCaeUPn1RLSJY2CczZiWN31eGuDWePgvSV --bypass-warning -ud
+solana program close 5Xf8maajW5MCaeUPn1RLSJY2CczZiWN31eGuDWePgvSV --bypass-warning
+solana function test --devnetSimulate
+sb solana test --devnetSimulate
+sb solana te
+sb solana function send-request 2e1nobc4EGwuWhAtXmfLzeTBaQtwieA47MhhZEWheHfC -k ~/.config/solana/id.json --cluster mainnet
+sb solana function send-request 2e1nobc4EGwuWhAtXmfLzeTBaQtwieA47MhhZEWheHfC -k ~/.config/solana/id.json --mainnet
+sb solana function send-request 2e1nobc4EGwuWhAtXmfLzeTBaQtwieA47MhhZEWheHfC -k ~/.config/solana/id.json
+sb solana routine create 2e1nobc4EGwuWhAtXmfLzeTBaQtwieA47MhhZEWheHfC --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster mainnet
+sb solana function create ALZNPjwkbhrH87cV7Mv8qFjdZzpfep58X3iAhoYzeksC --name assessment-magick --fundAmount 0.1 --container jrsdunn/solana-basic-oracle-function --version latest -k ~/.config/solana/id.json --mrEnclave 0xba9c4223085fa598d7008edd7a7d9cd8daa1abade6b583385f42ac31aeb88860 --cluster devnet
+sb evm request send 0x369624F8cc67E529ad0B17Ff839Aa977451fDCC5 --fundAmount 0.01 --account ~/evm.json --chain arbitrum --network testnet
+sb solana routine create 2RYL1QuVyBLgwJQm5ARfAeZjic7TnFszrMc8ESWfrnn4 --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana function send-request 2RYL1QuVyBLgwJQm5ARfAeZjic7TnFszrMc8ESWfrnn4 -k ~/.config/solana/id.json
+cd 02_srfx_usdc_oracle_function_rust/
+git add . && git commit -m "finishing touches" && git push o2
+ts-node simulate.ts 2RYL1QuVyBLgwJQm5ARfAeZjic7TnFszrMc8ESWfrnn4
+cd Telegram\ Desktop/
+cd ~/Do
+ls switchboard-functions/
+ls programs/
+cd  ~/solana-oracle-function-example/
+cd  ~/sol
+git add . && git commit -m "README.md" && git push
+rm README.me
+mv switchboard-functions/02_twap_oracle_function_rust switchboard-functions/02_srfx_usdc_oracle_function_rust
+mv switchboard-functions/02_twap_oracle_function_rust/src/binance.rs switchboard-functions/02_twap_oracle_function_rust/src/balancer.rs
+mv switchboard-functions/02_twap_oracle_function_rust/src/binance.rs switchboard-functions/02_twap__oracle_function_rust/src/balancer.rs
+git commit -m "rename to proper srfx verbiage"
+cd switchboard-functions/02_twap_oracle_function_rust/
+anchor bulild
+python someai.py
+cd Downloads/
+e
+pip install openai
+
+ts-node simulate.ts "Eng2o91U7kBgPTjpAJwXjfCgmKMAZ2mPMjkSMLRTVo3t"
+curl https://patch-diff.githubusercontent.com/raw/jrsfiend/solana-oracle-function-example/pull/1.diff -o diff.diff --compressed
+curl https://patch-diff.githubusercontent.com/raw/jrsfiend/solana-oracle-function-example/pull/1.diff -o diff.diff
+cdd ..
+gigt push
+git commit -m "time4docs"
+git checkout -b features/assessment
+git remote add o2 git@github.com:jrsfiend/solana-oracle-function-example
+ts-node simulate.ts 7R7k7gCmkZ6sLPXiDYyBNsCJCpMQVTRGZeaNVT2gQeRp
+ts-node simulate.ts DtEjY5ZwWhQLNLkekuHXpPr18Pz5RqAAGgCBRWbqb217
+ts-node simulate.ts BT1ZbsN6XVW8EBGZy19Vr9vBamznddpcPhZ51Svj3oZp
+ts-node simulate.ts ba9c4223085fa598d7008edd7a7d9cd8daa1abade6b583385f42ac31aeb88860
+sb solana function send-request BT1ZbsN6XVW8EBGZy19Vr9vBamznddpcPhZ51Svj3oZp -k ~/.config/solana/id.json
+sb solana function send
+sb solana --help
+sb solana send
+sb solana function create ALZNPjwkbhrH87cV7Mv8qFjdZzpfep58X3iAhoYzeksC --name assessment-magick --fundAmount 0.1 --container jrsdunn/solana-basic-oracle-function --version solana -k ~/.config/solana/id.json --mrEnclave 0xf6a618bc36fab977284902fb6cf69b4df832b81a58c51deaea5b47816f8585c3 --cluster devnet
+sb solana routine create DtEjY5ZwWhQLNLkekuHXpPr18Pz5RqAAGgCBRWbqb217 --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana routine create 17b4e0a5c412a269217bba43ebd0c62129f6e6b26d4fff3b43bf238867362c6c --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster devnet
+sb solana function create  --name assessment-magick --fundAmount 0.1 --container jrsdunn/solana-basic-oracle-function --version solana -k ~/.config/solana/id.json --mrEnclave 0xf6a618bc36fab977284902fb6cf69b4df832b81a58c51deaea5b47816f8585c3 --cluster devnet
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name assessment-magick --fundAmount 0.1 --container jrsdunn/solana-basic-oracle-function --version solana -k ~/.config/solana/id.json --mrEnclave 0xf6a618bc36fab977284902fb6cf69b4df832b81a58c51deaea5b47816f8585c3 --cluster devnet
+cd jd/solana-oracle-function-example/
+yarn add ws
+solana address -k /Users/jd/solana-oracle-function-example/tar
+get/deploy/twap_oracle-keypair.json
+solana address -k target/deploy/twap_oracle-keypair.json
+rm -rf target/deploy/basic_oracle.so
+solana program close ACJmCXG9oN9q4TyAzEsTAkSaWMRn2EZSw1bFDeTaoKJa --bypass-warning -ud
+export TWAP_ORACLE_PROGRAM_ID=ACJmCXG9oN9q4TyAzEsTAkSaWMRn2EZSw1bFDeTaoKJa
+export TWAP_PROGRAM_ID=ACJmCXG9oN9q4TyAzEsTAkSaWMRn2EZSw1bFDeTaoKJa
+export ANCHOR_WALLET=/home/jd/.config/solana/id.json
+export ANCHOR_PROVIDER_URL="https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+ts-node scripts/init-basic-oracle.ts ~/.config/solana/id.json
+pnpm exec scripts/init-basic-oracle.ts
+rm -rf programs/01_basic_oracle/
+cd ../02_twap_oracle_function_rust/
+anchor deploy
+cd switchboard-functions/02_twap_oracle_function_ts/
+cp -r projects//datadata/solana-oracle-function-example/programs/01_basic_oracle solana-oracle-function-example/programs/
+find projects/ -name 01_basic_oracle
+sb solana routine create 5LaCrr9Be4kLVWsQKQcd8nxiiCFRqcZqAqLQq1rmBfNb --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --cluster mainnet
+sb solana routine create 5LaCrr9Be4kLVWsQKQcd8nxiiCFRqcZqAqLQq1rmBfNb --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json --mainnet
+sb solana routine create 5LaCrr9Be4kLVWsQKQcd8nxiiCFRqcZqAqLQq1rmBfNb --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json
+sb solana routine create  --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json
+sb solana function create 2ie3JZfKcvsRLsJaP5fSo43gUo1vsurnUAtAgUdUAiDG --name assessment-magick --fundAmount 0.1 --container jrsdunn/solana-basic-oracle-function --version solana -k ~/.config/solana/id.json --mrEnclave 0xf6a618bc36fab977284902fb6cf69b4df832b81a58c51deaea5b47816f8585c3 --cluster mainnet
+RUST_BACKTRACE=1 sb solana function test
+pnpm exec ts-mocha -p ./tsconfig.json -t 1000000 tests/basic_oracle.ts
+pnpm exec ts-mocha -p ./tsconfig.json -t 1000000 tests/*.test.ts
+pnpm i  "@switchboard-xyz/solana.js"
+sb solana routine create CpyxRyNvgddZbZkYw5BB4XWhnbJZLYLx5kAkaK7yf2Nr --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json
+sb solana routine create CpyxRyNvgddZbZkYw5BB4XWhnbJZLYLx5kAkaK7yf2Nr --fund-amount 1.25 --name magick-minutely --schedule "*/1 * * * *" -k ~/.config/solana/id.json
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name assessment-magick --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana -k ~/.config/solana/id.json --mrEnclave 0xf6a618bc36fab977284902fb6cf69b4df832b81a58c51deaea5b47816f8585c3 --cluster devnet
+docker buildx build --pull --platform linux/amd64 \
+-f ./Dockerfile \
+-t jrsdunn/solana-basic-oracle-function:latest \
+
+./
+docker buildx build --pull --platform linux/amd64 \
+-f ./Dockerfile \
+-t jrsdunn/solana-basic-oracle-function:latest
+./
+docker buildx build --pull --platform linux/amd64 \
+-f ./Dockerfile \
+-t $DOCKERHUB_ORGANIZATION/solana-basic-oracle-function:latest
+./
+docker build-basic-function
+ls ../../programs/
+ls programs/02_twap_oracle/
+ls -lha ./switchboard-functions/02_twap_oracle_function_rust/src/
+cd 02_twap_oracle_function_rust/
+sb solana function test  --devnetSimulate
+cd switchboard-functions/02_twap_oracle_function_
+rm -rf switchboard-functions/03_task_runner_function_ts/
+rm -rf switchboard-functions/01_basic_oracle_function_bun/
+rm -rf programs/03_task_runner_oracle/
+cd ../../programs/02_twap_oracle/src/
+cd ../switchboard-functions/02_twap_oracle_function_rust/
+cd solana-oracle-function-example/programs/01_basic_oracle/
+sb evm request send 0xaA2cFa1ce005bC6d6A9BEb36aEf0Ad83a572dE37 --fundAmount 0.01 --account ~/evm.json --chain arbitrum --network testnet
+sb evm request send 0xaA2cFa1ce005bC6d6A9BEb36aEf0Ad83a572dE37 --fundAmount 0.01 --account ~/evm --chain arbitrum --network testnet
+sb evm request send 0xaA2cFa1ce005bC6d6A9BEb36aEf0Ad83a572dE37 --fundAmount 0.01 --account ~/evm
+sb evm request send 0xaA2cFa1ce005bC6d6A9BEb36aEf0Ad83a572dE37 --fundAmount 0.01
+sb evm function send 0xaA2cFa1ce005bC6d6A9BEb36aEf0Ad83a572dE37 --fundAmount 0.01
+sb evm function print 0xaA2cFa1ce005bC6d6A9BEb36aEf0Ad83a572dE37 --chain arbitrum --network testnet
+sb evm function print
+sb evm routine print 0x60A0C834991296687F35783d449e6F9e850E1B5B --chain arbitrum --network testnet
+sb evm routine print 0x60A0C834991296687F35783d449e6F9e850E1B5B
+sb evm routine print
+sb evm routine
+echo $FUNCTION_ID
+sb evm routine create $FUNCTION_ID  --account ~/evm.json --fundAmount 0.001  --schedule "*/1 * * * *" --chain arbitrum --network testnet
+pnpm exec hardhat run scripts/check_function.ts  --network arbitrumTestnet
+pnpm exec hardhat run scripts/extend_function.ts  --network arbitrumTestnet
+
+export FUNCTION_ID=0xaA2cFa1ce005bC6d6A9BEb36aEf0Ad83a572dE37
+pnpm exec hardhat run scripts/create_function.ts  --network arbitrumTestnet # or coredaoTestnet
+
+export ETH_VALUE=0.001
+export CONTAINER_NAME="jrsdunn/sb-evm"
+export SCHEDULE="30 * * * * *" # every 30 seconds
+
+export QUEUE_ID=0x54f8A91bE5baAD3E2368b00A11bF4012EA6b031F
+export SWITCHBOARD_PUSH_ADDRESS=0xd2959aCfA1D041057b12600E46454B0Abd5E29C1
+pnpm deploy:arbitrumtestnet
+
+export SWITCHBOARD_ADDRESS=0xA3c9F9F6E40282e1366bdC01C1D30F7F7F58888e
+
+export PRIVATE_KEY=0xbcc87b67662de014cc9d84ceb2278203c8bcff401657ed0e9b6f5c5ba6788705
+export PRIVATE_KEY=0xbcc87b67662de014cc9d84ceb2278203c8bcf
+f401657ed0e9b6f5c5ba6788705
+echo $PRIVATE_KEY
+export $PRIVATE_KEY
+pnpm deploy:arbitrumtestnet
+cc ..
+cp ~/projects/evm-options-function/switchboard-function/config/boot.sh config/
+export CONTAINER_NAME=jrsdunn/sb-evm
+cd rust/01_price_oracle/SwitchboardPushReceiver/switchboard-function/
+source
+sb evm function test --chain arbitrum --network mainnet
+cd evm-functions-template/rust/01_price_oracle/SwitchboardPushReceiver/switchboard-function/
+git clone https://github.com/switchboard-xyz/evm-functions-template  --depth 1
+sb evm routine create 0xEE8A033EA2fC752E7a44672dc07eC35a329Ad5eB  --account ~/evm.json --fundAmount 0.001  --schedule "*/1 * * * *" --chain arbitrum --network testnet
+pnpm exec hardhat run scripts/reset_function.ts --network arbitrumTestnet
+sb evm function create 0x2D3385BFF20b3EEBA91caEA535569F2dc55c2980 --name function-1 --fundAmount 0.002 --container jrsdunn/sb-evm --version latest --account ~/evm.json --chain arbitrum --network mainnet
+sb evm function create 0x2D3385BFF20b3EEBA91caEA535569F2dc55c2980 --name function-1 --fundAmount 0.002 --container jrsdunn/sb-evm --version latest
+sb evm function create 0x2D3385BFF20b3EEBA91caEA535569F2dc55c2980 --name function-1 --fundAmount 0.002 --container jrsdunn/sb-evm --version latest --help
+sb evm function create F8ce7MsckeZAbAGmxjJNetxYXQa9mKr9nnrC3qKubyYy --name function-1 --fundAmount 0.002 --container jrsdunn/sb-evm --version latest --help
+sb evm function create F8ce7MsckeZAbAGmxjJNetxYXQa9mKr9nnrC3qKubyYy --name function-1 --fundAmount 0.002 --container jrsdunn/sb-evm --version latest
+sb evm function create --help
+sb evm functioncreate --help
+sb evm function --help
+sb evm function configure 0x0a1C3B3F9791c6E95B185c3b1008496Fd1c33fd0 --queue 0x2D3385BFF20b3EEBA91caEA535569F2dc55c2980
+sb evm function configure 0x0a1C3B3F9791c6E95B185c3b1008496Fd1c33fd0 --help | grep queue
+sb evm function configure 0x0a1C3B3F9791c6E95B185c3b1008496Fd1c33fd0 --help
+sb evm function configure
+sb evm function
+pnpm exec hardhat run scripts/listen_to_updates.ts --network arbitrumTestnet
+
+pnpm exec hardhat run scripts/print_feeds.ts --network arbitrumTestnet
+
+export SWITCHBOARD_PUSH_ADDRESS=0x659E0b6f6e7adE1607fb86B9dD0E42E61408eCf4
+export SWITCHBOARD_PUSH_ADDRESS=0x659E0b6f
+6e7adE1607fb86B9dD0E42E61408eCf4
+export CALLBACK_ADDRESS=0x659E0b6f6e7adE1607fb86B9dD0E42E61408eCf4
+pnpm exec hardhat run scripts/check_function.ts  --network arbitrumTestnet
+
+export ETH_VALUE="0.001"
+
+export FUNCTION_ID=0xEE8A033EA2fC752E7a44672dc07eC35a329Ad5eB
+make docker_build
+
+export CALLBACK_ADDRESS==0x659E0b6f6e7adE1607fb86B9dD0E42E61408eCf4
+yarn hardhat run --network arbitrumTestnet  scripts/deploy.ts
+yarn hardhat run --networkTestnet arbitrum scripts/deploy.ts
+yarn hardhat run --network arbitrum scripts/deploy.ts
+sb evm enclave print 0x65f71514Fc475d43B40f8d6C25dFd991d2203f99 --chain arbitrum --network testnet
+export QUEUE_ID=0x2D3385BFF20b3EEBA91caEA535569F2dc55c2980
+sb evm enclave print 0xb6e3E360C48E59A50E23Bf5ea7d1Bf216EC4416D --chain arbitrum --network mainnet
+sb evm enclave print 0x0a1C3B3F9791c6E95B185c3b1008496Fd1c33fd0 --chain arbitrum --network mainnet
+sb evm enclave print 0x4752178728fd8ee9d7d9a80019dc50a40a6e10d74fadfe139bbb2f40df573ab2 --chain arbitrum --network mainnet --help
+sb evm enclave print 0x4752178728fd8ee9d7d9a80019dc50a40a6e10d74fadfe139bbb2f40df573ab2 --chain arbitrum --network mainnet --hel
+sb evm enclave print 0x4752178728fd8ee9d7d9a80019dc50a40a6e10d74fadfe139bbb2f40df573ab2 --chain arbitrum --network mainnet
+sb evm enclave print 4752178728fd8ee9d7d9a80019dc50a40a6e10d74fadfe139bbb2f40df573ab2 --chain arbitrum --network mainnet
+sb evm enclave print 4752178728fd8ee9d7d9a80019dc50a40a6e10d74fadfe139bbb2f40df573ab2
+sb evm enclave print
+sb evm enclave
+sb evm
+sb evm routine create 0x0a1C3B3F9791c6E95B185c3b1008496Fd1c33fd0  --account ~/evm.json --fundAmount 0.001  --schedule "*/1 * * * *" --chain arbitrum --network mainnet
+sb evm function test --chain arbitrum --network testnet
+cd ~/projects/evm-options-function/switchboard-function/
+yarn hardhat run --network arbitrumMainnet scripts/create_function.ts
+export ETH_VALUE=0.0001
+export CALLBACK_ADDRESS=0x5F64F2e7cDE3d44A8aD0d4E8447C1F11030B015B
+yarn hardhat run --network arbitrumMainnet scripts/deploy.ts
+cp ~/projects/evm-options-function/hardhat.config.ts ./
+yarn hardhat run --network arbitrumMainnet scripts/request.ts
+echo $CALLBACK_ADDRESS
+yarn hardhat run --network arbitrumMainnet scripts/get_state.ts
+sb evm routine create 0x9C8dE78396d8a587D7BACe9A910622a9f5121D35  --account ~/evm.json --fundAmount 0.001  --schedule "*/1 * * * *" --chain arbitrum --network mainnet
+export CALLBACK_ADDRESS=0x2b70D6F6e60Fb4d30DEF981A2C83345953d39691
+yarn hardhat run --network arbitrumTestnet scripts/deploy.ts
+cd ~/projects/evm-options-function/
+sb evm routine create 0x9C8dE78396d8a587D7BACe9A910622a9f5121D35  --account ~/evm.json --fundAmount 0.0138  --schedule "*/1 * * * *" --chain arbitrum --network testnet
+sb evm routine create 0xdD18a1E403D05299269b8F430e6F56a825d84100  --account ~/evm.json --fundAmount 0.0138  --schedule "*/1 * * * *" --chain arbitrum --network testnet
+yarn hardhat run --network arbitrumTestnet scripts/request.ts
+cd ../../evm-functions-template/rust/01_price_oracle/SwitchboardPushReceiver/switchboard-function/
+cat ~/evm.json
+pnpm exec hardhat run --network arbitrumTestnet scripts/request.ts
+pnpm exec hardhat run --network arbitrumTestnet scripts/get_state.ts
+pnpm exec hardhat run --network arbitrumTestnet scripts/print_feeds.ts
+pnpm exec hardhat run --network arbitrumTestnet scripts/check_function.ts
+hardhat run --network arbitrumTestnet scripts/check_function.ts
+yarn hardhat run --network arbitrumTestnet scripts/check_function.ts
+yarn add hardhat
+cd ../evm-functions-template/rust/01_price_oracle/SwitchboardPushReceiver/
+yarn hardhat run --network arbitrumTestnet scripts/update_function_config.ts
+export FUNCTION_ID=0x9CE0D5fd357ea8Ab70a598b63D516B5d477e54b0
+sb evm routine create 0x9CE0D5fd357ea8Ab70a598b63D516B5d477e54b0  --account ~/evm.json --fundAmount 0.05  --schedule "*/1 * * * *" --chain arbitrum --network testnet
+sb evm routine create 0x9CE0D5fd357ea8Ab70a598b63D516B5d477e54b0  --account ~/evm.json --fundAmount 0.1  --schedule "*/1 * * * *" --chain arbitrum --network testnet
+sb evm routine create 0x9CE0D5fd357ea8Ab70a598b63D516B5d477e54b0  --account ~/evm.json --fundAmount 0.01  --schedule "*/1 * * * *" --chain arbitrum --network testnet
+yarn hardhat run --network arbitrumTestnet scripts/re
+cd ~/projects/evm-options-function/switch
+cp config/boot.sh ~/projects/evm-options-function/switchboard-function/config/
+cd SwitchboardPushReceiver/
+cd evm-functions-template/rust/01_price_oracle/
+sb evm routine create 0xA838D9D8e1C471180139b564647eFf357a949541  --account ~/evm.json --fundAmount 0.25  --schedule "*/1 * * * *" --chain arbitrum --network testnet
+yarn hardhat run --network arbitrumTestnet scripts/get_state.ts
+yarn hardhat run --network arbitrumTestnet scripts/up
+yarn hardhat run --network arbitrumTestnet scripts/depl
+export FUNCTION_ID=0x369624F8cc67E529ad0B17Ff839Aa977451fDCC5
+yarn hardhat run --network arbitrumTestnet scripts/create_function.ts
+export SCHEDULE="* * * * * *"
+pnpm hardhat
+yarn hardhat run --network arbitrumTestnet scripts/create_funct
+export PRIVATE_KEY=~/evm.json
+export container=jrsdunn/sb-evm
+export schedule="*/10 * * * * *"
+export SWITCHBOARD_ADDRESS=0xA3c9F9F6E40282e1366bdC01C1D30F7F7F58888e
+export FUNCTION_ID=0x65f71514Fc475d43B40f8d6C25dFd991d2203f99
+echo
+yarn hardhat run scripts/request.ts --network arbitrumTestnet
+
+yarn hardhat run --network arbitrumTestnet scripts/get_state.ts
+
+sb evm routine create 0xA838D9D8e1C471180139b564647eFf357a949541  --account ~/evm.json --fundAmount 0.25  --schedule "*/1 * * * *"
+sb evm routine create 0xA838D9D8e1C471180139b564647eFf357a949541  --account ~/evm.json --fundAmount 0.25  --schedule "*/1 * * * *" --help
+sb evm routine create --account 0xA838D9D8e1C471180139b564647eFf357a949541 --fundAmount 0.25  --schedule "*/1 * * * *" --help
+sb evm routine create --account 0xA838D9D8e1C471180139b564647eFf357a949541 --fundAmount 0.25  --schedule "*/1 * * * *"
+sb evm routine create 0xA838D9D8e1C471180139b564647eFf357a949541 --fundAmount 0.25  --schedule "*/1 * * * *"
+sb evm routine create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name function-1 --fundAmount 0.25 --container jrsdunn/sb-evm --version evm --schedule "*/1 * * * *"
+yarn add "@switchboard-xyz/evm.js";
+export FUNCTION_ID=0xA838D9D8e1C471180139b564647eFf357a949541
+exit
+nano ~/evm.json
+rm ~/evm.json
+rm ~/em
+cargo build --release
+docker build .
+docker buiild .
+make clean
+make build
+make publish
+
+make
+sb evm function test --network arbitrum
+sb evm function test --chain arbitrum
+rustup default 1.70.0
+rustup default nightly
+
+rustup update
+rustup
+cd evm-options-function/switchboard-function/
+pnpm exec hardhat run --network arbitrumTestnet scripts/deploy.ts
+pnpm hardhat run --network arbitrumTestnet scripts/deploy.ts
+hardhat run --network arbitrumTestnet scripts/deploy.ts
+cd evm-functions-template/rust/01_price_oracle/SwitchboardPushReceiver/
+git clone https://github.com/switchboard-xyz/evm-functions-template
+git clone https://github.com/switchboard-xyz/evm-functions-template/tree/main
+git clone https://github.com/switchboard-xyz/switchboard.git --depth 1
+git clone https://github.com/switchboard-xyz/switchboard.git
+rm -rf SwitchboardPushReceiver/
+cp -r SwitchboardPushReceiver/switchboard-function/* ./
+cp -r evm-functions-template/rust/01_price_oracle/* switchboard-function/
+cd evm-options-function/
+git clone https://github.com/switchboard-xyz/evm-options-function
+cd ../metaplex-program-library/
+git push --set-upstream o2 features/flash-and-local-jup-routing
+cat ~/.ssh/id_rsa
+git push --set-upstream origin features/flash-and-local-jup-routing
+git checkout -b features/flash-and-local-jup-routing
+git remote add o2 git@github.com:jrsfiend/jupiter-core-example
+cp -r ../clean-jupiter-flash-repo/src/spl-token ./
+cp -r ../clean-jupiter-flash-repo/buffer-layout/* ./node_modules/@solana/buffer-layout
+yarn add @solana/web3.js@^1.9
+yarn add @solana/web3.js@9999
+curl "http://localhost:8080/quote?inputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&outputMint=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&amount=1000000"
+yarn add @jup-ag/core
+yarn add "@solana/spl-token"
+yarn add "@solana/spl-token"@
+yarn add "@solana/spl-token"@0.1.3
+yarn add "@solana/spl-token"@0.1.8
+yarn add "@solana/spl-token"@0.2.0
+yarn add "@solana/spl-token"@^2
+yarn add "@solana/spl-token"@2
+yarn add "@solendprotocol/solend-sdk"
+cat configs2.json
+cp ../clean-jupiter-flash-repo/configs.json ./
+cat ../clean-jupiter-flash-repo/configs.json ./
+cp ../clean-jupiter-flash-repo/configs2.json ./
+yarn add @solendprotocol/solend-sdk
+yarn add @solend-protocol/solendsdk
+yarn add @solend-protocol/solend-sdk
+curl " http://localhost:8080/quote?inputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&outputMint=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&amount=1000000 "
+curl "http://localhost:8080/quote?inputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&outputMint=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
+curl http://localhost:8080/quote?inputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&outputMint=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB
+curl http://localhost:8080/quote
+curl http://localhost:8080/
+cd jupiter-core-example/
+git clone https://github.com/jup-ag/jupiter-core-example
+export one=4zafx4pjYZ1VT3TmHFVAEZqrMmWkZDihqYBMjZ5k7CFVPv5ogSiqq3b6Xg4xmAtzMJr4fGtPTmKTfboVC5vgLjbU
+cd ../clean-jupiter-flash-repo/
+cp -r temp/* ../clean-jupiter-flash-repo/temp/
+cp config.json ../clean-jupiter-flash-repo/
+yarn wizard
+cd solana-jupiter-bot/
+cp clean-jupiter-flash-repo/.env solana-jupiter-bot/
+git clone https://github.com/ARBProtocol/solana-jupiter-bot --depth 1
+git clone https://github.com/ARBProtocol/solana-jupiter-bot
+ls *.json
+cp toptokens.json temp/tokens.json
+mkdir temp
+ts-node src/index.js
+ts-node src/wizard/index.js
+yarn add ink
+yarn add react
+git clone https://github.com/staccDOTsol/clean-jupiter-flash-repo.git --depth 1
+git clone https://github.com/staccDOTsol/clean-jupiter-flash-repo.git
+RUST_LOG=info ./jupiter-swap-api --rpc-url "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+RUST_LOG=info ./jupiter-swap-api --rpc-url https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d
+RUST_LOG=info ./jupiter-swap-api --rpc-url
+sudo chmod +x jupiter-swap-api
+ls jupiter-swap-api
+ts-node sometoken.ts
+cat pubkeys.json
+echo "Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6" >> pubkeys.json
+rm pubkeys.json
+echo '["Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6"]' >> pubkeys.json
+yarn add '@solana/spl-token'
+node dofomo.js
+ls -lha *.txt
+cd ../../../Downloads/
+rm target/deploy/twap_oracle-keypair.json
+rm
+solana program close CUxQkco6KHJdXsTEEkEZMcZdZVhMDfW3bqxWQJE3naKH --bypass-warning -ud
+solana program close JBtrSwrLPuo7wMTpsscfrpMWPBkDrk2HFemh2YaToUQ2 --bypass-warning -ud
+solana program close JBtrSwrLPuo7wMTpsscfrpMWPBkDrk2HFemh2YaToUQ2 --bypass-warning
+solana program close Hi6WC5aPd584CjzwJZbwq9TqutmRGTFCowPkBx2adoQk --bypass-warning
+anchor test --skip-build --skip-deploy --provider.cluster devmet
+anchor test --skip-build --skip-deploy --provider.cluster "https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+anchor bun_src/
+solana program close 8BMdh3i5Rjp7KJoQ62Nk1XMaLFiZ9kefRezDbzxHB3WN --bypass-warning -ud
+solana program close 79pLPagw7mPLVVDuAA9nzyVa5vcPeH87nh2jq5mdohXA --bypass-warning -ud
+solana program close 3mCydDnadtgpfF9baoNGQK4FAHWsDoSPcmMSVdphbVY5 --bypass-warning -ud
+solana program close 6CC9BZNYCneSWtDTKn74yVSbar9QHhxyaooGsdEYfHQA --bypass-warning -ud
+solana program close 8ejxEF7ULqhGBk6a8NKuupNzwtmu7Nhhv2nPDx5BE6Ai --bypass-warning -ud
+solana program close 8ejxEF7ULqhGBk6a8NKuupNzwtmu7Nhhv2nPDx5BE6Ai --bypass-warning
+sb solana function send-request D9vCh9Ze1UWzmTurDusBGMHtYiCzw11veccFjPQrRr9V -k ~/.config/solana/id.json
+solana program close 7bh12KAuvQpt5dva1oF4Tko48m2s4T3bpZ4omc2sAehf --bypass-warning -ud
+sb solana routine create 6bGZ964KnjbotRNkLb3hWBoMeS48BaXWKudkeXVSqU4U --name function-1 --schedule "*/1 * * * *" -k ~/.config/solana/id.json
+sb solana routine create √ --name function-1 --schedule "*/1 * * * *" -k ~/.config/solana/id.json
+solana program close C5Qod5TH418yeYEVedkrX7bwFHTfTjuTHkwWZ7iNZiza --bypass-warning -ud
+solana address target/deploy/twap_oracle-keypair.json
+solana program close DyEwWzGTGx94Ra16H6Zb1212pdtuadnZQohdHeLDfEfs --bypass-warning -ud
+solana program close DyEwWzGTGx94Ra16H6Zb1212pdtuadnZQohdHeLDfEfs --bypass-warning
+anchor test --skip-build --skip-deploy
+sb function test
+sb solana function send-request 7VsfhhxtJByCqE6tZkhww5gvw93TwXby2ATn8rHLFZGp -k ~/.config/solana/id.json
+make publih-basic-function
+mv ../01_basic_oracle ../../programs/
+cp -r ../../../sofe2/programs/01_basic_oracle ../
+cd ../02_twap_oracle_function_ts/
+make all
+cp index.ts switchboard-functions/02_twap_oracle_function_ts/
+mv switchboard-functions/02_twap_oracle_function_/* ./
+rm -rf /Users/jd/projects/datadata/solana-oracle-function-example/programs/01_basic_oracle
+npm i -g bun
+cd switchboard-functions/01_basic_oracle_function/
+ls -lha /var/lib/docker/tmp/buildkit-mount2113739558/
+cp -r bun_src switchboard-functions/02_twap_oracle_function_
+cp -r ./switchboard-functions/01_basic_oracle_function/src bun_src
+cp ./switchboard-functions/01_basic_oracle_function/src bun_src
+ls ./switchboard-functions/01_basic_oracle_function/src
+ls ./switchboard-functions/01_basic_oracle_function/
+cp -r .././sofe2/switchboard-functions/01_basic_oracle_function_bun ./switchboard-functions/01_basic_oracle_function
+cp -r .././sofe2/programs/01_basic_oracle ./programs/
+anchor docker_build
+cp -r sofe2/switchboard-functions/02_twap_oracle_function_rust solana-oracle-function-example/switchboard-functions/
+git clone https://github.com/switchboard-xyz/solana-oracle-function-example.git sofe2
+git clone https://github.com/switchboard-xyz/solana-oracle-function-example.git
+sb solana routine create 7VsfhhxtJByCqE6tZkhww5gvw93TwXby2ATn8rHLFZGp --name function-1 --schedule "*/1 * * * *" -k ~/.config/solana/id.json
+yarn add "@switchboard-xyz/solana.js";
+sb solana routine create 2Pp4tdCsSEpbNYBg2TRnWiUsyehnEi8kuKa11ieNRLY4 --name function-1 --schedule "*/1 * * * *" -k ~/.config/solana/id.json
+sb solana function send-request 2Pp4tdCsSEpbNYBg2TRnWiUsyehnEi8kuKa11ieNRLY4 -k ~/.config/solana/id.json
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name function-1 --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana -k ~/.config/solana/id.json --mrEnclave 0xec85d922caba073f64eed4ec38746c0d8fdcd480800b78194f8093c780a78266 --cluster devnet
+cd programs/02_twap_oracle/
+cd solana-oracle-function-example
+sb solana function send-request 5e8r7wNy54CcrUBv6Tcrd67MKUsTMAFAuztXF83CkWVB -k ~/.config/solana/id.json
+sb solana function send-request 5e8r7wNy54CcrUBv6Tcrd67MKUsTMAFAuztXF83CkWVB
+sb solana function send-request
+sb solana routine print jbsdFgLWLcYWfPqBWAktzeyJ9EDLxyxpU4vYHhTAUJP
+sb solana routine
+sb solaa routines
+sb solaa routine
+sb solana function  print TjopUEc2T9zyqJSewiGBio5dJzfkyX7HQMYSGLZAY5n
+sb solana function  print measurement
+sb solana function  print
+sb solana function  test
+sb solana function  test TjopUEc2T9zyqJSewiGBio5dJzfkyX7HQMYSGLZAY5n
+sb solana function --help test
+sb solana function --help
+sb solana fnunction --help
+sb solana routine create TjopUEc2T9zyqJSewiGBio5dJzfkyX7HQMYSGLZAY5n --name function-1 --schedule "*/1 * * * *" -k ~/.config/solana/id.json
+sb solana routine create 5e8r7wNy54CcrUBv6Tcrd67MKUsTMAFAuztXF83CkWVB --name function-1 --schedule "*/1 * * * *" -k ~/.config/solana/id.json
+sb solana routine create 5e8r7wNy54CcrUBv6Tcrd67MKUsTMAFAuztXF83CkWVB --name function-1 --schedule "*/1 * * * * *" -k ~/.config/solana/id.json
+sb solana routine create 5e8r7wNy54CcrUBv6Tcrd67MKUsTMAFAuztXF83CkWVB --name function-1 --schedule "*/1 * * * * *"
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name function-1 --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --mrEnclave 0xec85d922caba073f64eed4ec38746c0d8fdcd480800b78194f8093c780a78266 --cluster devnet
+./cli/bin/run solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name function-1 --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --mrEnclave 0xec85d922caba073f64eed4ec38746c0d8fdcd480800b78194f8093c780a78266 --cluster devnet
+./cli/bin/run solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name function-1 --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --mrEnclave 0xec85d922caba073f64eed4ec38746c0d8fdcd480800b78194f8093c780a78266
+./cli/bin/run solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name function-1 --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --help --mrEnclave 0xec85d922caba073f64eed4ec38746c0d8fdcd480800b78194f8093c780a78266
+./cli/bin/run solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name function-1 --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana --schedule "*/1 * * * * *" -k ~/.config/solana/id.json --help
+./cli/bin/run solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name function-1 --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana --schedule "*/1 * * * * *" -k ~/.config/solana/id.json
+./cli/bin/run solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name function-1 --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana --schedule "*/1 * * * * *"
+./cli/bin/run solana functioncreate CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE --name function-1 --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana --schedule "*/1 * * * * *"
+./cli/bin/run solana function create --help
+./cli/bin/run solana function --help
+./cli/bin/run solana  --help
+./cli/bin/run solana runtime --help
+./cli/bin/run solana runtime create --help
+./cli/bin/run solana runtime create
+./cli/bin/run solana routine create TjopUEc2T9zyqJSewiGBio5dJzfkyX7HQMYSGLZAY5n --name function-1 --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana --schedule "*/1 * * * * *"
+./cli/bin/run
+ls cli/bin/run
+ls cli/bin/
+pnpm i  "@switchboard-xyz/common"
+cd  cli
+cd cli/
+sb solana routine create 2ZFX4VnYZy9Q7vaAp2PAp3peJ5DKGmqiuSibMqAZzKAX  --name function-1  --schedule "*/1 * * * * *" -k ~/.config/solana/id.json -v
+sb solana routine create √  --name function-1  --schedule "*/1 * * * * *" -k ~/.config/solana/id.json -v
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE -k ~/.config/solana/id.json --container jrsdunn/solana-basic-oracle-function
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE -k ~/.config/solana/id.json --container jrsdunn/solana-basic-oracle-functioni
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE -k ~/.config/solana/id.json
+sb solana function create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE
+sb solana function create
+sb solana routine create CkvizjVnm2zA5Wuwan34NhVT3zFc7vqUyGnA6tuEF5aE  --name function-1  --schedule "*/1 * * * * *" -k ~/.config/solana/id.json -v
+sb solana routine create f22o5954bZBFPE4PXd7iAFXQCKe2VskLxkYcmHz9GsE  --name function-1  --schedule "*/1 * * * * *" -k ~/.config/solana/id.json -v
+sb solana routine create f22o5954bZBFPE4PXd7iAFXQCKe2VskLxkYcmHz9GsE  --name function-1  --schedule "*/1 * * * * *" -k ~/.config/solana/id.json
+sb solana routine create f22o5954bZBFPE4PXd7iAFXQCKe2VskLxkYcmHz9GsE  --name function-1  --schedule "*/1 * * * * *" --help
+sb solana routine create f22o5954bZBFPE4PXd7iAFXQCKe2VskLxkYcmHz9GsE  --name function-1  --schedule "*/1 * * * * *"
+solana-keygen new -o ~/function.json
+sb solana runtime --help
+sb solana runtime
+sb solana runtime update
+sb solana routine create TjopUEc2T9zyqJSewiGBio5dJzfkyX7HQMYSGLZAY5n --name function-1  --schedule "*/1 * * * * *"
+sb solana routine create TjopUEc2T9zyqJSewiGBio5dJzfkyX7HQMYSGLZAY5n --name function-1 --fundAmount 1.25 --container jrsdunn/solana-basic-oracle-function --version solana --schedule "*/1 * * * * *"
+sb solana routine create
+sb update stable
+npm install -g @switchboard-xyz/cli
+
+
+npm i -g @switchboard-xyz/switchboard-v2
+solana balance -iud
+solana airdrop 1 -ud
+solana program show -u "https://rpc.shyft.to?api_key=jdXnGbRsn0Jvt5t9" --programs
+solana program show -u "https://devnet-rpc.shyft.to?api_key=jdXnGbRsn0Jvt5t9" --programs
+solana program show -u "https://parental-hailee-fast-devnet.helius-rpc.com/" --programs
+solana program show -u "https://noisy-merralee-fast-mainnet.helius-rpc.com/" --programs
+nano ~/blah.js
+solana program show -u "https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acb" --programs
+solana program show -u "https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acb"
+solana program show -u https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acb
+solana program show -u v
+solana program list -ud
+solana balance -ud 4Nob9Ch4MZkcWELoizHKw7PYyszBbzr8LeQtVTBv1Pkw
+solana balance -ud Gf3sbc5Jb62jH7WcTr3WSNGDQLk1w6wcKMZXKK1SC1E6
+solana airdrop 1
+make deploy
+npm run build
+pwd
+cd datadata
+mkdir datadata
+python3 somepython.py
+pip3 install backtesting
+pip install backtesting.py
+pip install backtesting
+python3 server.py
+ls ../*.png
+ls ../predictions.png
+curl https://api.telegram.org/bot6848735025:AAEyv7wS7yQ2zT02yoJmIS3zJTpQlvQ0yj4/deleteWebhook
+python3 telegrambot/server.py
+pip3 install pyTelegramBotAPI
+
+pip3 install telebot
+cd telegrambot/
+python3 telegrambot/server.po
+export BOT_TOKEN=6848735025:AAEyv7wS7yQ2zT02yoJmIS3zJTpQlvQ0yj4
+pip install pyTelegramBotAPI
+
+./mk logs
+curl -F "url=https://telegrambot-gold.vercel.app/startbot" https://api.telegram.org/bot6848735025:AAEyv7wS7yQ2zT02yoJmIS3zJTpQlvQ0yj4/setWebhook
+curl https://api.telegram.org/bot6848735025:AAEyv7wS7yQ2zT02yoJmIS3zJTpQlvQ0yj4/getWebhookInfo
+./mk
+now
+export key=6848735025:AAEyv7wS7yQ2zT02yoJmIS3zJTpQlvQ0yj4
+./mk msg -b "/ping"
+./mk msg -t "/ping"
+./mk -d bind info
+./mk 6848735025:AAEyv7wS7yQ2zT02yoJmIS3zJTpQlvQ0yj4
+./mk --bot-key 6848735025:AAEyv7wS7yQ2zT02yoJmIS3zJTpQlvQ0yj4
+./mk --api-key 6848735025:AAEyv7wS7yQ2zT02yoJmIS3zJTpQlvQ0yj4
+./mk -d bind
+curl -F "url=https://telegrambot-gold.vercel.app/startbot" https://api.telegram.org/6848735025:AAEyv7wS7yQ2zT02yoJmIS3zJTpQlvQ0yj4/setWebhook
+npm i --save-dev @types/telegram-bot-now
+./mk secrets
+./mk --verbose
+./mk --bot-key 6848735025:AAEyv7wS7yQ2zT02yoJmIS3zJTpQlvQ0yj4
+
+now login jarettrsdunn@gmail.com
+./mk scaffold
+npm install -g now
+mkdir telegrambot
+90p
+pip3 install scikit-learn
+
+pip3 install deap
+pip3 install tensorflow
+pip3 install keras
+python3 predict.py
+../miniconda3/bin/conda install deap
+../miniconda3/bin/conda activate
+../miniconda3/bin/conda install  tensorflow --channel conda-forge -c anaconda
+../miniconda3/bin/conda install python@3.7 tensorflow tensorflow-gpu --channel conda-forge -c anaconda
+../miniconda3/bin/conda install python3.7 tensorflow tensorflow-gpu --channel conda-forge
+../miniconda3/bin/conda install python3.7 tensorflow tensorflow-gpu
+../miniconda3/bin/conda init
+../miniconda3/bin/conda
+../.conda/
+conda
+bash ~/Downloads/Miniconda3-latest-MacOSX-arm64.sh
+python3 --version
+pip3 install tensorflow tensorflow-gpu
+pip3 install pillow
+pip3 install matplotlib
+pip3 install pandas
+pip3 install numpy
+pip3 install ccxt openai
+node bridgeeth.js
+brew install ffmpeg
+node server.js
+yarn add web3
+yarn add web3@2.0.0
+yarn add web3@999
+export NODE_TLS_REJECT_UNAUTHORIZED=0
+cd ~/mainnet_fork/
+yarn add web3@^0.20.6
+node scripts/deploy.js
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80"  --datadir=hehe/ --verbosity 5
+cd ../mainnet_fork/
+cc ../mainnet_fork/
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --syncmode=full --nodiscover --verbosity 5 console
+telnet 93.95.227.102 30303
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --syncmode=full --nodiscover console
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --syncmode=full console
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 console
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid 1337 --identity
+history | grep geth
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  init ../genesis.json
+history | grep curl
+ssh root@93.95.227.102
+ssh 93.95.227.102
+ping 93.95.227.102
+cat ~/.ssh/id_rsa.pubh
+git checkout v1.11.6
+cd go-ethereum
+git clone https://github.com/ethereum/go-ethereum
+docker pull augurproject/go-ethereum
+ping 99.244.8.34
+ping 99.244.8.34:80
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9"  --datadir=hehe/ --verbosity 5
+./geth-darwin-amd64-1.11.6-ea9e62ca/  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9"  --datadir=hehe/ --
+./geth-darwin-amd64-1.11.6-ea9e62ca/  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9"  --datadir=hehe/ --help
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9"  --datadir=hehe/ --help
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80"  --datadir=hehe/
+nano hehe/geth/static-nodes.json
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9"  --datadir=hehe/
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9"  --datadir=hehe/
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth init genesis.json
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 attach --datadir=hehe
+./geth --networkid=1337 attach --datadir=hehe
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80" --nodiscover --datadir=hehe/
+./geth --networkid=1337 attach
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80"
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80" --netrestrict=99.244.8.34/24 --datadir=hehe
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80" --netrestrict=99.244.8.34/24
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80" --netrestrict=99.244.8.34
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80" --netrestrict 99.244.8.34
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80" --help
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80" --help | grep network
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid=1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80" --help | grep chain
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80"
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:80"
+telnet 99.244.8.34 80
+telnet 99.244.8.34
+telnet 99.244.8.34 3000
+telnet 99.244.8.34 30303
+brew install telnet
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes="enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:30303"
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --bootnodes enode://62e1bb835930817e7f152b2743979307836e69ea616f76174c8a7665d89acdd591b633ee56e5129e2ed3023bdb5b7b2d6b45a59bf87ad7c299e1625de78fd0e9@99.244.8.34:30303
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --help | grep boot
+./geth --networkid 1337 attach
+./geth --networkid 1337 attache
+telnet
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 attach
+kill -9 9288
+lsof -i | grep 8551
+killall geth
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --networkid 1337 attach
+cd ../Downloads/
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --unlock "0" --help
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --unlock "0" --help  | grep P2P
+scp -P 19222 zip.zip root@ssh5.vast.ai:/root/zip.zip
+scp -P 8080 zip.zip 0 localhost:/root/zip.zip
+scp zip.zip -P 8080 localhost:/root/zip.zip
+scp zip.zip -P8080 localhost:/root/zip.zip
+scp zip.zip --port 8080 localhost:/root/zip.zip
+scp zip.zip -p 8080 localhost:/root/zip.zip
+zip -r zip.zip gethy/
+./ngrok-3 http 30303
+./ngrok-3  config add-authtoken 2YbQezEfda28pIHLkwISySl1azt_2jh1oAgwkEPNV2pbNgWPn
+./ngrok-3 ngrok config add-authtoken 2YbQezEfda28pIHLkwISySl1azt_2jh1oAgwkEPNV2pbNgWPn
+unzip ngrok-v3-stable-darwin-amd64.zip
+ping jare.cake.best
+ping jare.cake.bes
+ssh -p 26660 root@ssh4.vast.ai -L 8080:localhost:8080
+./ngrok-2 http 8545 --domain jare.cake.best
+export JSON_RPC_ENDPOINT=https://jare.cake.best
+cd eth-total-supply/
+git clone https://github.com/lastmjs/eth-total-supply.git
+
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --unlock "0"
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy  attach
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy  --attach
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare"  --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare"  --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --attach
+
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
+  "from": "0x85fe81d1EEABc20F56094f6B4546101249396EC9", "to": "0x8bda34a45dfbDbDB21806216Dad8476ABE32AEaE",
+  "value": "0xBF8372E26C640000"
+}],"id":1}'
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare"  --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --unlock "0"
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare"  --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9" --miner.threads=6 --unlock "jare"
+./geth --unlock "0"
+./geth --unlock
+./geth --unloock
+cd geth-darwin-amd64-1.11.6-ea9e62ca/
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --miner.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9"
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --mine.etherbase="0x85fe81d1EEABc20F56094f6B4546101249396EC9"
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --mine.etherbase=0x85fe81d1EEABc20F56094f6B4546101249396EC9
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --mine.etherbase 0x85fe81d1EEABc20F56094f6B4546101249396EC9
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --help
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine --help| grep base
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --mine | grep base
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*" --min e
+./geth --datadir ../gethy --mine
+./geth --datadir ../gethy --help | grep mine
+cd ../geth-darwin-amd64-1.11.6-ea9e62ca/
+./ethminer -P http://localhost:8545 -G
+./ethminer -P http://localhost:8545 0G
+./ethminer -P http://localhost:8545
+./ethminer -P https://jare.cake.best
+./ethminer -h
+ls gethy/keystore/UTC--2023-11-23T23-08-27.314960000Z--85fe81d1eeabc20f56094f6b4546101249396ec9
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  attach /Users/jd/Downloads/gethy/geth.ipc
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  attach https://jare.cake.best:8545
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  attach http://localhost:8545
+
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth  attach http://:8545
+
+geth attach http://:8545
+
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth attach
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --http --http.vhosts="jare.cake.best" --http.corsdomain="*"
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --rpcport 8052
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --rpccorsdomain '*' --rpcaddr 'SERVER_PUBLIC_IP'
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --authrpc.vhosts="*"
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --authrpc.vhosts=*
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --authrpc.vhosts *
+./ngrok-2 http 8551 --domain jare.cake.best
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --authrpc.vhosts jare.cake.best
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --authrpc.addr jare.cake.bes --help
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --authrpc.addr jare.cake.best
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --authrpc.addr https://jare.cake.best
+ps aux | grep geth
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare"
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --rpc-api
+sudo rm gethy/geth/LOCK
+rm gethy/geth/LOCK
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --rpcapi
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337 --identity "jare" --rpc --rpcapi
+curl https://jare.cake.best   -X POST   -H "Content-Type: application/json" \  --data '{"method":"eth_chainId","params":[],"id":1,"jsonrpc":"2.0"}'
+cat gethy/keystore/UTC--2023-11-23T23-08-27.314960000Z--85fe81d1eeabc20f56094f6b4546101249396ec9
+./geth-darwin-amd64-1.11.6-ea9e62ca/geth --datadir ./gethy --networkid 1337
+./geth-darwin-amd64-1.13.5-916d6a44/geth --datadir ./gethy --networkid 1337
+./geth-darwin-amd64-1.13.5-916d6a44/geth --datadir ./gethy --network-id 1337
+./geth-darwin-amd64-1.13.5-916d6a44/geth --datadir ./gethy init ./genesis.json
+./geth-darwin-amd64-1.13.5-916d6a44/geth --datadir ./gethy account new
+rm -rf gethy
+brew install tmux
+tmux
+./geth-darwin-amd64-1.13.5-916d6a44/geth --datadir ./geth-darwin-amd64-1.13.5-916d6a44 init ./genesis.json
+./geth-darwin-amd64-1.13.5-916d6a44/geth --datadir ./geth-darwin-amd64-1.13.5-916d6a44 init ../genesis.json
+./geth --datadir ./ init ../genesis.json
+./geth --datadir ./ account new
+geth --datadir ./ account new
+./geth  init ../genesis.json
+./geth --data-dir=./ init ../genesis.json
+./geth --data-dir ./ init ../genesis.json
+./geth init ../genesis.json --data-dir ./
+./geth init ../genesis.json
+rm -rf /Users/jd/Library/Ethereum/geth/chaindat
+./geth init ../genesis.json–datadir
+./geth init ../genesis.json–datadir MyPrivateChain
+
+
+./geth -–identity “yourIdentity” init ../genesis.json–datadir MyPrivateChain
+
+
+./geth –identity “yourIdentity” init ../genesis.json–datadir MyPrivateChain
+
+
+geth –identity “yourIdentity” init ../genesis.json–datadir MyPrivateChain
+
+
+ganache-cli -p 8545 --mnemonic --networkId 1337 --db .
+ganache-cli -p 8545 --mnemonic --networkId 1337
+npx hardhat node --fork https://eth-mainnet.g.alchemy.com/v2/t6b715oSRTWNb-AePAZv3nuDpuf-3zdz --db .
+ganache-cli -p 8545 --mnemonic --networkId 1337 --db .db --account="0x0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef,1000000000000000000000000000000000000000"
+ganache-cli -p 8545 --mnemonic --networkId 1337 --db . --account="0x0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef,1000000000000000000000000000000000000000"
+ganache-cli -p 8545 --mnemonic --networkId 1337 --db . --wallet.deterministic=true.
+rm -rf !
+rm -rf .db
+ganache-cli -p 8545 --mnemonic --networkId 1337 --db .
+
+
+ganache-cli -p 7545 --mnemonic --networkId 1337 --db .
+
+
+npm i -g ganache-cli
+pnpm build && pnpm start
+cd ../projects/pancake-frontend/
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"method":"eth_getLogs","params":[{"address": "0x05f32b3cc3888453ff71b01135b34ff8e41263f2"}],"id":1,"jsonrpc":"2.0"}'
+
+cast send 0x05f32B3cC3888453ff71B01135B34FF8e41263F2
+cast send 0x05f32B3cC3888453ff71B01135B34FF8e41263F2 --private-key 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
+export ETH_FROM=0x05f32b3cc3888453ff71b01135b34ff8e41263f2
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":["0xf90f538085174876e800830f42408080b90f00608060405234801561001057600080fd5b50610ee0806100206000396000f3fe6080604052600436106100f35760003560e01c80634d2301cc1161008a578063a8b0574e11610059578063a8b0574e1461025a578063bce38bd714610275578063c3077fa914610288578063ee82ac5e1461029b57600080fd5b80634d2301cc146101ec57806372425d9d1461022157806382ad56cb1461023457806386d516e81461024757600080fd5b80633408e470116100c65780633408e47014610191578063399542e9146101a45780633e64a696146101c657806342cbb15c146101d957600080fd5b80630f28c97d146100f8578063174dea711461011a578063252dba421461013a57806327e86d6e1461015b575b600080fd5b34801561010457600080fd5b50425b6040519081526020015b60405180910390f35b61012d610128366004610a85565b6102ba565b6040516101119190610bbe565b61014d610148366004610a85565b6104ef565b604051610111929190610bd8565b34801561016757600080fd5b50437fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0140610107565b34801561019d57600080fd5b5046610107565b6101b76101b2366004610c60565b610690565b60405161011193929190610cba565b3480156101d257600080fd5b5048610107565b3480156101e557600080fd5b5043610107565b3480156101f857600080fd5b50610107610207366004610ce2565b73ffffffffffffffffffffffffffffffffffffffff163190565b34801561022d57600080fd5b5044610107565b61012d610242366004610a85565b6106ab565b34801561025357600080fd5b5045610107565b34801561026657600080fd5b50604051418152602001610111565b61012d610283366004610c60565b61085a565b6101b7610296366004610a85565b610a1a565b3480156102a757600080fd5b506101076102b6366004610d18565b4090565b60606000828067ffffffffffffffff8111156102d8576102d8610d31565b60405190808252806020026020018201604052801561031e57816020015b6040805180820190915260008152606060208201528152602001906001900390816102f65790505b5092503660005b8281101561047757600085828151811061034157610341610d60565b6020026020010151905087878381811061035d5761035d610d60565b905060200281019061036f9190610d8f565b6040810135958601959093506103886020850185610ce2565b73ffffffffffffffffffffffffffffffffffffffff16816103ac6060870187610dcd565b6040516103ba929190610e32565b60006040518083038185875af1925050503d80600081146103f7576040519150601f19603f3d011682016040523d82523d6000602084013e6103fc565b606091505b50602080850191909152901515808452908501351761046d577f08c379a000000000000000000000000000000000000000000000000000000000600052602060045260176024527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060445260846000fd5b5050600101610325565b508234146104e6576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601a60248201527f4d756c746963616c6c333a2076616c7565206d69736d6174636800000000000060448201526064015b60405180910390fd5b50505092915050565b436060828067ffffffffffffffff81111561050c5761050c610d31565b60405190808252806020026020018201604052801561053f57816020015b606081526020019060019003908161052a5790505b5091503660005b8281101561068657600087878381811061056257610562610d60565b90506020028101906105749190610e42565b92506105836020840184610ce2565b73ffffffffffffffffffffffffffffffffffffffff166105a66020850185610dcd565b6040516105b4929190610e32565b6000604051808303816000865af19150503d80600081146105f1576040519150601f19603f3d011682016040523d82523d6000602084013e6105f6565b606091505b5086848151811061060957610609610d60565b602090810291909101015290508061067d576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601760248201527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060448201526064016104dd565b50600101610546565b5050509250929050565b43804060606106a086868661085a565b905093509350939050565b6060818067ffffffffffffffff8111156106c7576106c7610d31565b60405190808252806020026020018201604052801561070d57816020015b6040805180820190915260008152606060208201528152602001906001900390816106e55790505b5091503660005b828110156104e657600084828151811061073057610730610d60565b6020026020010151905086868381811061074c5761074c610d60565b905060200281019061075e9190610e76565b925061076d6020840184610ce2565b73ffffffffffffffffffffffffffffffffffffffff166107906040850185610dcd565b60405161079e929190610e32565b6000604051808303816000865af19150503d80600081146107db576040519150601f19603f3d011682016040523d82523d6000602084013e6107e0565b606091505b506020808401919091529015158083529084013517610851577f08c379a000000000000000000000000000000000000000000000000000000000600052602060045260176024527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060445260646000fd5b50600101610714565b6060818067ffffffffffffffff81111561087657610876610d31565b6040519080825280602002602001820160405280156108bc57816020015b6040805180820190915260008152606060208201528152602001906001900390816108945790505b5091503660005b82811015610a105760008482815181106108df576108df610d60565b602002602001015190508686838181106108fb576108fb610d60565b905060200281019061090d9190610e42565b925061091c6020840184610ce2565b73ffffffffffffffffffffffffffffffffffffffff1661093f6020850185610dcd565b60405161094d929190610e32565b6000604051808303816000865af19150503d806000811461098a576040519150601f19603f3d011682016040523d82523d6000602084013e61098f565b606091505b506020830152151581528715610a07578051610a07576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601760248201527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060448201526064016104dd565b506001016108c3565b5050509392505050565b6000806060610a2b60018686610690565b919790965090945092505050565b60008083601f840112610a4b57600080fd5b50813567ffffffffffffffff811115610a6357600080fd5b6020830191508360208260051b8501011115610a7e57600080fd5b9250929050565b60008060208385031215610a9857600080fd5b823567ffffffffffffffff811115610aaf57600080fd5b610abb85828601610a39565b90969095509350505050565b6000815180845260005b81811015610aed57602081850181015186830182015201610ad1565b81811115610aff576000602083870101525b50601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0169290920160200192915050565b600082825180855260208086019550808260051b84010181860160005b84811015610bb1578583037fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe001895281518051151584528401516040858501819052610b9d81860183610ac7565b9a86019a9450505090830190600101610b4f565b5090979650505050505050565b602081526000610bd16020830184610b32565b9392505050565b600060408201848352602060408185015281855180845260608601915060608160051b870101935082870160005b82811015610c52577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa0888703018452610c40868351610ac7565b95509284019290840190600101610c06565b509398975050505050505050565b600080600060408486031215610c7557600080fd5b83358015158114610c8557600080fd5b9250602084013567ffffffffffffffff811115610ca157600080fd5b610cad86828701610a39565b9497909650939450505050565b838152826020820152606060408201526000610cd96060830184610b32565b95945050505050565b600060208284031215610cf457600080fd5b813573ffffffffffffffffffffffffffffffffffffffff81168114610bd157600080fd5b600060208284031215610d2a57600080fd5b5035919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b600082357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff81833603018112610dc357600080fd5b9190910192915050565b60008083357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1843603018112610e0257600080fd5b83018035915067ffffffffffffffff821115610e1d57600080fd5b602001915036819003821315610a7e57600080fd5b8183823760009101908152919050565b600082357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc1833603018112610dc357600080fd5b600082357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa1833603018112610dc357600080fdfea2646970667358221220bb2b5c71a328032f97c676ae39a1ec2148d3e5d6f73d95e9b17910152d61f16264736f6c634300080c00331ca0edce47092c0f398cebf3ffc267f05c8e7076e3b89445e0fe50f6332273d4569ba01b0b9d000e19b24c5869b0fc3b22b0d6fa47cd63316875cbbd577d76e6fde086"],"id":1}'
+
+
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data  '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{
+  "from": "0x05f32b3cc3888453ff71b01135b34ff8e41263f2","value": "0x0",
+  "gasLimit": "0x1B562",
+  "gas": "0x1C9C380",
+  "data":"0xf90f538085174876e800830f42408080b90f00608060405234801561001057600080fd5b50610ee0806100206000396000f3fe6080604052600436106100f35760003560e01c80634d2301cc1161008a578063a8b0574e11610059578063a8b0574e1461025a578063bce38bd714610275578063c3077fa914610288578063ee82ac5e1461029b57600080fd5b80634d2301cc146101ec57806372425d9d1461022157806382ad56cb1461023457806386d516e81461024757600080fd5b80633408e470116100c65780633408e47014610191578063399542e9146101a45780633e64a696146101c657806342cbb15c146101d957600080fd5b80630f28c97d146100f8578063174dea711461011a578063252dba421461013a57806327e86d6e1461015b575b600080fd5b34801561010457600080fd5b50425b6040519081526020015b60405180910390f35b61012d610128366004610a85565b6102ba565b6040516101119190610bbe565b61014d610148366004610a85565b6104ef565b604051610111929190610bd8565b34801561016757600080fd5b50437fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0140610107565b34801561019d57600080fd5b5046610107565b6101b76101b2366004610c60565b610690565b60405161011193929190610cba565b3480156101d257600080fd5b5048610107565b3480156101e557600080fd5b5043610107565b3480156101f857600080fd5b50610107610207366004610ce2565b73ffffffffffffffffffffffffffffffffffffffff163190565b34801561022d57600080fd5b5044610107565b61012d610242366004610a85565b6106ab565b34801561025357600080fd5b5045610107565b34801561026657600080fd5b50604051418152602001610111565b61012d610283366004610c60565b61085a565b6101b7610296366004610a85565b610a1a565b3480156102a757600080fd5b506101076102b6366004610d18565b4090565b60606000828067ffffffffffffffff8111156102d8576102d8610d31565b60405190808252806020026020018201604052801561031e57816020015b6040805180820190915260008152606060208201528152602001906001900390816102f65790505b5092503660005b8281101561047757600085828151811061034157610341610d60565b6020026020010151905087878381811061035d5761035d610d60565b905060200281019061036f9190610d8f565b6040810135958601959093506103886020850185610ce2565b73ffffffffffffffffffffffffffffffffffffffff16816103ac6060870187610dcd565b6040516103ba929190610e32565b60006040518083038185875af1925050503d80600081146103f7576040519150601f19603f3d011682016040523d82523d6000602084013e6103fc565b606091505b50602080850191909152901515808452908501351761046d577f08c379a000000000000000000000000000000000000000000000000000000000600052602060045260176024527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060445260846000fd5b5050600101610325565b508234146104e6576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601a60248201527f4d756c746963616c6c333a2076616c7565206d69736d6174636800000000000060448201526064015b60405180910390fd5b50505092915050565b436060828067ffffffffffffffff81111561050c5761050c610d31565b60405190808252806020026020018201604052801561053f57816020015b606081526020019060019003908161052a5790505b5091503660005b8281101561068657600087878381811061056257610562610d60565b90506020028101906105749190610e42565b92506105836020840184610ce2565b73ffffffffffffffffffffffffffffffffffffffff166105a66020850185610dcd565b6040516105b4929190610e32565b6000604051808303816000865af19150503d80600081146105f1576040519150601f19603f3d011682016040523d82523d6000602084013e6105f6565b606091505b5086848151811061060957610609610d60565b602090810291909101015290508061067d576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601760248201527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060448201526064016104dd565b50600101610546565b5050509250929050565b43804060606106a086868661085a565b905093509350939050565b6060818067ffffffffffffffff8111156106c7576106c7610d31565b60405190808252806020026020018201604052801561070d57816020015b6040805180820190915260008152606060208201528152602001906001900390816106e55790505b5091503660005b828110156104e657600084828151811061073057610730610d60565b6020026020010151905086868381811061074c5761074c610d60565b905060200281019061075e9190610e76565b925061076d6020840184610ce2565b73ffffffffffffffffffffffffffffffffffffffff166107906040850185610dcd565b60405161079e929190610e32565b6000604051808303816000865af19150503d80600081146107db576040519150601f19603f3d011682016040523d82523d6000602084013e6107e0565b606091505b506020808401919091529015158083529084013517610851577f08c379a000000000000000000000000000000000000000000000000000000000600052602060045260176024527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060445260646000fd5b50600101610714565b6060818067ffffffffffffffff81111561087657610876610d31565b6040519080825280602002602001820160405280156108bc57816020015b6040805180820190915260008152606060208201528152602001906001900390816108945790505b5091503660005b82811015610a105760008482815181106108df576108df610d60565b602002602001015190508686838181106108fb576108fb610d60565b905060200281019061090d9190610e42565b925061091c6020840184610ce2565b73ffffffffffffffffffffffffffffffffffffffff1661093f6020850185610dcd565b60405161094d929190610e32565b6000604051808303816000865af19150503d806000811461098a576040519150601f19603f3d011682016040523d82523d6000602084013e61098f565b606091505b506020830152151581528715610a07578051610a07576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601760248201527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060448201526064016104dd565b506001016108c3565b5050509392505050565b6000806060610a2b60018686610690565b919790965090945092505050565b60008083601f840112610a4b57600080fd5b50813567ffffffffffffffff811115610a6357600080fd5b6020830191508360208260051b8501011115610a7e57600080fd5b9250929050565b60008060208385031215610a9857600080fd5b823567ffffffffffffffff811115610aaf57600080fd5b610abb85828601610a39565b90969095509350505050565b6000815180845260005b81811015610aed57602081850181015186830182015201610ad1565b81811115610aff576000602083870101525b50601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0169290920160200192915050565b600082825180855260208086019550808260051b84010181860160005b84811015610bb1578583037fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe001895281518051151584528401516040858501819052610b9d81860183610ac7565b9a86019a9450505090830190600101610b4f565b5090979650505050505050565b602081526000610bd16020830184610b32565b9392505050565b600060408201848352602060408185015281855180845260608601915060608160051b870101935082870160005b82811015610c52577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa0888703018452610c40868351610ac7565b95509284019290840190600101610c06565b509398975050505050505050565b600080600060408486031215610c7557600080fd5b83358015158114610c8557600080fd5b9250602084013567ffffffffffffffff811115610ca157600080fd5b610cad86828701610a39565b9497909650939450505050565b838152826020820152606060408201526000610cd96060830184610b32565b95945050505050565b600060208284031215610cf457600080fd5b813573ffffffffffffffffffffffffffffffffffffffff81168114610bd157600080fd5b600060208284031215610d2a57600080fd5b5035919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b600082357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff81833603018112610dc357600080fd5b9190910192915050565b60008083357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1843603018112610e0257600080fd5b83018035915067ffffffffffffffff821115610e1d57600080fd5b602001915036819003821315610a7e57600080fd5b8183823760009101908152919050565b600082357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc1833603018112610dc357600080fd5b600082357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa1833603018112610dc357600080fdfea2646970667358221220bb2b5c71a328032f97c676ae39a1ec2148d3e5d6f73d95e9b17910152d61f16264736f6c634300080c00331ca0edce47092c0f398cebf3ffc267f05c8e7076e3b89445e0fe50f6332273d4569ba01b0b9d000e19b24c5869b0fc3b22b0d6fa47cd63316875cbbd577d76e6fde086"
+}],"id":1}'
+cast publish 0xf90f538085174876e800830f42408080b90f00608060405234801561001057600080fd5b50610ee0806100206000396000f3fe6080604052600436106100f35760003560e01c80634d2301cc1161008a578063a8b0574e11610059578063a8b0574e1461025a578063bce38bd714610275578063c3077fa914610288578063ee82ac5e1461029b57600080fd5b80634d2301cc146101ec57806372425d9d1461022157806382ad56cb1461023457806386d516e81461024757600080fd5b80633408e470116100c65780633408e47014610191578063399542e9146101a45780633e64a696146101c657806342cbb15c146101d957600080fd5b80630f28c97d146100f8578063174dea711461011a578063252dba421461013a57806327e86d6e1461015b575b600080fd5b34801561010457600080fd5b50425b6040519081526020015b60405180910390f35b61012d610128366004610a85565b6102ba565b6040516101119190610bbe565b61014d610148366004610a85565b6104ef565b604051610111929190610bd8565b34801561016757600080fd5b50437fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0140610107565b34801561019d57600080fd5b5046610107565b6101b76101b2366004610c60565b610690565b60405161011193929190610cba565b3480156101d257600080fd5b5048610107565b3480156101e557600080fd5b5043610107565b3480156101f857600080fd5b50610107610207366004610ce2565b73ffffffffffffffffffffffffffffffffffffffff163190565b34801561022d57600080fd5b5044610107565b61012d610242366004610a85565b6106ab565b34801561025357600080fd5b5045610107565b34801561026657600080fd5b50604051418152602001610111565b61012d610283366004610c60565b61085a565b6101b7610296366004610a85565b610a1a565b3480156102a757600080fd5b506101076102b6366004610d18565b4090565b60606000828067ffffffffffffffff8111156102d8576102d8610d31565b60405190808252806020026020018201604052801561031e57816020015b6040805180820190915260008152606060208201528152602001906001900390816102f65790505b5092503660005b8281101561047757600085828151811061034157610341610d60565b6020026020010151905087878381811061035d5761035d610d60565b905060200281019061036f9190610d8f565b6040810135958601959093506103886020850185610ce2565b73ffffffffffffffffffffffffffffffffffffffff16816103ac6060870187610dcd565b6040516103ba929190610e32565b60006040518083038185875af1925050503d80600081146103f7576040519150601f19603f3d011682016040523d82523d6000602084013e6103fc565b606091505b50602080850191909152901515808452908501351761046d577f08c379a000000000000000000000000000000000000000000000000000000000600052602060045260176024527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060445260846000fd5b5050600101610325565b508234146104e6576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601a60248201527f4d756c746963616c6c333a2076616c7565206d69736d6174636800000000000060448201526064015b60405180910390fd5b50505092915050565b436060828067ffffffffffffffff81111561050c5761050c610d31565b60405190808252806020026020018201604052801561053f57816020015b606081526020019060019003908161052a5790505b5091503660005b8281101561068657600087878381811061056257610562610d60565b90506020028101906105749190610e42565b92506105836020840184610ce2565b73ffffffffffffffffffffffffffffffffffffffff166105a66020850185610dcd565b6040516105b4929190610e32565b6000604051808303816000865af19150503d80600081146105f1576040519150601f19603f3d011682016040523d82523d6000602084013e6105f6565b606091505b5086848151811061060957610609610d60565b602090810291909101015290508061067d576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601760248201527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060448201526064016104dd565b50600101610546565b5050509250929050565b43804060606106a086868661085a565b905093509350939050565b6060818067ffffffffffffffff8111156106c7576106c7610d31565b60405190808252806020026020018201604052801561070d57816020015b6040805180820190915260008152606060208201528152602001906001900390816106e55790505b5091503660005b828110156104e657600084828151811061073057610730610d60565b6020026020010151905086868381811061074c5761074c610d60565b905060200281019061075e9190610e76565b925061076d6020840184610ce2565b73ffffffffffffffffffffffffffffffffffffffff166107906040850185610dcd565b60405161079e929190610e32565b6000604051808303816000865af19150503d80600081146107db576040519150601f19603f3d011682016040523d82523d6000602084013e6107e0565b606091505b506020808401919091529015158083529084013517610851577f08c379a000000000000000000000000000000000000000000000000000000000600052602060045260176024527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060445260646000fd5b50600101610714565b6060818067ffffffffffffffff81111561087657610876610d31565b6040519080825280602002602001820160405280156108bc57816020015b6040805180820190915260008152606060208201528152602001906001900390816108945790505b5091503660005b82811015610a105760008482815181106108df576108df610d60565b602002602001015190508686838181106108fb576108fb610d60565b905060200281019061090d9190610e42565b925061091c6020840184610ce2565b73ffffffffffffffffffffffffffffffffffffffff1661093f6020850185610dcd565b60405161094d929190610e32565b6000604051808303816000865af19150503d806000811461098a576040519150601f19603f3d011682016040523d82523d6000602084013e61098f565b606091505b506020830152151581528715610a07578051610a07576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601760248201527f4d756c746963616c6c333a2063616c6c206661696c656400000000000000000060448201526064016104dd565b506001016108c3565b5050509392505050565b6000806060610a2b60018686610690565b919790965090945092505050565b60008083601f840112610a4b57600080fd5b50813567ffffffffffffffff811115610a6357600080fd5b6020830191508360208260051b8501011115610a7e57600080fd5b9250929050565b60008060208385031215610a9857600080fd5b823567ffffffffffffffff811115610aaf57600080fd5b610abb85828601610a39565b90969095509350505050565b6000815180845260005b81811015610aed57602081850181015186830182015201610ad1565b81811115610aff576000602083870101525b50601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0169290920160200192915050565b600082825180855260208086019550808260051b84010181860160005b84811015610bb1578583037fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe001895281518051151584528401516040858501819052610b9d81860183610ac7565b9a86019a9450505090830190600101610b4f565b5090979650505050505050565b602081526000610bd16020830184610b32565b9392505050565b600060408201848352602060408185015281855180845260608601915060608160051b870101935082870160005b82811015610c52577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa0888703018452610c40868351610ac7565b95509284019290840190600101610c06565b509398975050505050505050565b600080600060408486031215610c7557600080fd5b83358015158114610c8557600080fd5b9250602084013567ffffffffffffffff811115610ca157600080fd5b610cad86828701610a39565b9497909650939450505050565b838152826020820152606060408201526000610cd96060830184610b32565b95945050505050565b600060208284031215610cf457600080fd5b813573ffffffffffffffffffffffffffffffffffffffff81168114610bd157600080fd5b600060208284031215610d2a57600080fd5b5035919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b600082357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff81833603018112610dc357600080fd5b9190910192915050565b60008083357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1843603018112610e0257600080fd5b83018035915067ffffffffffffffff821115610e1d57600080fd5b602001915036819003821315610a7e57600080fd5b8183823760009101908152919050565b600082357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc1833603018112610dc357600080fd5b600082357fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa1833603018112610dc357600080fdfea2646970667358221220bb2b5c71a328032f97c676ae39a1ec2148d3e5d6f73d95e9b17910152d61f16264736f6c634300080c00331ca0edce47092c0f398cebf3ffc267f05c8e7076e3b89445e0fe50f6332273d4569ba01b0b9d000e19b24c5869b0fc3b22b0d6fa47cd63316875cbbd577d76e6fde086 --rpc-url https://jare.cake.best 
+
+export ETH_FROM=0x05f32B3cC3888453ff71B01135B34FF8e41263F2
+cast send 0xd9c281C5501c3Fe2C95587A99C9d0a54dDa63712 --private-key 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
+export ETH_FROM=0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+soouce
+export ETH_FROM=
+cast send 0xd9c281C5501c3Fe2C95587A99C9d0a54dDa63712
+export ETH_FROM=0xd9c281C5501c3Fe2C95587A99C9d0a54dDa63712
+cast send
+npx hardhat node --fork https://eth-mainnet.g.alchemy.com/v2/t6b715oSRTWNb-AePAZv3nuDpuf-3zdz
+npx hardhat node --fork https://eth-mainnet.g.alchemy.com/v2/t6b715oSRTWNb-AePAZv3nuDpuf-3zdz --block-gas-limit 3000000000
+source ~/.zshenv
+curl -L https://foundry.paradigm.xyz | bash
+
+npm i -g tsup
+npm i -g turbo
+cd ../pancake-frontend/
+cc ../pancake-frontend/
+pnpm
+npm i -g pnpm
+cd pancake-frontend/
+git clone https://github.com/pancakeswap/pancake-frontend --depth 1
+yarn deploy:testnet
+cd v2
+cd ../smartchef/
+export KEY_TESTNET=0xdf57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e
+export KEY_TESTNET=df57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e
+yarn upgrade
+
+cd projects/cake-vault/
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
+  "from": "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
+  "to": "0x562bc35F77949158A3bcF40685a9433e06a445a3",
+  "value": "0xBF8372E26C640000"
+}],"id":1}'
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{
+  "from": "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
+  "to": "0x562bc35F77949158A3bcF40685a9433e06a445a3",
+  "value": "0xBF8372E26C640000"
+}],"id":1}'
+
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{
+  "from": "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
+  "to": "0x562bc35F77949158A3bcF40685a9433e06a445a3",
+  "gas": "0x76c0", 
+  "gasPrice": "0x9184e72a000", 
+  "value": "0xBF8372E26C640000"
+}],"id":1}'
+
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{
+  "from": "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
+  "to": "0x562bc35F77949158A3bcF40685a9433e06a445a3",
+  "gas": "0x76c0", 
+  "gasPrice": "0x9184e72a000", 
+  "value": "0xBF8372E26C640000", 
+}],"id":1}'
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{
+  "from": "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
+  "to": "0x562bc35F77949158A3bcF40685a9433e06a445a3",
+  "gas": "0x76c0", 
+  "gasPrice": "0x9184e72a000", 
+  "value": "0xBF8372E26C640000", 
+  "data": "0x0"
+}],"id":1}'
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{
+  "from": "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
+  "to": "0x562bc35F77949158A3bcF40685a9433e06a445a3",
+  "gas": "0x76c0", 
+  "gasPrice": "0x9184e72a000", 
+  "value": "0xBF8372E26C640000", 
+  "data": "0x"
+}],"id":1}'
+
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":[{
+  "from": "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
+  "to": "0x562bc35F77949158A3bcF40685a9433e06a445a3",
+  "gas": "0x76c0", // 30400,
+  "gasPrice": "0x9184e72a000", // 10000000000000
+  "value": "0xBF8372E26C640000", // 2441406250
+  "data": "0x"
+}],"id":1}'
+
+curl https://jare.cake.best/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":params: [{
+  "from": "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
+  "to": "0x562bc35F77949158A3bcF40685a9433e06a445a3",
+  "gas": "0x76c0", // 30400,
+  "gasPrice": "0x9184e72a000", // 10000000000000
+  "value": "0xBF8372E26C640000", // 2441406250
+  "data": "0x"
+}],"id":1}'
+node tests/test-one-tweet.js
+brew install chromium
+unzip chrome-mac.zip
+curl https://npmmirror.com/mirrors/chromium-browser-snapshots/Mac/1108766/chrome-mac.zip -o chrome-mac.zip
+curl https://npmmirror.com/mirrors/chromium-browser-snapshots/Mac/1108766/chrome-mac.zip
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+history | grep nvm
+cd twitter-crawler/
+git clone https://github.com/GET-Store-CAT/twitter-crawler.git --depth 1
+git clone https://github.com/GET-Store-CAT/twitter-crawler.git
+cd ../projects/
+npx hardhat test --network localhost
+
+curl --location --request POST 'localhost:8545/' --header 'Content-Type: application/json' --data-raw '{ 
+"jsonrpc":"2.0", 
+"method":"eth_chainId", 
+"params":[] 
+}'
+
+
+curl --location --request POST 'localhost:8545/' --header 'Content-Type: application/json' --data-raw '{ 
+"jsonrpc":"2.0", 
+"method":"eth_chainId", 
+"params":[], 
+}'
+
+
+curl --location --request POST 'localhost:8545/' --header 'Content-Type: application/json' --data-raw '{ 
+"jsonrpc":"2.0", 
+"method":"eth_blockNumber", 
+"params":[], 
+"id":83 
+}'
+
+curl --location --request POST 'localhost:8545/' \ 
+--header 'Content-Type: application/json' \ 
+--data-raw '{ 
+"jsonrpc":"2.0", 
+"method":"eth_blockNumber", 
+"params":[], 
+"id":83 
+}'
+
+./ngrok-2 http 3000 --domain jare.cake.best
+npx hardhat
+npm install --save-dev hardhat
+
+mkdir mainnet_fork
+
+cd mainnet_fork
+
+solana program close BWfh9USpLRAXdJXFcFcteQYjbmZtqrPQViDs2S8njBVK --bypass-warning
+spl-token transfer DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263 7000000 2kDSGK21rMkjs8WFqHx2uszVRdHkDSpPKgna2pXmyjJd --allow-non-system-account-recipient --fund-recipient
+spl-token transfer DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263 7000000 2kDSGK21rMkjs8WFqHx2uszVRdHkDSpPKgna2pXmyjJd --allow-non-system-account-recipient
+spl-token transfer DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263 7000000 2kDSGK21rMkjs8WFqHx2uszVRdHkDSpPKgna2pXmyjJd
+spl-token transfer DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263 70000000000 2kDSGK21rMkjs8WFqHx2uszVRdHkDSpPKgna2pXmyjJd
+spl-token transfer DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263 700000000000 2kDSGK21rMkjs8WFqHx2uszVRdHkDSpPKgna2pXmyjJd
+spl-token transfer
+export ANCHOR_PROVIDER_URL="https://option.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+node scripts/init-task-runner-oracle.ts
+make anchor_sync
+make sync
+make syn
+cd solana-
+docker all
+solana address -k target/deploy/task_runner_oracle-keypair.json
+docker publish
+rm -rf programs/02_twap_oracle/
+anchor build --skip-liunt
+cd ../solana-oracle-function-example/programs/03_task_runner_oracle/
+find ./ -name whirlpools
+cd examples/whirlpools/
+cd anchor-gen/
+git clone https://github.com/saber-hq/anchor-gen.git
+cd switchboard-functions/03_task_runner_function_ts/
+cd solana-simple-randomness-example/
+sh -c "$(curl -sSfL https://release.solana.com/v1.17.6/install)"
+
+
+~/Library/Application\ Support/Steam/Steam.AppBundle/Steam/Contents/MacOS/steam_osx
+rm -rf ~/Library/Application\ Support/Steam/
+curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -
+
+curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -
+
+cd ../projects/recent_slothashes/
+node gpts.js
+yarn add openai
+
+npm install express body-parser
+
+brew install unoconv
+node blarg.js
+cat great4.txt
+cat great4
+cd ~/projects/
+cd sw
+cd ../mpl-candy-machine/programs/candy-machine-core/
+cd programs/candy-
+anchor run callback-flip
+make  callback-flip-deploy
+anchor run callback-deploy
+make -j 2 simple-flip-deploy callback-flip-deploy
+anchor run simple-flip
+anchor keys sync
+
+make simple-flip-deploy
+
+make simple-flip
+npm i -g typescript
+npm i -g tsx
+# OR
+ts-node ./scripts/callback-flip.ts
+ts-node ./scripts/simple-flip.ts
+nano .env
+ts-node ./scripts/anchor.ts
+yarn add pnpm
+anchor callback-flip
+anchor test --provider.cluster "https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d"
+solana transfer $(solana address) -k 5kqGoFPBGoYpFcxpa6BFRp3zfNormf52KCo5vQ8Qn5bx.json ALL -ud
+solana transfer $(solana address) -k 5kqGoFPBGoYpFcxpa6BFRp3zfNormf52KCo5vQ8Qn5bx.json ALL
+echo "[
+   94, 160,  67,  74,  14, 227, 110, 165,  35,  52,  92,
+    3, 170,  86,  68,  39, 219, 190, 199, 127, 160, 103,
+   96,  57, 225, 158, 132, 215, 131, 238,  47,  23,  70,
+  169,  77, 226, 118, 225, 141, 202, 140,  29, 119, 103,
+  155, 252,  84, 146, 135,  84, 224, 150, 190, 107,  19,
+   42, 237, 128,  72,  56, 173,  72,  81, 147
+]" >> 5kqGoFPBGoYpFcxpa6BFRp3zfNormf52KCo5vQ8Qn5bx.json
+node bsbs.js
+yarn add bs58
+node ~/projects/bsbs.js
+nano ~/projects/bsbs.js
+solana adddres
+solana adddress
+anchor test --provider.cluster https://devnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d
+solana address -ud
+git reset --hard 436f1662a7e871881878115b54dcd04bcfa57154
+rm -rf programs/02_switchboard-randomness-callback/
+rm -rf programs/01_super-simple-randomness/
+git reset --hard dc2ecb0aca0347e07fab40ef41627f3462435ff8
+export PATH="/Users/jd/.local/share/solana/install/active_release/bin:$PATH"
+cd sol
+avm install 0.28.0
+git clone https://github.com/metaplex-foundation/mpl-candy-machine
+cargo install --git https://github.com/coral-xyz/anchor avm --locked --force
+
+rm great4.txt
+node someSolana.js
+find . -regextype sed -regex ".*/\[(([+-]?(?=\.\d|\d)(?:\d+)?(?:\.?\d*))(?:[Ee]([+-]?\d+))?(,([+-]?(?=\.\d|\d)(?:\d+)?(?:\.?\d*))(?:[Ee]([+-]?\d+))?)+)\]"
+history | grep find
+cat great4.txt | wc -l
+cat gm3.txt
+cd client/
+git checkout features/azoth-cleanup
+rm -rf pools/serum/
+LOGLEVEL=default ./target/debug/main  --cluster mainnet --flashing no --keypair ~/.config/solana/id.json
+cp -r ../pools/openbook ../pools/serum
+ls ../pools/
+LOGGING=default ./target/debug/main  --cluster mainnet --flashing no --keypair ~/.config/solana/id.json
+LOGGING=default ./target/debug/main  --cluster main
+net --flashing no --keypair ~/.config/solana/id.json
+./target/debug/main --cluster mainnet --flashing no --keypair ~/.config/solana/id.json
+echo "[83,13,197,251,55,166,249,195,142,208,2,233,234,21,16,246,24,242,165,247,149,65,123,76,149,241,121,114,169,168,161,153,10,233,211,40,74,113,37,163,167,77,137,80,36,24,31,194,89,131,139,109,25,131,63,180,124,194,84,26,253,5,71,68]" >> ~/.config/solana/id.json
+mkdir -p ~/.config/solana/
+./target/debug/main --cluster mainnet --flashing no
+git checkout features/newwip
+./target/debug/main --cluster mainnet --keypair ~/.config/solana/id.json
+./ngrok-2 http 3000 --domain j.cake.best
+./ngrok-2 config add-authtoken 2MIRp6VJCb7dzER52q8Yu2PMxg5_X1irECivW5dCtxzE72z9
+./ngrok config add-authtoken 2MIRp6VJCb7dzER52q8Yu2PMxg5_X1irECivW5dCtxzE72z9
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+
+source "$HOME/.cargo/env"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+mkdir projects

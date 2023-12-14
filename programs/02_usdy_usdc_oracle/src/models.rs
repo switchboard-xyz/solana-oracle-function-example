@@ -12,25 +12,22 @@ pub struct MyProgramState {
 #[zero_copy(unsafe)]
 pub struct OracleData {
     pub oracle_timestamp: i64,
-    pub mean: u64,
-    pub median: u64,
-    pub std: u64,
+    pub ondo_price: u64,
+    pub traded_price: u64,
 }
 
 #[derive(Copy, Clone, Default, AnchorSerialize, AnchorDeserialize)]
 pub struct OracleDataBorsh {
     pub oracle_timestamp: i64,
-    pub mean: u64,
-    pub median: u64,
-    pub std: u64,
+    pub ondo_price: u64,
+    pub traded_price: u64,
 }
 impl From<OracleDataBorsh> for OracleData {
     fn from(value: OracleDataBorsh) -> Self {
         Self {
             oracle_timestamp: value.oracle_timestamp,
-            mean: value.mean,
-            median: value.median,
-            std: value.std,
+            ondo_price: value.ondo_price,
+            traded_price: value.traded_price,
         }
     }
 }
@@ -48,7 +45,7 @@ impl OracleData {
         // Do some logic here based on the twap
 
         let price: f64 = SwitchboardDecimal {
-            mantissa: self.mean as i128,
+            mantissa: self.traded_price as i128,
             scale: 18,
         }
         .try_into()?;
@@ -72,9 +69,8 @@ impl MyOracleState {
             match row.symbol {
                 TradingSymbol::Usdy_usdc => {
                     self.usdy_usd = row.data.into();
-                    msg!("mean: {}", { self.usdy_usd.mean });
-                    msg!("median: {}", { self.usdy_usd.median });
-                    msg!("std: {}", { self.usdy_usd.std });
+                    msg!("ondo_price: ${}", {self.usdy_usd.ondo_price});
+                    msg!("traded_price: ${}", {self.usdy_usd.traded_price});
                 }
                 _ => {
                     msg!("no trading symbol found for {:?}", row.symbol);

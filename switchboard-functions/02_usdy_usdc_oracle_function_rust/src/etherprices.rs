@@ -10,9 +10,8 @@ use serde::Deserialize;
 #[derive(Deserialize, Default, Clone, Debug)]
 pub struct Ticker {
     pub symbol: String, // BTCUSDT
-    pub mean: I256,  // 0.00000000
-    pub median: I256, // 0.00000000
-    pub std: I256, // 0.00000000
+    pub ondo_price: u128,
+    pub traded_price: u128
 }
 
 #[derive(Clone, Debug)]
@@ -38,9 +37,8 @@ impl TryInto<OracleDataBorsh> for IndexData {
 
             switchboard_solana::Result::Ok(OracleDataBorsh {
                 oracle_timestamp,
-                mean: self.data.mean.as_u64(),
-                median: self.data.median.as_u64(),
-                std: self.data.std.as_u64(),
+                ondo_price: self.data.ondo_price as u64,
+                traded_price: self.data.traded_price as u64,
 
             })
     }
@@ -53,28 +51,23 @@ pub struct EtherPrices {
 impl EtherPrices {
 
     // Fetch data from the EtherPrices API
-    pub async fn fetch(mean:  ethers::types::U256, median:  ethers::types::U256, std:  ethers::types::U256) -> std::result::Result<EtherPrices, SbError> {
+    pub async fn fetch(ondo_price:  ethers::types::U256, traded_price:  ethers::types::U256) -> std::result::Result<EtherPrices, SbError> {
         let symbols = ["USDYUSD"];
-        let mean: I256 = mean.try_into().map_err(|_| {
-            SbError::CustomMessage("Invalid mean".to_string())
-        }).unwrap();
-        let median: I256 = median.try_into().map_err(|_| {
-            SbError::CustomMessage("Invalid median".to_string())
-        }).unwrap();
-        let std: I256 = std.try_into().map_err(|_| {
-            SbError::CustomMessage("Invalid std".to_string())
-        }).unwrap();
+        let ondo_price = ondo_price.as_u128();
+        let traded_price = traded_price.as_u128();
+        println!("ondo_price: {:?}", ondo_price);
+        println!("traded_price: {:?}", traded_price);
+
         Ok(EtherPrices {
             usdy_usd: {
                 let symbol = symbols[0];
-                
+                println!("symbol: {:?}", symbol);
                 IndexData {
                     symbol: symbol.to_string(),
                     data: Ticker {
                         symbol: symbol.to_string(),
-                        mean,
-                        median,
-                        std,
+                        ondo_price: ondo_price,
+                        traded_price: traded_price,
                     
                     }
                 }
@@ -83,6 +76,7 @@ impl EtherPrices {
     }
 
     pub fn to_ixns(&self, runner: &FunctionRunner) -> Vec<Instruction> {
+        println!("to_ixns");
         let rows: Vec<OracleDataWithTradingSymbol> = vec![
             OracleDataWithTradingSymbol {
                 symbol: TradingSymbol::Usdy_usdc,
@@ -99,14 +93,16 @@ impl EtherPrices {
             // data: self.doge_usdt.clone().into(),
             // },
         ];
-
+        println!("2");
         let params = RefreshOraclesParams { rows };
 
         let (program_state_pubkey, _state_bump) =
-            Pubkey::find_program_address(&[b"USDY_USDC_ORACLE"], &usdy_usd_oracle::ID);
+            Pubkey::find_program_address(&[b"USDY_USDC_ORACLE_V2"], &usdy_usd_oracle::ID);
+        println!("program_state_pubkey: {:?}", program_state_pubkey);
 
         let (oracle_pubkey, _oracle_bump) =
-            Pubkey::find_program_address(&[b"ORACLE_USDY_SEED"], &usdy_usd_oracle::ID);
+            Pubkey::find_program_address(&[b"ORACLE_USDY_SEED_V2"], &usdy_usd_oracle::ID);
+        println!("oracle_pubkey: {:?}", oracle_pubkey);
 
         let ixn = Instruction {
             program_id: usdy_usd_oracle::ID,
@@ -130,7 +126,9 @@ impl EtherPrices {
                     pubkey: runner.signer,
                     is_signer: true,
                     is_writable: false,
-                },
+                }
+
+
             ],
             data: [
                 get_ixn_discriminator("refresh_oracles").to_vec(),

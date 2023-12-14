@@ -1,23 +1,24 @@
-import { SwitchboardProgram, loadKeypair } from "@switchboard-xyz/solana.js";
+import { QueueAccount, SwitchboardProgram, loadKeypair } from "@switchboard-xyz/solana.js";
 import * as anchor from "@coral-xyz/anchor";
 import { UsdyUsdOracle } from "../target/types/usdy_usd_oracle";
 import dotenv from "dotenv";
 import { loadDefaultQueue } from "./utils";
 import fs from 'fs'
-import { PublicKey } from "@solana/web3.js";
+import { Connection, PublicKey } from "@solana/web3.js";
+import type {
+  JobAccount,
+} from "@switchboard-xyz/solana.js";
+import { OracleAccount } from "@switchboard-xyz/solana.js";
+import { OracleJob } from "@switchboard-xyz/common";
+
 dotenv.config();
 
 (async () => {
+
   const provider = anchor.AnchorProvider.env();
-  anchor.setProvider(
-    process.argv.length > 2
-      ? new anchor.AnchorProvider(
-          provider.connection,
-          new anchor.Wallet(loadKeypair(process.argv[2])),
-          {}
-        )
-      : provider
-  );
+  anchor.setProvider(provider);
+
+
 
   const payer = (provider.wallet as anchor.Wallet).payer;
   console.log(`PAYER: ${payer.publicKey}`);
@@ -29,7 +30,7 @@ dotenv.config();
         "utf8"
       ).toString()
     ),
-    new PublicKey("9jDnKqdcm7dWLj1jh46EQxLviH1snCthEmNMdDumvCK4"),
+    new PublicKey("2LuPhyrumCFRXjeDuYp1bLNYp7EbzUraZcvrzN9ZBUkN"),
     provider
   );
   console.log(`PROGRAM: ${program.programId}`);
@@ -37,16 +38,27 @@ dotenv.config();
   const switchboardProgram = await SwitchboardProgram.fromProvider(provider);
 
   const [programStatePubkey, b1] = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("USDY_USDC_ORACLE")],
+    [Buffer.from("USDY_USDC_ORACLE_V2")],
     program.programId
   );
   console.log(`PROGRAM_STATE: ${programStatePubkey}`);
 
-  const [oraclePubkey, b2] = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("ORACLE_USDY_SEED")],
-    program.programId
-  );
-  console.log(`ORACLE_PUBKEY: ${oraclePubkey}`);
+  
+let switchboard: SwitchboardProgram = await SwitchboardProgram.fromProvider(
+  provider
+);
+
+const queueAccount = new QueueAccount(
+  switchboard,
+  "PeRMnAqNqHQYHUuCBEjhm1XPeVTh4BxjY4t4TPan1pG"
+); // devnet
+const [oracle, b2] = anchor.web3.PublicKey.findProgramAddressSync(
+  [Buffer.from("ORACLE_USDY_SEED_V2")],
+  program.programId
+);
+console.log(`ORACLE_PUBKEY: ${oracle}`);
+
+
 
   const attestationQueueAccount = await loadDefaultQueue(switchboardProgram);
   console.log(`ATTESTATION_QUEUE: ${attestationQueueAccount.publicKey}`);
@@ -61,18 +73,108 @@ dotenv.config();
     });
   console.log(`SWITCHBOARD_FUNCTION: ${functionAccount.publicKey}`);
 
+/*
   const signature = await program.methods
-    .initialize(b1, b2)
+    .initialize(b1, b2) //initialize 
     .accounts({
-      oracle: oraclePubkey,
+      oracle,
       program: programStatePubkey,
       authority: payer.publicKey,
       payer: payer.publicKey,
-      switchboardFunction: functionAccount.publicKey,
+      switchboardFunction: new PublicKey("DSYtAsC1YAfMBDoJPAd2Q5rDEwKnrBkzN1wNQ7aYd1o5")//functionAccount.publicKey,
     })
     .signers([...functionInit.signers])
     .preInstructions([...functionInit.ixns])
     .rpc();
 
   console.log(`[TX] initialize: ${signature}`);
+await provider.connection.confirmTransaction(signature, "confirmed");*/
+const [ondoFeed] = await queueAccount.createFeed({
+  batchSize: 1,
+  minRequiredOracleResults: 1,
+  minRequiredJobResults: 1,
+  minUpdateDelaySeconds: 5,
+  fundAmount: 1.38,
+  
+  name: "ondo-price-feed",
+  enable: true,
+  
+  jobs: [
+    // existing job account
+    // or create a new job account with the feed
+    {
+      weight: 2,
+      data: OracleJob.encodeDelimited(
+        OracleJob.fromObject({
+          tasks: [
+            {
+              solanaAccountDataFetchTask: {
+
+                pubkey: oracle.toBase58(),
+              }
+            },{
+              bufferLayoutParseTask: {
+                endian: OracleJob.BufferLayoutParseTask.Endian.LITTLE_ENDIAN,
+                type: OracleJob.BufferLayoutParseTask.BufferParseType.u64,
+                offset: 1+8+8
+              },
+
+            },
+            {
+              divideTask: {
+                big: 1000000000,
+              },
+            },
+          ],
+        })
+      ).finish(),
+    },
+  ],
+});
+
+const [tradedFeed] = await queueAccount.createFeed({
+  batchSize: 1,
+  minRequiredOracleResults: 1,
+  minRequiredJobResults: 1,
+  minUpdateDelaySeconds: 5,
+  fundAmount: 1.38,
+  enable: true,
+  name: "ondo-traded-price-feed",
+  
+  jobs: [
+    // existing job account
+    // or create a new job account with the feed
+    {
+      weight: 2,
+      data: OracleJob.encodeDelimited(
+        OracleJob.fromObject({
+          tasks: [
+            {
+              solanaAccountDataFetchTask: {
+
+                pubkey: oracle.toBase58(),
+              }},
+              {
+              bufferLayoutParseTask: {
+                endian: OracleJob.BufferLayoutParseTask.Endian.LITTLE_ENDIAN,
+                type: OracleJob.BufferLayoutParseTask.BufferParseType.u64,
+                offset: 1+8+8+8 
+              },
+
+            },
+            // divide 1000000000
+            {
+              divideTask: {
+                big: 1000000000,
+              },
+            },
+          ],
+        })
+      ).finish(),
+    },
+  ],
+});
+console.log(`ORACLE_PUBKEY_ONDO: ${ondoFeed?.publicKey}`);
+console.log(`ORACLE_PUBKEY_TRADED: ${tradedFeed?.publicKey}`);
+
 })();

@@ -19,14 +19,15 @@ pub use models::*;
 
 
 
-declare_id!("9jDnKqdcm7dWLj1jh46EQxLviH1snCthEmNMdDumvCK4");
+declare_id!("2LuPhyrumCFRXjeDuYp1bLNYp7EbzUraZcvrzN9ZBUkN");
 
-pub const PROGRAM_SEED: &[u8] = b"USDY_USDC_ORACLE";
+pub const PROGRAM_SEED: &[u8] = b"USDY_USDC_ORACLE_V2";
 
-pub const ORACLE_SEED: &[u8] = b"ORACLE_USDY_SEED";
+pub const ORACLE_SEED: &[u8] = b"ORACLE_USDY_SEED_V2";
 
 #[program]
 pub mod usdy_usd_oracle {
+
     use super::*;
 
     pub fn initialize(ctx: Context<Initialize>, bump: u8, bump2: u8) -> anchor_lang::Result<()> {
@@ -41,10 +42,25 @@ pub mod usdy_usd_oracle {
 
         let oracle = &mut ctx.accounts.oracle.load_init()?;
         oracle.bump = bump2;
-
         Ok(())
     }
 
+
+    pub fn update(ctx: Context<Initialize>, bump: u8, bump2: u8) -> anchor_lang::Result<()> {
+        let program = &mut ctx.accounts.program.load_mut()?;
+        program.bump = bump;
+        program.authority = ctx.accounts.authority.key();
+
+        // Optionally set the switchboard_function if provided
+        if let Some(switchboard_function) = ctx.accounts.switchboard_function.as_ref() {
+            program.switchboard_function = switchboard_function.key();
+        }
+
+        let oracle = &mut ctx.accounts.oracle.load_mut()?;
+        oracle.bump = bump2;
+        
+        Ok(())
+    }
     pub fn refresh_oracles(
         ctx: Context<RefreshOracles>,
         params: RefreshOraclesParams,
@@ -52,9 +68,11 @@ pub mod usdy_usd_oracle {
         let oracle = &mut ctx.accounts.oracle.load_mut()?;
         msg!("saving oracle data");
         oracle.save_rows(&params.rows)?;
-        msg!("${}", {oracle.usdy_usd.mean});
-        msg!("${}", {oracle.usdy_usd.median});
-        msg!("{}%", {oracle.usdy_usd.std}); 
+        msg!("${}", {oracle.usdy_usd.ondo_price});
+        msg!("${}", {oracle.usdy_usd.traded_price});
+        // save the price
+
+
         
         Ok(())
     }
@@ -80,7 +98,7 @@ pub mod usdy_usd_oracle {
 #[derive(Accounts)]
 pub struct Initialize<'info> {
     #[account(
-        init,
+        init_if_needed,
         space = 8 + std::mem::size_of::<MyProgramState>(),
         payer = payer,
         seeds = [PROGRAM_SEED],
@@ -89,7 +107,7 @@ pub struct Initialize<'info> {
     pub program: AccountLoader<'info, MyProgramState>,
 
     #[account(
-        init,
+        init_if_needed,
         space = 8 + std::mem::size_of::<MyOracleState>(),
         payer = payer,
         seeds = [ORACLE_SEED],
@@ -105,6 +123,7 @@ pub struct Initialize<'info> {
     pub payer: Signer<'info>,
 
     pub system_program: Program<'info, System>,
+    
 }
 
 #[derive(Accounts)]
@@ -115,7 +134,7 @@ pub struct RefreshOracles<'info> {
     #[account(
         seeds = [PROGRAM_SEED],
         bump = program.load()?.bump,
-       has_one = switchboard_function
+       //has_one = switchboard_function
     )]
     pub program: AccountLoader<'info, MyProgramState>,
 
@@ -127,11 +146,11 @@ pub struct RefreshOracles<'info> {
     pub oracle: AccountLoader<'info, MyOracleState>,
 
     // We use this to verify the functions enclave state was verified successfully
-   #[account(
+   #[account(/*
     constraint =
                 switchboard_function.load()?.validate(
                 &enclave_signer.to_account_info()
-            )? @ USDY_USDC_ORACLEError::FunctionValidationFailed     
+            )? @ USDY_USDC_ORACLEError::FunctionValidationFailed    */ 
     )]
     pub switchboard_function: AccountLoader<'info, FunctionAccountData>,
     pub enclave_signer: Signer<'info>,

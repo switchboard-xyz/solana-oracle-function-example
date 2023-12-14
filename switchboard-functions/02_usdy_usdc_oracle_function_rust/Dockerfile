@@ -35,8 +35,6 @@ FROM switchboardlabs/sgx-function
 # Copy the binary
 WORKDIR /sgx
 COPY --from=builder /sgx/app /sgx
-COPY ./switchboard-functions/02_usdy_usdc_oracle_function_rust/config/app.manifest.template /sgx/app.manifest.template
-
 # Get the measurement from the enclave
 RUN rm -f /measurement.txt && \
     /get_measurement.sh && \
