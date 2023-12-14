@@ -42,8 +42,8 @@ import { AggregatorAccountData, AggregatorRound } from "@switchboard-xyz/solana.
   );
   console.log(`ORACLE_PUBKEY: ${oraclePubkey}`);
   
-  const ondo = new PublicKey("CEDs8BAayqiXhD7zZbRNzjhQPMHoPRQbXfJ3nXHGuRZC")
-  const traded = new PublicKey("4L1yyphpXoYYSrUGgpqR9vLYTodpnL7Hk6KH532qKCnf")
+  const ondo = new PublicKey("2s52PZeGDJrA3pgD7ZSRBP8MdNyxrcVnyL4yBn39GQrj")
+  const traded = new PublicKey("9npnQQpVLW7w3FdFDPGv4gJoxpKjJYAzjtQ2XxuJ8aE1")
   const ondoFeed = new AggregatorAccount(switchboardProgram, ondo);
   const ondoState: types.AggregatorAccountData =
     await ondoFeed.loadData();

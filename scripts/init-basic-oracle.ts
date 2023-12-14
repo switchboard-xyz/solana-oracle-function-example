@@ -50,7 +50,7 @@ let switchboard: SwitchboardProgram = await SwitchboardProgram.fromProvider(
 
 const queueAccount = new QueueAccount(
   switchboard,
-  "PeRMnAqNqHQYHUuCBEjhm1XPeVTh4BxjY4t4TPan1pG"
+  "uPeRMdfPmrPqgRWSrjAnAkH78RqAhe5kXoW6vBYRqFX"
 ); // devnet
 const [oracle, b2] = anchor.web3.PublicKey.findProgramAddressSync(
   [Buffer.from("ORACLE_USDY_SEED_V2")],
@@ -94,10 +94,11 @@ const [ondoFeed] = await queueAccount.createFeed({
   minRequiredOracleResults: 1,
   minRequiredJobResults: 1,
   minUpdateDelaySeconds: 5,
-  fundAmount: 1.38,
+  fundAmount: 0.38,
   
   name: "ondo-price-feed",
   enable: true,
+  crankPubkey: new PublicKey("UcrnK4w2HXCEjY8z6TcQ9tysYr3c9VcFLdYAU9YQP5e"),
   
   jobs: [
     // existing job account
@@ -137,9 +138,10 @@ const [tradedFeed] = await queueAccount.createFeed({
   minRequiredOracleResults: 1,
   minRequiredJobResults: 1,
   minUpdateDelaySeconds: 5,
-  fundAmount: 1.38,
+  fundAmount: 0.38,
   enable: true,
   name: "ondo-traded-price-feed",
+  crankPubkey: new PublicKey("UcrnK4w2HXCEjY8z6TcQ9tysYr3c9VcFLdYAU9YQP5e"),
   
   jobs: [
     // existing job account
