@@ -103,7 +103,18 @@ impl EtherPrices {
         let (oracle_pubkey, _oracle_bump) =
             Pubkey::find_program_address(&[b"ORACLE_USDY_SEED_V2"], &usdy_usd_oracle::ID);
         println!("oracle_pubkey: {:?}", oracle_pubkey);
-
+        let (ondo_price_feed, _) =
+            Pubkey::find_program_address(&[b"ORACLE_USDY_SEED_V2",
+            runner.function.as_ref(),
+            b"ondo_price_feed"],
+            &usdy_usd_oracle::ID);
+        let (ondo_traded_feed, _) =
+            Pubkey::find_program_address(&[b"ORACLE_USDY_SEED_V2",
+            runner.function.as_ref(),
+            b"ondo_traded_feed"],
+            &usdy_usd_oracle::ID);
+        println!("oracle_pubkey: {:?}", oracle_pubkey);
+        
         let ixn = Instruction {
             program_id: usdy_usd_oracle::ID,
             accounts: vec![
@@ -126,8 +137,19 @@ impl EtherPrices {
                     pubkey: runner.signer,
                     is_signer: true,
                     is_writable: false,
-                }
-
+                },
+                //ondo_price_feed
+                AccountMeta {
+                    pubkey: ondo_price_feed,
+                    is_signer: false,
+                    is_writable: true,
+                },
+                //ondo_traded_feed
+                AccountMeta {
+                    pubkey: ondo_traded_feed,
+                    is_signer: false,
+                    is_writable: true,
+                },
 
             ],
             data: [

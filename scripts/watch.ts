@@ -42,22 +42,24 @@ import { AggregatorAccountData, AggregatorRound } from "@switchboard-xyz/solana.
   );
   console.log(`ORACLE_PUBKEY: ${oraclePubkey}`);
   
-  const ondo = new PublicKey("2s52PZeGDJrA3pgD7ZSRBP8MdNyxrcVnyL4yBn39GQrj")
-  const traded = new PublicKey("9npnQQpVLW7w3FdFDPGv4gJoxpKjJYAzjtQ2XxuJ8aE1")
-  const ondoFeed = new AggregatorAccount(switchboardProgram, ondo);
-  const ondoState: types.AggregatorAccountData =
-    await ondoFeed.loadData();
-  const tradedFeed = new AggregatorAccount(switchboardProgram, traded);
-  const tradedState: types.AggregatorAccountData =
-    await tradedFeed.loadData();
-  console.log(`ORACLE_PUBKEY_ONDO: ${ondo}`);
-  console.log(`ORACLE_PUBKEY_TRADED: ${traded}`);
+  const [ondoPriceFeedPubkey, _] = anchor.web3.PublicKey.findProgramAddressSync(
+    [Buffer.from("ORACLE_USDY_SEED_V2"), new PublicKey("GBDDsAJHuKR6fJDv5aYj2bBPMbqdgxsaC87qcHpAXtcA").toBuffer(), Buffer.from("ondo_price_feed")],
+    program.programId
+  );
+  const [ondoTradedFeedPubkey, __] = anchor.web3.PublicKey.findProgramAddressSync(
+    [Buffer.from("ORACLE_USDY_SEED_V2"), new PublicKey("GBDDsAJHuKR6fJDv5aYj2bBPMbqdgxsaC87qcHpAXtcA").toBuffer(), Buffer.from("ondo_traded_feed")],
+    program.programId
+  );
+  const ondoFeed = await program.account.aggregatorAccountData.fetch(ondoPriceFeedPubkey);
+  const tradedFeed = await program.account.aggregatorAccountData.fetch(ondoTradedFeedPubkey);
+  console.log(`ORACLE_PUBKEY_ONDO: ${ondoPriceFeedPubkey}`);
+  console.log(`ORACLE_PUBKEY_TRADED: ${ondoTradedFeedPubkey}`);
   let oracleState = await program.account.myOracleState.fetch(
     oraclePubkey
   );
 
-  displayOracleState(ondo, ondoState);
-  displayOracleState(traded, tradedState);
+  displayOracleState(ondoPriceFeedPubkey, ondoFeed);
+  displayOracleState(ondoTradedFeedPubkey, tradedFeed);
 
   let lastFetched: number = Date.now();
   while (true) {
@@ -68,12 +70,16 @@ import { AggregatorAccountData, AggregatorRound } from "@switchboard-xyz/solana.
   }
 })();
 
-function displayOracleState(pubkey: PublicKey, oracleState: AggregatorAccountData) {
+function displayOracleState(pubkey: PublicKey, oracleState: any) {
   console.log(`## Oracle (${pubkey})`);
   displaySymbol(oracleState.latestConfirmedRound, "usdy_usd");
 }
 
 function displaySymbol(data: AggregatorRound, symbol: string) {
   console.log(` > ${symbol.toUpperCase()} / USD`);
-  console.log(`\Price: ${data.result}`);
+  if (data){
+    console.log(`\tRound timestamp: ${data.roundOpenTimestamp}`);
+
+    console.log(`\Price: ${data.result.mantissa.toNumber() / 10 ** data.result.scale}`);
+  }
 }

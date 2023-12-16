@@ -58,8 +58,6 @@ const [oracle, b2] = anchor.web3.PublicKey.findProgramAddressSync(
 );
 console.log(`ORACLE_PUBKEY: ${oracle}`);
 
-
-
   const attestationQueueAccount = await loadDefaultQueue(switchboardProgram);
   console.log(`ATTESTATION_QUEUE: ${attestationQueueAccount.publicKey}`);
 
@@ -73,110 +71,37 @@ console.log(`ORACLE_PUBKEY: ${oracle}`);
     });
   console.log(`SWITCHBOARD_FUNCTION: ${functionAccount.publicKey}`);
 
-/*
+  const [ondoPriceFeedPubkey, _] = anchor.web3.PublicKey.findProgramAddressSync(
+    [Buffer.from("ORACLE_USDY_SEED_V2"), new PublicKey("GBDDsAJHuKR6fJDv5aYj2bBPMbqdgxsaC87qcHpAXtcA").toBuffer(), Buffer.from("ondo_price_feed")],
+    program.programId
+  );
+  const [ondoTradedFeedPubkey, __] = anchor.web3.PublicKey.findProgramAddressSync(
+    [Buffer.from("ORACLE_USDY_SEED_V2"), new PublicKey("GBDDsAJHuKR6fJDv5aYj2bBPMbqdgxsaC87qcHpAXtcA").toBuffer(), Buffer.from("ondo_traded_feed")],
+    program.programId
+  );
+
   const signature = await program.methods
-    .initialize(b1, b2) //initialize 
+    .update(b1, b2) //initialize 
     .accounts({
       oracle,
       program: programStatePubkey,
       authority: payer.publicKey,
+      ondoPriceFeed: ondoPriceFeedPubkey,
+      ondoTradedFeed: ondoTradedFeedPubkey,
       payer: payer.publicKey,
-      switchboardFunction: new PublicKey("DSYtAsC1YAfMBDoJPAd2Q5rDEwKnrBkzN1wNQ7aYd1o5")//functionAccount.publicKey,
+      switchboardFunction: new PublicKey("GBDDsAJHuKR6fJDv5aYj2bBPMbqdgxsaC87qcHpAXtcA")//functionAccount.publicKey,
     })
     .signers([...functionInit.signers])
     .preInstructions([...functionInit.ixns])
     .rpc();
 
   console.log(`[TX] initialize: ${signature}`);
-await provider.connection.confirmTransaction(signature, "confirmed");*/
-const [ondoFeed] = await queueAccount.createFeed({
-  batchSize: 1,
-  minRequiredOracleResults: 1,
-  minRequiredJobResults: 1,
-  minUpdateDelaySeconds: 5,
-  fundAmount: 0.38,
-  
-  name: "ondo-price-feed",
-  enable: true,
-  crankPubkey: new PublicKey("UcrnK4w2HXCEjY8z6TcQ9tysYr3c9VcFLdYAU9YQP5e"),
-  
-  jobs: [
-    // existing job account
-    // or create a new job account with the feed
-    {
-      weight: 2,
-      data: OracleJob.encodeDelimited(
-        OracleJob.fromObject({
-          tasks: [
-            {
-              solanaAccountDataFetchTask: {
+await provider.connection.confirmTransaction(signature, "confirmed");
 
-                pubkey: oracle.toBase58(),
-              }
-            },{
-              bufferLayoutParseTask: {
-                endian: OracleJob.BufferLayoutParseTask.Endian.LITTLE_ENDIAN,
-                type: OracleJob.BufferLayoutParseTask.BufferParseType.u64,
-                offset: 1+8+8
-              },
+const ondoFeed = await program.account.AggregatorAccountData.fetch(ondoPriceFeedPubkey);
+const tradedFeed = await program.account.AggregatorAccountData.fetch(ondoTradedFeedPubkey);
 
-            },
-            {
-              divideTask: {
-                big: 1000000000,
-              },
-            },
-          ],
-        })
-      ).finish(),
-    },
-  ],
-});
-
-const [tradedFeed] = await queueAccount.createFeed({
-  batchSize: 1,
-  minRequiredOracleResults: 1,
-  minRequiredJobResults: 1,
-  minUpdateDelaySeconds: 5,
-  fundAmount: 0.38,
-  enable: true,
-  name: "ondo-traded-price-feed",
-  crankPubkey: new PublicKey("UcrnK4w2HXCEjY8z6TcQ9tysYr3c9VcFLdYAU9YQP5e"),
-  
-  jobs: [
-    // existing job account
-    // or create a new job account with the feed
-    {
-      weight: 2,
-      data: OracleJob.encodeDelimited(
-        OracleJob.fromObject({
-          tasks: [
-            {
-              solanaAccountDataFetchTask: {
-
-                pubkey: oracle.toBase58(),
-              }},
-              {
-              bufferLayoutParseTask: {
-                endian: OracleJob.BufferLayoutParseTask.Endian.LITTLE_ENDIAN,
-                type: OracleJob.BufferLayoutParseTask.BufferParseType.u64,
-                offset: 1+8+8+8 
-              },
-
-            },
-            // divide 1000000000
-            {
-              divideTask: {
-                big: 1000000000,
-              },
-            },
-          ],
-        })
-      ).finish(),
-    },
-  ],
-});
-console.log(`ORACLE_PUBKEY_ONDO: ${ondoFeed?.publicKey}`);
-console.log(`ORACLE_PUBKEY_TRADED: ${tradedFeed?.publicKey}`);
+console.log(`ORACLE_PUBKEY_ONDO: ${ondoFeed}`);
+console.log(`ORACLE_PUBKEY_TRADED: ${tradedFeed}`);
 
 })();
