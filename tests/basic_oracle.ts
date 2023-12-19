@@ -28,7 +28,7 @@ describe("BASICORACLE", () => {
   const payer = (program.provider as anchor.AnchorProvider).publicKey;
 
   const programStatePubkey = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("USDY_USDC_ORACLE")],
+    [Buffer.from("USDY_USDC_ORACLE_V2")],
     program.programId
   )[0];
   console.log(`programStatePubkey: ${programStatePubkey}`);

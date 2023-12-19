@@ -6,6 +6,9 @@ import { sleep } from "@switchboard-xyz/common";
 import { PublicKey } from "@solana/web3.js";
 import fs from 'fs'
 dotenv.config();
+import type { types } from "@switchboard-xyz/solana.js";
+import { AggregatorAccount } from "@switchboard-xyz/solana.js";
+import { AggregatorAccountData, AggregatorRound } from "@switchboard-xyz/solana.js/lib/generated";
 
 (async () => {
   const provider = anchor.AnchorProvider.env();
@@ -18,26 +21,45 @@ dotenv.config();
         "utf8"
       ).toString()
     ),
-    new PublicKey("9jDnKqdcm7dWLj1jh46EQxLviH1snCthEmNMdDumvCK4"),
+    new PublicKey("2LuPhyrumCFRXjeDuYp1bLNYp7EbzUraZcvrzN9ZBUkN"),
     provider
   );
   console.log(`PROGRAM: ${program.programId}`);
 
+  let switchboardProgram: SwitchboardProgram = await SwitchboardProgram.fromProvider(
+    provider
+  );
+
+  
   const [programStatePubkey] = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("USDY_USDC_ORACLE")],
+    [Buffer.from("USDY_USDC_ORACLE_V2")],
     program.programId
   );
   console.log(`PROGRAM_STATE: ${programStatePubkey}`);
   const [oraclePubkey] = anchor.web3.PublicKey.findProgramAddressSync(
-    [Buffer.from("ORACLE_USDY_SEED")],
+    [Buffer.from("ORACLE_USDY_SEED_V2")],
     program.programId
   );
   console.log(`ORACLE_PUBKEY: ${oraclePubkey}`);
-
+  
+  const [ondoPriceFeedPubkey, _] = anchor.web3.PublicKey.findProgramAddressSync(
+    [Buffer.from("ORACLE_USDY_SEED_V2"), new PublicKey("GBDDsAJHuKR6fJDv5aYj2bBPMbqdgxsaC87qcHpAXtcA").toBuffer(), Buffer.from("ondo_price_feed")],
+    program.programId
+  );
+  const [ondoTradedFeedPubkey, __] = anchor.web3.PublicKey.findProgramAddressSync(
+    [Buffer.from("ORACLE_USDY_SEED_V2"), new PublicKey("GBDDsAJHuKR6fJDv5aYj2bBPMbqdgxsaC87qcHpAXtcA").toBuffer(), Buffer.from("ondo_traded_feed")],
+    program.programId
+  );
+  const ondoFeed = await program.account.aggregatorAccountData.fetch(ondoPriceFeedPubkey);
+  const tradedFeed = await program.account.aggregatorAccountData.fetch(ondoTradedFeedPubkey);
+  console.log(`ORACLE_PUBKEY_ONDO: ${ondoPriceFeedPubkey}`);
+  console.log(`ORACLE_PUBKEY_TRADED: ${ondoTradedFeedPubkey}`);
   let oracleState = await program.account.myOracleState.fetch(
     oraclePubkey
   );
-  displayOracleState(oraclePubkey, oracleState as any); // apparently doesnt like _# syntax
+
+  displayOracleState(ondoPriceFeedPubkey, ondoFeed);
+  displayOracleState(ondoTradedFeedPubkey, tradedFeed);
 
   let lastFetched: number = Date.now();
   while (true) {
@@ -48,24 +70,16 @@ dotenv.config();
   }
 })();
 
-interface OracleState {
-  bump: number;
-  usdyUsd: OracleData;
-}
-interface OracleData {
-  oracleTimestamp: anchor.BN;
-  mean: anchor.BN;
-  median: anchor.BN;
-  std: anchor.BN;
-}
-function displayOracleState(pubkey: PublicKey, oracleState: OracleState) {
+function displayOracleState(pubkey: PublicKey, oracleState: any) {
   console.log(`## Oracle (${pubkey})`);
-  displaySymbol(oracleState.usdyUsd, "usdy_usd");
+  displaySymbol(oracleState.latestConfirmedRound, "usdy_usd");
 }
 
-function displaySymbol(data: OracleData, symbol: string) {
+function displaySymbol(data: AggregatorRound, symbol: string) {
   console.log(` > ${symbol.toUpperCase()} / USD`);
-  console.log(`\Mean: $${new anchor.BN(data.mean.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9}`);
-  console.log(`\Median: $${new anchor.BN(data.median.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9}`);
-  console.log(`\Population Variance: ${new anchor.BN(data.std.toString()).div(new anchor.BN(10 ** 9)).toNumber() / 10 ** 9 * 100}%`);
+  if (data){
+    console.log(`\tRound timestamp: ${data.roundOpenTimestamp}`);
+
+    console.log(`\Price: ${data.result.mantissa.toNumber() / 10 ** data.result.scale}`);
+  }
 }
